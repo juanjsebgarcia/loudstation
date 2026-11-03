@@ -201,4 +201,6 @@ Most translations have not yet been checked by a native speaker. Corrections are
 
 MIT. See [LICENSE](LICENSE).
 
+To report a security problem, see [SECURITY.md](SECURITY.md).
+
 LoudStation is an independent project, not affiliated with or endorsed by Apple Inc. Apple, Mac, macOS and Apple Silicon are trademarks of Apple Inc. Other product and company names are trademarks of their owners and are used only to identify those products.
