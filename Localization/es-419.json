@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "es-419",
+    "name": "Español (Latinoamérica)",
+    "reviewed": false,
+    "glossary": {
+      "display": "pantalla",
+      "your monitor speakers": "tus bocinas del monitor",
+      "fix": "arreglar",
+      "no sound": "sin sonido",
+      "sound output": "salida de sonido",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "El sonido funciona en todas las pantallas",
+    "headline.speakers_silent": "Tus bocinas del monitor no tienen sonido",
+    "headline.speakers_on": "En %@",
+    "headline.fixing": "Arreglando %@…",
+    "headline.checking": "Verificando el sonido…",
+    "headline.couldnt_check": "No se pudieron verificar todas las pantallas",
+    "headline.none": "Ninguna pantalla puede reproducir sonido",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "pantalla",
+    "display.fallback": "la pantalla",
+    "row.tag.speakers": "bocinas del monitor",
+    "row.tag.sound_output": "salida de sonido",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Funciona",
+    "status.no_sound": "Sin sonido",
+    "status.checking": "Verificando…",
+    "status.couldnt_check": "Sin verificar",
+    "status.fixing": "Arreglando…",
+    "submenu.speakers_here": "Usar esta pantalla para las bocinas",
+    "submenu.fix_now": "Arreglar ahora",
+    "submenu.fix_now_confirm": "Arreglar ahora…",
+    "submenu.hint_blackout": "La pantalla se pone negra unos 3 segundos",
+    "submenu.hint_others": "Puede cortar el sonido en otras pantallas",
+    "submenu.checked": "Verificado %@",
+    "menu.check_now": "Verificar ahora",
+    "menu.follow_sound_output": "Bocinas del monitor según la salida de sonido",
+    "menu.fix_automatically": "Arreglar bocinas del monitor automáticamente",
+    "menu.check_every": "Verificar cada",
+    "menu.interval.minute": "1 minuto",
+    "menu.interval.events_only": "Solo si cambian las pantallas o se activa la Mac",
+    "menu.open_at_login": "Abrir al iniciar sesión",
+    "menu.last_checked": "Última verificación: %@",
+    "menu.show_log": "Mostrar registro",
+    "menu.quit": "Salir de %@",
+    "menu.quit_after_fix": "Salir cuando termine el arreglo",
+    "note.fixing": "Apagando y encendiendo %@…",
+    "note.gave_up": "El arreglo automático se detuvo en esta pantalla tras dos intentos. Reconéctala o usa “Arreglar ahora”.",
+    "note.output_switched": "Ahora el sonido sale por %@. Quizá debas volver a abrir las apps que ya estaban reproduciendo.",
+    "note.too_soon": "Esperando un minuto entre un arreglo y otro.",
+    "note.waiting_call": "Esperando a que termine tu llamada. Usa “Arreglar ahora” para hacerlo de todos modos.",
+    "note.waiting_full_screen": "Esperando a que salgas de pantalla completa. Usa “Arreglar ahora” para hacerlo de todos modos.",
+    "note.collateral": "Al arreglar %1$@ se cortó el sonido en %2$@.",
+    "note.confirming": "Tus bocinas del monitor no tienen sonido. Comprobando de nuevo antes de arreglar…",
+    "note.stranded": "Una pantalla sigue apagada. Se está intentando de nuevo; también puedes volver a conectarla.",
+    "note.busy": "Todavía se está verificando. Vuelve a intentar “Arreglar ahora” en unos segundos.",
+    "note.cant_autofix": "Esta pantalla no se puede arreglar automáticamente aquí. Vuelve a conectar su cable para arreglarla.",
+    "note.speakers_missing": "La pantalla con tus bocinas del monitor no está conectada.",
+    "note.quitting": "Se cerrará cuando termine el arreglo…",
+    "outcome.fixed": "%@ ya funciona otra vez. Pausa y vuelve a reproducir, o vuelve a abrir las apps que se hayan trabado.",
+    "outcome.still_silent": "%@ sigue sin sonido. Intenta desconectar su cable y volver a conectarlo.",
+    "outcome.unverified": "Se apagó y encendió %@, pero no se pudo verificar después.",
+    "outcome.unknown_display": "No se pudo saber qué pantalla es %@, así que no se apagó nada.",
+    "outcome.cycle_failed": "No se terminó de apagar y encender %@. Encontrarás los detalles en “Mostrar registro”.",
+    "welcome.title": "%@ está en tu barra de menús",
+    "welcome.body": "El ícono muestra si funciona el sonido de tus pantallas. Verde: todo funciona. Naranja: una pantalla que no usas para el sonido se quedó sin sonido. Rojo: tus bocinas del monitor se quedaron sin sonido.\n\nPara arreglar tus bocinas del monitor, la app apaga y enciende su pantalla. Esa pantalla se pone negra unos 3 segundos y sus ventanas pueden moverse un momento. Nunca lo hace con tu única pantalla, y espera a que terminen las llamadas y los videos en pantalla completa.\n\nSe abre al iniciar sesión. Puedes cambiarlo en su menú.",
+    "welcome.fix_automatically": "Arreglar automáticamente",
+    "welcome.status_only": "Solo mostrar el estado",
+    "confirm.title": "¿Arreglar %@?",
+    "confirm.body": "Esto apaga y enciende %1$@, así que se pondrá negra unos 3 segundos. Arreglar una pantalla puede cortar el sonido en otra, incluidas tus bocinas del monitor.",
+    "confirm.fix": "Arreglar",
+    "confirm.cancel": "Cancelar",
+    "notify.fixed.title": "Tus bocinas del monitor ya funcionan otra vez",
+    "notify.fixed.body": "%@ se apagó y encendió durante unos segundos. Si una app sigue sin sonido, sal de ella y vuelve a abrirla.",
+    "notify.fixed.body_collateral": "%1$@ se apagó y encendió durante unos segundos. Esto cortó el sonido en %2$@. Si una app sigue sin sonido, sal de ella y vuelve a abrirla.",
+    "notify.still_silent.title": "Tus bocinas del monitor siguen sin sonido",
+    "notify.still_silent.body": "Intenta desconectar %@ y volver a conectarlo.",
+    "notify.paused.title": "Arreglo automático en pausa",
+    "notify.waiting.title": "Tus bocinas del monitor no tienen sonido",
+    "notify.waiting_call.body": "Esperando a que termine tu llamada, porque el arreglo deja %@ en negro unos 3 segundos. Usa “Arreglar ahora” en el menú para hacerlo de todos modos.",
+    "notify.waiting_full_screen.body": "Esperando a que salgas de pantalla completa, porque el arreglo deja %@ en negro unos 3 segundos. Usa “Arreglar ahora” en el menú para hacerlo de todos modos.",
+    "notify.stranded.title": "Una pantalla sigue apagada",
+    "notify.stranded.body": "%@ no pudo volver a encenderla. Desconecta su cable y vuelve a conectarlo, o cierra sesión y vuelve a iniciarla.",
+    "cli.status.working": "Funciona",
+    "cli.status.no_sound": "Sin sonido",
+    "cli.status.couldnt_check": "Sin verificar",
+    "cli.status.sound_output": "(salida de sonido)",
+    "cli.status.hint_fix": "Ejecuta `%@ fix` para arreglar la pantalla por la que se reproduce el sonido.",
+    "cli.status.hint_other": "Tu salida de sonido funciona. Para arreglar otra pantalla (esto puede cortar el sonido en las demás): %1$@ fix --uid %2$@",
+    "cli.none": "Ninguna pantalla puede reproducir sonido.",
+    "cli.nothing_to_fix": "El sonido no se reproduce a través de una pantalla, así que no hay nada que arreglar.",
+    "cli.couldnt_check": "No se pudo verificar %@, así que no se apagó nada.",
+    "cli.stranded": "No se pudo volver a encender una pantalla que apagó un arreglo anterior, así que no se apagó nada más.",
+    "cli.list.outputs": "Salidas de audio:",
+    "cli.list.displays": "Pantallas:",
+    "cli.list.default": "predeterminada",
+    "cli.list.system_sounds": "sonidos del sistema",
+    "cli.list.on_display": "en la pantalla %@",
+    "cli.app.opened": "Se abrió %@. A partir de ahora se abrirá cada vez que inicies sesión; busca su ícono en la barra de menús.",
+    "cli.app.not_found": "No se encontró %@. Se buscó en:",
+    "cli.app.open_failed": "No se pudo abrir %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Ejecuta `%@ --help` para ver cómo se usa.",
+    "cli.error.needs_value": "%@ necesita un valor.",
+    "cli.error.range": "%1$@ debe ser un número entre %2$@ y %3$@, no “%4$@”.",
+    "cli.error.root": "No ejecutes %@ como root ni con sudo. Solo necesita tu propia cuenta.",
+    "cli.error.one_command": "Solo se admite un comando a la vez: se recibieron “%1$@” y “%2$@”.",
+    "cli.error.unknown_option": "Opción desconocida: “%@”.",
+    "cli.error.unknown_command": "Comando desconocido: “%@”.",
+    "cli.error.no_output": "No hay ninguna salida de audio con el ID %1$@. Consulta `%2$@ list`.",
+    "cli.error.not_display": "%@ no es la salida de audio de una pantalla."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d pantalla más no tiene sonido",
+          "other": "%1$d pantallas más no tienen sonido"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "%1$d vez sin sonido",
+          "other": "%1$d veces sin sonido"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "%2$d arreglo",
+          "other": "%2$d arreglos"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d segundo",
+          "other": "%1$d segundos"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "%1$d arreglo, el último %2$@",
+          "other": "%1$d arreglos, el último %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Arreglo automático en pausa tras %1$d intento. Vuelve a conectar la pantalla o usa “Arreglar ahora”.",
+          "other": "Arreglo automático en pausa tras %1$d intentos. Vuelve a conectar la pantalla o usa “Arreglar ahora”."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Tus bocinas del monitor siguen sin sonido tras %1$d intento. Intenta desconectar %2$@ y volver a conectarlo.",
+          "other": "Tus bocinas del monitor siguen sin sonido tras %1$d intentos. Intenta desconectar %2$@ y volver a conectarlo."
+        }
+      }
+    }
+  }
+}

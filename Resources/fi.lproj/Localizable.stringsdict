@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d muusta näytöstä ei kuulu ääntä</string>
+			<key>other</key>
+			<string>%1$d muusta näytöstä ei kuulu ääntä</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Korjattu %1$d kerran, viimeksi %2$@</string>
+			<key>other</key>
+			<string>Korjattu %1$d kertaa, viimeksi %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d sekunti</string>
+			<key>other</key>
+			<string>%1$d sekuntia</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Automaattinen korjaus keskeytettiin %1$d yrityksen jälkeen. Kytke näyttö uudelleen tai valitse Korjaa nyt.</string>
+			<key>other</key>
+			<string>Automaattinen korjaus keskeytettiin %1$d yrityksen jälkeen. Kytke näyttö uudelleen tai valitse Korjaa nyt.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Näyttökaiuttimesi ovat yhä hiljaa %1$d yrityksen jälkeen. Kokeile irrottaa näyttö %2$@ ja kytkeä se takaisin.</string>
+			<key>other</key>
+			<string>Näyttökaiuttimesi ovat yhä hiljaa %1$d yrityksen jälkeen. Kokeile irrottaa näyttö %2$@ ja kytkeä se takaisin.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>korjattu %2$d kerran</string>
+			<key>other</key>
+			<string>korjattu %2$d kertaa</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Ei ääntä %1$d kerran</string>
+			<key>other</key>
+			<string>Ei ääntä %1$d kertaa</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

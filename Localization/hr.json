@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "language": "hr",
+    "name": "Hrvatski",
+    "reviewed": false,
+    "glossary": {
+      "display": "zaslon",
+      "your monitor speakers": "vaši zvučnici zaslona",
+      "fix": "popraviti",
+      "no sound": "nema zvuka",
+      "sound output": "izlaz zvuka",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Zvuk radi na svim zaslonima",
+    "headline.speakers_silent": "Nema zvuka iz vaših zvučnika zaslona",
+    "headline.speakers_on": "Zaslon: %@",
+    "headline.fixing": "Popravak: %@…",
+    "headline.checking": "Provjera zvuka…",
+    "headline.couldnt_check": "Nije moguće provjeriti sve zaslone",
+    "headline.none": "Nijedan zaslon ne može reproducirati zvuk",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "zaslon",
+    "display.fallback": "zaslon",
+    "row.tag.speakers": "zvučnici zaslona",
+    "row.tag.sound_output": "izlaz zvuka",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Radi",
+    "status.no_sound": "Nema zvuka",
+    "status.checking": "Provjera…",
+    "status.couldnt_check": "Nije provjereno",
+    "status.fixing": "Popravak…",
+    "submenu.speakers_here": "Koristi ovaj zaslon za zvučnike",
+    "submenu.fix_now": "Popravi sada",
+    "submenu.fix_now_confirm": "Popravi sada…",
+    "submenu.hint_blackout": "Zaslon se zatamni na oko 3 sekunde",
+    "submenu.hint_others": "Može prekinuti zvuk na drugim zaslonima",
+    "submenu.checked": "Provjereno: %@",
+    "menu.check_now": "Provjeri sada",
+    "menu.follow_sound_output": "Zvučnici zaslona prate izlaz zvuka",
+    "menu.fix_automatically": "Automatski popravljaj zvučnike zaslona",
+    "menu.check_every": "Interval provjere",
+    "menu.interval.minute": "1 minuta",
+    "menu.interval.events_only": "Samo kad se zasloni promijene ili se Mac probudi",
+    "menu.open_at_login": "Otvori pri prijavi",
+    "menu.last_checked": "Zadnja provjera: %@",
+    "menu.show_log": "Prikaži zapisnik",
+    "menu.quit": "Zatvori %@",
+    "menu.quit_after_fix": "Zatvori kad popravak završi",
+    "note.fixing": "Isključivanje i uključivanje: %@…",
+    "note.gave_up": "Automatski popravak zaslona prekinut je nakon dva pokušaja. Ponovno ga spojite ili odaberite „Popravi sada”.",
+    "note.output_switched": "Zvuk se sada reproducira putem: %@. Aplikacije koje su već reproducirale možda treba ponovno otvoriti.",
+    "note.too_soon": "Između popravaka čeka se jedna minuta.",
+    "note.waiting_call": "Čeka se kraj poziva. Za popravak odmah upotrijebite „Popravi sada”.",
+    "note.waiting_full_screen": "Čeka se izlaz iz prikaza preko cijelog zaslona. Za popravak odmah upotrijebite „Popravi sada”.",
+    "note.collateral": "%1$@ je popravljen, ali zvuk je nestao: %2$@.",
+    "note.confirming": "Vaši zvučnici zaslona nemaju zvuka. Prije popravka provjerava se ponovno…",
+    "note.stranded": "Jedan zaslon je i dalje isključen. Pokušava se ponovno; pomaže i ponovno spajanje.",
+    "note.busy": "Provjera je još u tijeku. Pokušajte „Popravi sada” ponovno za nekoliko sekundi.",
+    "note.cant_autofix": "Ovaj zaslon ovdje se ne može automatski popraviti. Ponovno spojite njegov kabel.",
+    "note.speakers_missing": "Zaslon s vašim zvučnicima nije spojen.",
+    "note.quitting": "Zatvaranje kad popravak završi…",
+    "outcome.fixed": "%@ ponovno radi. Pauzirajte i ponovno pokrenite reprodukciju ili ponovno otvorite aplikaciju koja je zapela.",
+    "outcome.still_silent": "%@ i dalje nema zvuka. Pokušajte iskopčati kabel i ponovno ga ukopčati.",
+    "outcome.unverified": "%@ je isključen i uključen, ali poslije ga nije bilo moguće provjeriti.",
+    "outcome.unknown_display": "Nije moguće utvrditi koji je zaslon %@, pa ništa nije isključeno.",
+    "outcome.cycle_failed": "%@: isključivanje i uključivanje nije dovršeno. Pojedinosti su u „Prikaži zapisnik”.",
+    "welcome.title": "%@ je u traci izbornika",
+    "welcome.body": "Ikona pokazuje radi li zvuk vaših zaslona. Zelena: sve radi. Narančasta: utihnuo je zaslon koji ne koristite za zvuk. Crvena: utihnuli su vaši zvučnici zaslona.\n\nKad zvučnici zaslona utihnu, aplikacija isključi i uključi njihov zaslon. Taj se zaslon zatamni na oko 3 sekunde, a njegovi se prozori mogu nakratko pomaknuti. To nikad ne radi vašem jedinom zaslonu i čeka da završe pozivi i videozapisi preko cijelog zaslona.\n\nOtvara se pri prijavi. To možete promijeniti u njezinu izborniku.",
+    "welcome.fix_automatically": "Popravljaj automatski",
+    "welcome.status_only": "Samo prikazuj stanje",
+    "confirm.title": "Popraviti %@?",
+    "confirm.body": "Ovime se %1$@ isključuje i uključuje, pa se zatamni na oko 3 sekunde. Popravak jednog zaslona može prekinuti zvuk na drugom, uključujući vaše zvučnike zaslona.",
+    "confirm.fix": "Popravi",
+    "confirm.cancel": "Odustani",
+    "notify.fixed.title": "Vaši zvučnici zaslona ponovno rade",
+    "notify.fixed.body": "%@ je na nekoliko sekundi isključen i ponovno uključen. Ako je neka aplikacija i dalje bez zvuka, zatvorite je i ponovno otvorite.",
+    "notify.fixed.body_collateral": "%1$@ je na nekoliko sekundi isključen i ponovno uključen. Zbog toga je nestao zvuk: %2$@. Ako je neka aplikacija i dalje bez zvuka, zatvorite je i ponovno otvorite.",
+    "notify.still_silent.title": "Vaši zvučnici zaslona i dalje šute",
+    "notify.still_silent.body": "Pokušajte iskopčati %@ i ponovno ga ukopčati.",
+    "notify.paused.title": "Automatski popravak je pauziran",
+    "notify.waiting.title": "Vaši zvučnici zaslona šute",
+    "notify.waiting_call.body": "Čeka se kraj poziva jer popravak zatamni %@ na oko 3 sekunde. Za popravak odmah upotrijebite „Popravi sada” u izborniku.",
+    "notify.waiting_full_screen.body": "Čeka se izlaz iz prikaza preko cijelog zaslona jer popravak zatamni %@ na oko 3 sekunde. Za popravak odmah upotrijebite „Popravi sada” u izborniku.",
+    "notify.stranded.title": "Jedan zaslon je i dalje isključen",
+    "notify.stranded.body": "Aplikacija %@ nije ga uspjela ponovno uključiti. Iskopčajte i ponovno ukopčajte kabel ili se odjavite i ponovno prijavite.",
+    "cli.status.working": "Radi",
+    "cli.status.no_sound": "Nema zvuka",
+    "cli.status.couldnt_check": "Nije provjereno",
+    "cli.status.sound_output": "(izlaz zvuka)",
+    "cli.status.hint_fix": "Pokrenite `%@ fix` za popravak zaslona preko kojeg se reproducira zvuk.",
+    "cli.status.hint_other": "Vaš izlaz zvuka radi. Za popravak drugog zaslona (to može prekinuti zvuk na ostalima): %1$@ fix --uid %2$@",
+    "cli.none": "Nijedan zaslon ne može reproducirati zvuk.",
+    "cli.nothing_to_fix": "Zvuk se ne reproducira preko zaslona, pa nema što popraviti.",
+    "cli.couldnt_check": "Nije moguće provjeriti %@, pa ništa nije isključeno.",
+    "cli.stranded": "Zaslon koji je isključio prethodni popravak nije bilo moguće ponovno uključiti, pa ništa drugo nije isključeno.",
+    "cli.list.outputs": "Audioizlazi:",
+    "cli.list.displays": "Zasloni:",
+    "cli.list.default": "zadano",
+    "cli.list.system_sounds": "zvukovi sustava",
+    "cli.list.on_display": "na zaslonu %@",
+    "cli.app.opened": "Aplikacija %@ je otvorena. Od sada se otvara pri svakoj prijavi; potražite njezinu ikonu u traci izbornika.",
+    "cli.app.not_found": "Nije pronađeno: %@. Pretražene mape:",
+    "cli.app.open_failed": "Nije moguće otvoriti %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Upute: `%@ --help`.",
+    "cli.error.needs_value": "Opcija %@ treba vrijednost.",
+    "cli.error.range": "Vrijednost %1$@ mora biti broj od %2$@ do %3$@, a ne „%4$@”.",
+    "cli.error.root": "Ne pokrećite %@ kao root ni putem sudo. Treba mu samo vaš vlastiti račun.",
+    "cli.error.one_command": "Samo jedna naredba odjednom: zadano je „%1$@” i „%2$@”.",
+    "cli.error.unknown_option": "Nepoznata opcija „%@”.",
+    "cli.error.unknown_command": "Nepoznata naredba „%@”.",
+    "cli.error.no_output": "Nema audioizlaza s ID-om %1$@. Pogledajte `%2$@ list`.",
+    "cli.error.not_display": "%@ nije audioizlaz zaslona."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "Još %1$d zaslon nema zvuka",
+          "few": "Još %1$d zaslona nemaju zvuka",
+          "other": "Još %1$d zaslona nema zvuka"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Bez zvuka %1$d put",
+          "few": "Bez zvuka %1$d puta",
+          "other": "Bez zvuka %1$d puta"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "popravljeno %2$d put",
+          "few": "popravljeno %2$d puta",
+          "other": "popravljeno %2$d puta"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d sekunda",
+          "few": "%1$d sekunde",
+          "other": "%1$d sekundi"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Popravljeno %1$d put, zadnji put %2$@",
+          "few": "Popravljeno %1$d puta, zadnji put %2$@",
+          "other": "Popravljeno %1$d puta, zadnji put %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”.",
+          "few": "Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”.",
+          "other": "Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati.",
+          "few": "Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati.",
+          "other": "Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati."
+        }
+      }
+    }
+  }
+}

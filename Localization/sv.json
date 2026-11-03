@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "sv",
+    "name": "Svenska",
+    "reviewed": false,
+    "glossary": {
+      "display": "skärm",
+      "your monitor speakers": "dina skärmhögtalare",
+      "fix": "åtgärda",
+      "no sound": "inget ljud",
+      "sound output": "ljudutgång",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Ljudet fungerar på alla skärmar",
+    "headline.speakers_silent": "Inget ljud från dina skärmhögtalare",
+    "headline.speakers_on": "På %@",
+    "headline.fixing": "Åtgärdar %@…",
+    "headline.checking": "Kontrollerar ljudet…",
+    "headline.couldnt_check": "Kunde inte kontrollera alla skärmar",
+    "headline.none": "Ingen skärm kan spela upp ljud",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "skärm",
+    "display.fallback": "skärmen",
+    "row.tag.speakers": "skärmhögtalare",
+    "row.tag.sound_output": "ljudutgång",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Fungerar",
+    "status.no_sound": "Inget ljud",
+    "status.checking": "Kontrollerar…",
+    "status.couldnt_check": "Ej kontrollerad",
+    "status.fixing": "Åtgärdar…",
+    "submenu.speakers_here": "Använd den här skärmen för högtalarna",
+    "submenu.fix_now": "Åtgärda nu",
+    "submenu.fix_now_confirm": "Åtgärda nu…",
+    "submenu.hint_blackout": "Skärmen blir svart i cirka 3 sekunder",
+    "submenu.hint_others": "Kan stoppa ljudet på andra skärmar",
+    "submenu.checked": "Kontrollerades %@",
+    "menu.check_now": "Kontrollera nu",
+    "menu.follow_sound_output": "Skärmhögtalarna följer ljudutgången",
+    "menu.fix_automatically": "Åtgärda skärmhögtalarna automatiskt",
+    "menu.check_every": "Kontrollintervall",
+    "menu.interval.minute": "1 minut",
+    "menu.interval.events_only": "Bara när skärmar ändras eller datorn vaknar",
+    "menu.open_at_login": "Öppna vid inloggning",
+    "menu.last_checked": "Senast kontrollerad %@",
+    "menu.show_log": "Visa logg",
+    "menu.quit": "Avsluta %@",
+    "menu.quit_after_fix": "Avsluta när åtgärden är klar",
+    "note.fixing": "Stänger av och slår på %@…",
+    "note.gave_up": "Automatisk åtgärd har stoppats för skärmen efter två försök. Anslut den på nytt eller använd ”Åtgärda nu”.",
+    "note.output_switched": "Ljudet spelas nu upp via %@. Appar som redan spelade kan behöva öppnas igen.",
+    "note.too_soon": "Väntar en minut mellan åtgärderna.",
+    "note.waiting_call": "Väntar tills samtalet är slut. Välj Åtgärda nu för att åtgärda ändå.",
+    "note.waiting_full_screen": "Väntar tills du lämnar helskärmsläget. Välj Åtgärda nu för att åtgärda ändå.",
+    "note.collateral": "När %1$@ åtgärdades slutade ljudet på %2$@.",
+    "note.confirming": "Dina skärmhögtalare har inget ljud. Kontrollerar igen före åtgärd…",
+    "note.stranded": "En skärm är fortfarande avstängd. Försöker igen. Det hjälper också att ansluta den på nytt.",
+    "note.busy": "Kontrollerar fortfarande. Prova Åtgärda nu igen om några sekunder.",
+    "note.cant_autofix": "Den här skärmen kan inte åtgärdas automatiskt här. Anslut kabeln på nytt för att åtgärda den.",
+    "note.speakers_missing": "Skärmen med dina skärmhögtalare är inte ansluten.",
+    "note.quitting": "Avslutar när åtgärden är klar…",
+    "outcome.fixed": "%@ fungerar igen. Pausa och spela upp igen, eller öppna om appar som har fastnat.",
+    "outcome.still_silent": "%@ har fortfarande inget ljud. Prova att dra ut kabeln och sätta i den igen.",
+    "outcome.unverified": "%@ stängdes av och slogs på, men kunde inte kontrolleras efteråt.",
+    "outcome.unknown_display": "Kunde inte avgöra vilken skärm %@ är, så inget stängdes av.",
+    "outcome.cycle_failed": "Det gick inte att stänga av och slå på %@ helt. Mer information finns under Visa logg.",
+    "welcome.title": "%@ finns i menyraden",
+    "welcome.body": "Symbolen visar om ljudet fungerar på dina skärmar. Grön: allt fungerar. Orange: en skärm som du inte använder för ljud har tystnat. Röd: dina skärmhögtalare har tystnat.\n\nFör att åtgärda tysta skärmhögtalare stänger appen av och slår på deras skärm. Den skärmen blir svart i cirka 3 sekunder och dess fönster kan flytta sig en kort stund. Appen gör aldrig detta med din enda skärm, och den väntar tills samtal och video i helskärm är slut.\n\nAppen öppnas vid inloggning. Det kan du ändra i dess meny.",
+    "welcome.fix_automatically": "Åtgärda automatiskt",
+    "welcome.status_only": "Visa bara status",
+    "confirm.title": "Åtgärda %@?",
+    "confirm.body": "%1$@ stängs av och slås på, så den blir svart i cirka 3 sekunder. Att åtgärda en skärm kan stoppa ljudet på en annan, även dina skärmhögtalare.",
+    "confirm.fix": "Åtgärda",
+    "confirm.cancel": "Avbryt",
+    "notify.fixed.title": "Dina skärmhögtalare fungerar igen",
+    "notify.fixed.body": "%@ stängdes av och slogs på i några sekunder. Om en app fortfarande är tyst avslutar du den och öppnar den igen.",
+    "notify.fixed.body_collateral": "%1$@ stängdes av och slogs på i några sekunder. Det stoppade ljudet på %2$@. Om en app fortfarande är tyst avslutar du den och öppnar den igen.",
+    "notify.still_silent.title": "Dina skärmhögtalare är fortfarande tysta",
+    "notify.still_silent.body": "Prova att koppla från %@ och ansluta den igen.",
+    "notify.paused.title": "Automatisk åtgärd pausad",
+    "notify.waiting.title": "Dina skärmhögtalare är tysta",
+    "notify.waiting_call.body": "Väntar tills samtalet är slut, eftersom åtgärden gör %@ svart i cirka 3 sekunder. Välj Åtgärda nu i menyn för att åtgärda ändå.",
+    "notify.waiting_full_screen.body": "Väntar tills du lämnar helskärmsläget, eftersom åtgärden gör %@ svart i cirka 3 sekunder. Välj Åtgärda nu i menyn för att åtgärda ändå.",
+    "notify.stranded.title": "En skärm är fortfarande avstängd",
+    "notify.stranded.body": "%@ kunde inte slå på den igen. Dra ut kabeln och sätt i den igen, eller logga ut och in igen.",
+    "cli.status.working": "Fungerar",
+    "cli.status.no_sound": "Inget ljud",
+    "cli.status.couldnt_check": "Ej kontrollerad",
+    "cli.status.sound_output": "(ljudutgång)",
+    "cli.status.hint_fix": "Kör `%@ fix` för att åtgärda skärmen som ljudet spelas upp genom.",
+    "cli.status.hint_other": "Din ljudutgång fungerar. Så här åtgärdar du en annan skärm (det kan stoppa ljudet på de andra): %1$@ fix --uid %2$@",
+    "cli.none": "Ingen skärm kan spela upp ljud.",
+    "cli.nothing_to_fix": "Ljudet spelas inte upp genom en skärm, så det finns inget att åtgärda.",
+    "cli.couldnt_check": "Kunde inte kontrollera %@, så inget stängdes av.",
+    "cli.stranded": "En skärm som stängdes av vid en tidigare åtgärd kunde inte slås på igen, så inget annat stängdes av.",
+    "cli.list.outputs": "Ljudutgångar:",
+    "cli.list.displays": "Skärmar:",
+    "cli.list.default": "standard",
+    "cli.list.system_sounds": "systemljud",
+    "cli.list.on_display": "på skärm %@",
+    "cli.app.opened": "%@ har öppnats. Från och med nu öppnas den vid varje inloggning. Leta efter symbolen i menyraden.",
+    "cli.app.not_found": "Hittade inte %@. Letade i:",
+    "cli.app.open_failed": "Kunde inte öppna %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Kör `%@ --help` för att se hur kommandot används.",
+    "cli.error.needs_value": "%@ behöver ett värde.",
+    "cli.error.range": "%1$@ måste vara ett tal från %2$@ till %3$@, inte ”%4$@”.",
+    "cli.error.root": "Kör inte %@ som root eller med sudo. Det behövs bara ditt eget konto.",
+    "cli.error.one_command": "Bara ett kommando åt gången: fick ”%1$@” och ”%2$@”.",
+    "cli.error.unknown_option": "Okänt alternativ ”%@”.",
+    "cli.error.unknown_command": "Okänt kommando ”%@”.",
+    "cli.error.no_output": "Det finns ingen ljudutgång med ID %1$@. Se `%2$@ list`.",
+    "cli.error.not_display": "%@ är inte en skärms ljudutgång."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d annan skärm har inget ljud",
+          "other": "%1$d andra skärmar har inget ljud"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Inget ljud %1$d gång",
+          "other": "Inget ljud %1$d gånger"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "åtgärdad %2$d gång",
+          "other": "åtgärdad %2$d gånger"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d sekund",
+          "other": "%1$d sekunder"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Åtgärdad %1$d gång, senast %2$@",
+          "other": "Åtgärdad %1$d gånger, senast %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatisk åtgärd pausad efter %1$d försök. Anslut skärmen igen eller välj Åtgärda nu.",
+          "other": "Automatisk åtgärd pausad efter %1$d försök. Anslut skärmen igen eller välj Åtgärda nu."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Dina skärmhögtalare är fortfarande tysta efter %1$d försök. Prova att koppla från %2$@ och ansluta den igen.",
+          "other": "Dina skärmhögtalare är fortfarande tysta efter %1$d försök. Prova att koppla från %2$@ och ansluta den igen."
+        }
+      }
+    }
+  }
+}

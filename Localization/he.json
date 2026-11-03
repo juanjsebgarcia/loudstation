@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "language": "he",
+    "name": "עברית",
+    "reviewed": false,
+    "glossary": {
+      "display": "מסך",
+      "your monitor speakers": "רמקולי המסך",
+      "fix": "תיקון / תקן",
+      "no sound": "ללא צליל",
+      "sound output": "פלט הצליל",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "הצליל פועל בכל המסכים",
+    "headline.speakers_silent": "אין צליל מרמקולי המסך",
+    "headline.speakers_on": "ב-%@",
+    "headline.fixing": "מתקן את %@…",
+    "headline.checking": "בודק את הצליל…",
+    "headline.couldnt_check": "לא ניתן היה לבדוק את כל המסכים",
+    "headline.none": "אף מסך לא יכול להשמיע צליל",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "מסך",
+    "display.fallback": "המסך",
+    "row.tag.speakers": "רמקולי המסך",
+    "row.tag.sound_output": "פלט הצליל",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "פועל",
+    "status.no_sound": "ללא צליל",
+    "status.checking": "בודק…",
+    "status.couldnt_check": "לא ניתן לבדוק",
+    "status.fixing": "מתקן…",
+    "submenu.speakers_here": "השתמש במסך זה לרמקולים",
+    "submenu.fix_now": "תקן עכשיו",
+    "submenu.fix_now_confirm": "תקן עכשיו…",
+    "submenu.hint_blackout": "המסך יחשיך לכ-3 שניות",
+    "submenu.hint_others": "עלול להפסיק את הצליל במסכים אחרים",
+    "submenu.checked": "נבדק %@",
+    "menu.check_now": "בדוק עכשיו",
+    "menu.follow_sound_output": "רמקולי המסך עוקבים אחר פלט הצליל",
+    "menu.fix_automatically": "תקן את רמקולי המסך באופן אוטומטי",
+    "menu.check_every": "בדוק כל",
+    "menu.interval.minute": "דקה אחת",
+    "menu.interval.events_only": "רק כשהמסכים משתנים או כשה-Mac מתעורר",
+    "menu.open_at_login": "פתח בעת ההתחברות",
+    "menu.last_checked": "נבדק לאחרונה %@",
+    "menu.show_log": "הצג יומן",
+    "menu.quit": "צא מ-%@",
+    "menu.quit_after_fix": "צא בסיום התיקון",
+    "note.fixing": "מכבה ומדליק את %@…",
+    "note.gave_up": "התיקון האוטומטי של המסך הזה הופסק אחרי שני ניסיונות. חבר אותו מחדש או השתמש ב\"תקן עכשיו\".",
+    "note.output_switched": "הצליל מושמע עכשיו דרך %@. ייתכן שיהיה צורך לפתוח מחדש אפליקציות שכבר השמיעו.",
+    "note.too_soon": "ממתין דקה בין תיקון לתיקון.",
+    "note.waiting_call": "ממתין לסיום השיחה. ניתן להשתמש ב\"תקן עכשיו\" כדי לתקן בכל זאת.",
+    "note.waiting_full_screen": "ממתין ליציאה ממסך מלא. ניתן להשתמש ב\"תקן עכשיו\" כדי לתקן בכל זאת.",
+    "note.collateral": "התיקון של %1$@ הפסיק את הצליל ב-%2$@.",
+    "note.confirming": "אין צליל ברמקולי המסך. בודק שוב לפני התיקון…",
+    "note.stranded": "מסך אחד עדיין כבוי. מנסה שוב; גם חיבור מחדש שלו יעזור.",
+    "note.busy": "הבדיקה עדיין מתבצעת. נסה שוב \"תקן עכשיו\" בעוד כמה שניות.",
+    "note.cant_autofix": "לא ניתן לתקן את המסך הזה באופן אוטומטי כאן. חבר מחדש את הכבל שלו כדי לתקן.",
+    "note.speakers_missing": "המסך שאליו מחוברים רמקולי המסך אינו מחובר.",
+    "note.quitting": "ייסגר בסיום התיקון…",
+    "outcome.fixed": "%@ פועל שוב. השהה והפעל שוב, או פתח מחדש כל אפליקציה שנתקעה.",
+    "outcome.still_silent": "עדיין אין צליל ב-%@. נסה לנתק את הכבל שלו ולחבר אותו שוב.",
+    "outcome.unverified": "%@ כובה והודלק, אך לא ניתן היה לבדוק אותו לאחר מכן.",
+    "outcome.unknown_display": "לא ניתן היה לזהות איזה מסך הוא %@, ולכן דבר לא כובה.",
+    "outcome.cycle_failed": "הכיבוי וההדלקה של %@ לא הסתיימו. הפרטים מופיעים ב\"הצג יומן\".",
+    "welcome.title": "%@ נמצא בשורת התפריטים",
+    "welcome.body": "הצלמית מראה אם הצליל של המסכים שלך פועל. ירוק: הכול פועל. כתום: מסך שאינך משתמש בו לצליל השתתק. אדום: רמקולי המסך השתתקו.\n\nכדי לתקן את רמקולי המסך כשהם שותקים, האפליקציה מכבה ומדליקה את המסך שלהם. המסך הזה יחשיך לכ-3 שניות, והחלונות שבו עשויים לזוז לרגע. היא לעולם לא עושה זאת למסך היחיד שלך, וממתינה עד שהשיחות והווידאו במסך מלא יסתיימו.\n\nהיא נפתחת בעת ההתחברות. ניתן לשנות זאת בתפריט שלה.",
+    "welcome.fix_automatically": "תקן אוטומטית",
+    "welcome.status_only": "הצג מצב בלבד",
+    "confirm.title": "לתקן את %@?",
+    "confirm.body": "פעולה זו מכבה ומדליקה את %1$@, ולכן הוא יחשיך לכ-3 שניות. תיקון של מסך אחד עלול להפסיק את הצליל במסך אחר, כולל ברמקולי המסך.",
+    "confirm.fix": "תקן",
+    "confirm.cancel": "ביטול",
+    "notify.fixed.title": "רמקולי המסך פועלים שוב",
+    "notify.fixed.body": "%@ כובה והודלק לכמה שניות. אם אפליקציה עדיין שותקת, צא ממנה ופתח אותה מחדש.",
+    "notify.fixed.body_collateral": "%1$@ כובה והודלק לכמה שניות. הדבר הפסיק את הצליל ב-%2$@. אם אפליקציה עדיין שותקת, צא ממנה ופתח אותה מחדש.",
+    "notify.still_silent.title": "רמקולי המסך עדיין שותקים",
+    "notify.still_silent.body": "נסה לנתק את %@ ולחבר אותו שוב.",
+    "notify.paused.title": "התיקון האוטומטי הושהה",
+    "notify.waiting.title": "רמקולי המסך שותקים",
+    "notify.waiting_call.body": "ממתין לסיום השיחה, כי התיקון מחשיך את %@ לכ-3 שניות. ניתן להשתמש ב\"תקן עכשיו\" בתפריט כדי לתקן בכל זאת.",
+    "notify.waiting_full_screen.body": "ממתין ליציאה ממסך מלא, כי התיקון מחשיך את %@ לכ-3 שניות. ניתן להשתמש ב\"תקן עכשיו\" בתפריט כדי לתקן בכל זאת.",
+    "notify.stranded.title": "מסך אחד עדיין כבוי",
+    "notify.stranded.body": "%@ לא הצליח להדליק אותו שוב. נתק את הכבל שלו וחבר אותו שוב, או התנתק והתחבר מחדש.",
+    "cli.status.working": "פועל",
+    "cli.status.no_sound": "ללא צליל",
+    "cli.status.couldnt_check": "לא ניתן לבדוק",
+    "cli.status.sound_output": "(פלט הצליל)",
+    "cli.status.hint_fix": "הרץ `%@ fix` כדי לתקן את המסך שדרכו מושמע הצליל.",
+    "cli.status.hint_other": "פלט הצליל שלך פועל. כדי לתקן מסך אחר (הדבר עלול להפסיק את הצליל באחרים): %1$@ fix --uid %2$@",
+    "cli.none": "אף מסך לא יכול להשמיע צליל.",
+    "cli.nothing_to_fix": "הצליל אינו מושמע דרך מסך, ולכן אין מה לתקן.",
+    "cli.couldnt_check": "לא ניתן היה לבדוק את %@, ולכן דבר לא כובה.",
+    "cli.stranded": "מסך שתיקון קודם כיבה לא הודלק שוב, ולכן דבר נוסף לא כובה.",
+    "cli.list.outputs": "פלטי צליל:",
+    "cli.list.displays": "מסכים:",
+    "cli.list.default": "ברירת מחדל",
+    "cli.list.system_sounds": "צלילי מערכת",
+    "cli.list.on_display": "במסך %@",
+    "cli.app.opened": "%@ נפתח. מעכשיו הוא ייפתח בכל התחברות; חפש את הצלמית שלו בשורת התפריטים.",
+    "cli.app.not_found": "לא ניתן היה למצוא את %@. נבדקו התיקיות:",
+    "cli.app.open_failed": "לא ניתן היה לפתוח את %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "הרץ `%@ --help` לקבלת הוראות שימוש.",
+    "cli.error.needs_value": "%@ דורש ערך.",
+    "cli.error.range": "%1$@ חייב להיות מספר בין %2$@ ל-%3$@, ולא \"%4$@\".",
+    "cli.error.root": "אין להריץ את %@ כ-root או עם sudo. הוא צריך רק את החשבון שלך.",
+    "cli.error.one_command": "רק פקודה אחת בכל פעם: התקבלו \"%1$@\" ו-\"%2$@\".",
+    "cli.error.unknown_option": "אפשרות לא מוכרת \"%@\".",
+    "cli.error.unknown_command": "פקודה לא מוכרת \"%@\".",
+    "cli.error.no_output": "אין פלט צליל עם המזהה %1$@. ראה `%2$@ list`.",
+    "cli.error.not_display": "%@ אינו פלט צליל של מסך."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "מסך אחד נוסף ללא צליל",
+          "two": "שני מסכים נוספים ללא צליל",
+          "other": "%1$d מסכים נוספים ללא צליל"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "ללא צליל פעם אחת",
+          "two": "ללא צליל פעמיים",
+          "other": "ללא צליל %1$d פעמים"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "תוקן פעם אחת",
+          "two": "תוקן פעמיים",
+          "other": "תוקן %2$d פעמים"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "שנייה אחת",
+          "two": "%1$d שניות",
+          "other": "%1$d שניות"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "תוקן פעם אחת, לאחרונה %2$@",
+          "two": "תוקן פעמיים, לאחרונה %2$@",
+          "other": "תוקן %1$d פעמים, לאחרונה %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "התיקון האוטומטי הושהה אחרי ניסיון אחד. חבר מחדש את המסך או השתמש ב\"תקן עכשיו\".",
+          "two": "התיקון האוטומטי הושהה אחרי שני ניסיונות. חבר מחדש את המסך או השתמש ב\"תקן עכשיו\".",
+          "other": "התיקון האוטומטי הושהה אחרי %1$d ניסיונות. חבר מחדש את המסך או השתמש ב\"תקן עכשיו\"."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "רמקולי המסך עדיין שותקים אחרי ניסיון אחד. נסה לנתק את %2$@ ולחבר אותו שוב.",
+          "two": "רמקולי המסך עדיין שותקים אחרי שני ניסיונות. נסה לנתק את %2$@ ולחבר אותו שוב.",
+          "other": "רמקולי המסך עדיין שותקים אחרי %1$d ניסיונות. נסה לנתק את %2$@ ולחבר אותו שוב."
+        }
+      }
+    }
+  }
+}

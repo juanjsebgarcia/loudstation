@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "pt-PT",
+    "name": "Português (Portugal)",
+    "reviewed": false,
+    "glossary": {
+      "display": "ecrã",
+      "your monitor speakers": "as suas colunas do monitor",
+      "fix": "corrigir",
+      "no sound": "sem som",
+      "sound output": "saída de som",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "O som está a funcionar em todos os ecrãs",
+    "headline.speakers_silent": "As suas colunas do monitor estão sem som",
+    "headline.speakers_on": "Em %@",
+    "headline.fixing": "A corrigir %@…",
+    "headline.checking": "A verificar o som…",
+    "headline.couldnt_check": "Não foi possível verificar todos os ecrãs",
+    "headline.none": "Nenhum ecrã consegue reproduzir som",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "ecrã",
+    "display.fallback": "o ecrã",
+    "row.tag.speakers": "colunas do monitor",
+    "row.tag.sound_output": "saída de som",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "A funcionar",
+    "status.no_sound": "Sem som",
+    "status.checking": "A verificar…",
+    "status.couldnt_check": "Não verificado",
+    "status.fixing": "A corrigir…",
+    "submenu.speakers_here": "Usar este ecrã para as colunas",
+    "submenu.fix_now": "Corrigir agora",
+    "submenu.fix_now_confirm": "Corrigir agora…",
+    "submenu.hint_blackout": "O ecrã fica preto durante cerca de 3 segundos",
+    "submenu.hint_others": "Pode cortar o som noutros ecrãs",
+    "submenu.checked": "Verificado %@",
+    "menu.check_now": "Verificar agora",
+    "menu.follow_sound_output": "Colunas do monitor seguem a saída de som",
+    "menu.fix_automatically": "Corrigir colunas do monitor automaticamente",
+    "menu.check_every": "Verificar a cada",
+    "menu.interval.minute": "1 minuto",
+    "menu.interval.events_only": "Só quando os ecrãs mudam ou o Mac sai do repouso",
+    "menu.open_at_login": "Abrir ao iniciar sessão",
+    "menu.last_checked": "Última verificação: %@",
+    "menu.show_log": "Mostrar registo",
+    "menu.quit": "Sair de %@",
+    "menu.quit_after_fix": "Sair quando a correção terminar",
+    "note.fixing": "A desligar e voltar a ligar %@…",
+    "note.gave_up": "A correção automática parou para este ecrã após duas tentativas. Volte a ligá-lo ou use «Corrigir agora».",
+    "note.output_switched": "Agora o som sai por %@. Poderá ser preciso voltar a abrir as apps que já estavam a reproduzir.",
+    "note.too_soon": "A aguardar um minuto entre correções.",
+    "note.waiting_call": "A aguardar que a chamada termine. Use «Corrigir agora» para corrigir na mesma.",
+    "note.waiting_full_screen": "A aguardar que saia do ecrã completo. Use «Corrigir agora» para corrigir na mesma.",
+    "note.collateral": "Corrigir %1$@ cortou o som em %2$@.",
+    "note.confirming": "As suas colunas do monitor estão sem som. A verificar novamente antes de corrigir…",
+    "note.stranded": "Um ecrã continua desligado. A tentar novamente; também pode voltar a ligá-lo.",
+    "note.busy": "Ainda a verificar. Tente «Corrigir agora» de novo dentro de alguns segundos.",
+    "note.cant_autofix": "Este ecrã não pode ser corrigido automaticamente aqui. Volte a ligar o cabo para o corrigir.",
+    "note.speakers_missing": "O ecrã com as suas colunas do monitor não está ligado.",
+    "note.quitting": "Vai sair quando a correção terminar…",
+    "outcome.fixed": "%@ voltou a funcionar. Pause e volte a reproduzir, ou reabra qualquer app que tenha ficado bloqueada.",
+    "outcome.still_silent": "%@ continua sem som. Experimente desligar o cabo e voltar a ligá-lo.",
+    "outcome.unverified": "%@ foi desligado e voltou a ser ligado, mas não foi possível verificá-lo depois.",
+    "outcome.unknown_display": "Não foi possível saber qual é o ecrã %@, por isso nada foi desligado.",
+    "outcome.cycle_failed": "Não foi possível concluir o desligar e voltar a ligar de %@. Encontra os detalhes em «Mostrar registo».",
+    "welcome.title": "%@ está na barra de menus",
+    "welcome.body": "O ícone mostra se o som dos seus ecrãs está a funcionar. Verde: está tudo a funcionar. Laranja: um ecrã que não usa para o som ficou sem som. Vermelho: as suas colunas do monitor ficaram sem som.\n\nPara corrigir as suas colunas do monitor, a app desliga e volta a ligar o respetivo ecrã. Esse ecrã fica preto durante cerca de 3 segundos e as janelas podem mudar de sítio por um momento. Nunca o faz no seu único ecrã e aguarda que terminem as chamadas e os vídeos em ecrã completo.\n\nAbre ao iniciar sessão. Pode alterar isso no respetivo menu.",
+    "welcome.fix_automatically": "Corrigir automaticamente",
+    "welcome.status_only": "Só mostrar o estado",
+    "confirm.title": "Corrigir %@?",
+    "confirm.body": "Isto desliga e volta a ligar %1$@, que fica preto durante cerca de 3 segundos. Corrigir um ecrã pode cortar o som noutro, incluindo nas suas colunas do monitor.",
+    "confirm.fix": "Corrigir",
+    "confirm.cancel": "Cancelar",
+    "notify.fixed.title": "As suas colunas do monitor voltaram a funcionar",
+    "notify.fixed.body": "%@ foi desligado e voltou a ser ligado durante alguns segundos. Se uma app continuar sem som, saia dela e volte a abri-la.",
+    "notify.fixed.body_collateral": "%1$@ foi desligado e voltou a ser ligado durante alguns segundos. Isto cortou o som em %2$@. Se uma app continuar sem som, saia dela e volte a abri-la.",
+    "notify.still_silent.title": "As suas colunas do monitor continuam sem som",
+    "notify.still_silent.body": "Experimente desligar %@ e voltar a ligá-lo.",
+    "notify.paused.title": "Correção automática em pausa",
+    "notify.waiting.title": "As suas colunas do monitor estão sem som",
+    "notify.waiting_call.body": "A aguardar que a chamada termine, porque a correção deixa %@ preto durante cerca de 3 segundos. Use «Corrigir agora» no menu para corrigir na mesma.",
+    "notify.waiting_full_screen.body": "A aguardar que saia do ecrã completo, porque a correção deixa %@ preto durante cerca de 3 segundos. Use «Corrigir agora» no menu para corrigir na mesma.",
+    "notify.stranded.title": "Um ecrã continua desligado",
+    "notify.stranded.body": "%@ não conseguiu voltar a ligá-lo. Desligue o cabo e volte a ligá-lo, ou termine a sessão e volte a iniciá-la.",
+    "cli.status.working": "A funcionar",
+    "cli.status.no_sound": "Sem som",
+    "cli.status.couldnt_check": "Não verificado",
+    "cli.status.sound_output": "(saída de som)",
+    "cli.status.hint_fix": "Execute `%@ fix` para corrigir o ecrã por onde o som está a sair.",
+    "cli.status.hint_other": "A sua saída de som está a funcionar. Para corrigir outro ecrã (pode cortar o som nos restantes): %1$@ fix --uid %2$@",
+    "cli.none": "Nenhum ecrã consegue reproduzir som.",
+    "cli.nothing_to_fix": "O som não está a sair por um ecrã, por isso não há nada para corrigir.",
+    "cli.couldnt_check": "Não foi possível verificar %@, por isso nada foi desligado.",
+    "cli.stranded": "Não foi possível voltar a ligar um ecrã desligado por uma correção anterior, por isso mais nada foi desligado.",
+    "cli.list.outputs": "Saídas de áudio:",
+    "cli.list.displays": "Ecrãs:",
+    "cli.list.default": "predefinida",
+    "cli.list.system_sounds": "sons do sistema",
+    "cli.list.on_display": "no ecrã %@",
+    "cli.app.opened": "%@ foi aberto. A partir de agora abre sempre que iniciar sessão; procure o ícone na barra de menus.",
+    "cli.app.not_found": "Não foi possível encontrar %@. Locais procurados:",
+    "cli.app.open_failed": "Não foi possível abrir %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Execute `%@ --help` para ver como se utiliza.",
+    "cli.error.needs_value": "%@ precisa de um valor.",
+    "cli.error.range": "%1$@ tem de ser um número entre %2$@ e %3$@, não «%4$@».",
+    "cli.error.root": "Não execute %@ como root nem com sudo. Basta a sua própria conta.",
+    "cli.error.one_command": "Só um comando de cada vez: foram recebidos «%1$@» e «%2$@».",
+    "cli.error.unknown_option": "Opção desconhecida: «%@».",
+    "cli.error.unknown_command": "Comando desconhecido: «%@».",
+    "cli.error.no_output": "Não existe nenhuma saída de áudio com o ID %1$@. Consulte `%2$@ list`.",
+    "cli.error.not_display": "%@ não é a saída de áudio de um ecrã."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d outro ecrã está sem som",
+          "other": "%1$d outros ecrãs estão sem som"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Sem som %1$d vez",
+          "other": "Sem som %1$d vezes"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "corrigido %2$d vez",
+          "other": "corrigido %2$d vezes"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d segundo",
+          "other": "%1$d segundos"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Corrigido %1$d vez, a última %2$@",
+          "other": "Corrigido %1$d vezes, a última %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Correção automática em pausa após %1$d tentativa. Volte a ligar o ecrã ou use «Corrigir agora».",
+          "other": "Correção automática em pausa após %1$d tentativas. Volte a ligar o ecrã ou use «Corrigir agora»."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "As suas colunas do monitor continuam sem som após %1$d tentativa. Experimente desligar %2$@ e voltar a ligá-lo.",
+          "other": "As suas colunas do monitor continuam sem som após %1$d tentativas. Experimente desligar %2$@ e voltar a ligá-lo."
+        }
+      }
+    }
+  }
+}

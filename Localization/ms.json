@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "language": "ms",
+    "name": "Bahasa Melayu",
+    "reviewed": false,
+    "glossary": {
+      "display": "paparan",
+      "your monitor speakers": "pembesar suara monitor anda",
+      "fix": "baiki",
+      "no sound": "tiada bunyi",
+      "sound output": "output bunyi",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Bunyi berfungsi pada semua paparan",
+    "headline.speakers_silent": "Tiada bunyi daripada pembesar suara monitor anda",
+    "headline.speakers_on": "Pada %@",
+    "headline.fixing": "Membaiki %@…",
+    "headline.checking": "Menyemak bunyi…",
+    "headline.couldnt_check": "Tidak dapat menyemak semua paparan",
+    "headline.none": "Tiada paparan yang boleh memainkan bunyi",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "paparan",
+    "display.fallback": "paparan",
+    "row.tag.speakers": "pembesar suara monitor",
+    "row.tag.sound_output": "output bunyi",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Berfungsi",
+    "status.no_sound": "Tiada Bunyi",
+    "status.checking": "Menyemak…",
+    "status.couldnt_check": "Gagal Menyemak",
+    "status.fixing": "Membaiki…",
+    "submenu.speakers_here": "Guna Paparan Ini untuk Pembesar Suara",
+    "submenu.fix_now": "Baiki Sekarang",
+    "submenu.fix_now_confirm": "Baiki Sekarang…",
+    "submenu.hint_blackout": "Skrin menjadi hitam selama kira-kira 3 saat",
+    "submenu.hint_others": "Boleh menghentikan bunyi pada paparan lain",
+    "submenu.checked": "Disemak %@",
+    "menu.check_now": "Semak Sekarang",
+    "menu.follow_sound_output": "Pembesar Suara Monitor Ikut Output Bunyi",
+    "menu.fix_automatically": "Baiki Pembesar Suara Monitor Secara Automatik",
+    "menu.check_every": "Semak Setiap",
+    "menu.interval.minute": "1 Minit",
+    "menu.interval.events_only": "Hanya Apabila Paparan Berubah atau Mac Bangun",
+    "menu.open_at_login": "Buka semasa Log Masuk",
+    "menu.last_checked": "Kali terakhir disemak %@",
+    "menu.show_log": "Tunjukkan Log",
+    "menu.quit": "Keluar dari %@",
+    "menu.quit_after_fix": "Keluar Apabila Pembaikan Selesai",
+    "note.fixing": "Mematikan dan menghidupkan %@…",
+    "note.gave_up": "Pembaikan automatik paparan ini dihentikan selepas dua cubaan. Sambungkan semula atau pilih “Baiki Sekarang”.",
+    "note.output_switched": "Bunyi kini dimainkan melalui %@. App yang sudah memainkan bunyi mungkin perlu dibuka semula.",
+    "note.too_soon": "Menunggu seminit antara pembaikan.",
+    "note.waiting_call": "Menunggu panggilan anda tamat. Gunakan Baiki Sekarang untuk membaikinya juga.",
+    "note.waiting_full_screen": "Menunggu anda keluar dari skrin penuh. Gunakan Baiki Sekarang untuk membaikinya juga.",
+    "note.collateral": "Membaiki %1$@ telah menghentikan bunyi pada %2$@.",
+    "note.confirming": "Pembesar suara monitor anda tiada bunyi. Menyemak semula sebelum membaiki…",
+    "note.stranded": "Satu paparan masih dimatikan. Mencuba lagi; menyambungkannya semula juga berkesan.",
+    "note.busy": "Masih menyemak. Cuba Baiki Sekarang sekali lagi dalam beberapa saat.",
+    "note.cant_autofix": "Paparan ini tidak boleh dibaiki secara automatik di sini. Sambungkan semula kabelnya untuk membaikinya.",
+    "note.speakers_missing": "Paparan pembesar suara monitor anda tidak disambungkan.",
+    "note.quitting": "Keluar apabila pembaikan selesai…",
+    "outcome.fixed": "%@ berfungsi semula. Jeda dan main semula, atau buka semula mana-mana app yang tersekat.",
+    "outcome.still_silent": "%@ masih tiada bunyi. Cuba cabut kabelnya dan pasang semula.",
+    "outcome.unverified": "%@ telah dimatikan dan dihidupkan, tetapi tidak dapat disemak selepas itu.",
+    "outcome.unknown_display": "Tidak dapat mengenal pasti skrin %@, jadi tiada apa-apa yang dimatikan.",
+    "outcome.cycle_failed": "Mematikan dan menghidupkan %@ tidak selesai. Lihat butirannya dalam Tunjukkan Log.",
+    "welcome.title": "%@ ada dalam bar menu anda",
+    "welcome.body": "Ikon menunjukkan sama ada bunyi paparan anda berfungsi. Hijau: semuanya berfungsi. Jingga: paparan yang anda tidak gunakan untuk bunyi telah senyap. Merah: pembesar suara monitor anda telah senyap.\n\nUntuk membaiki pembesar suara monitor yang senyap, app ini mematikan dan menghidupkan paparannya. Skrin itu menjadi hitam selama kira-kira 3 saat dan tetingkapnya mungkin beralih seketika. App ini tidak akan melakukannya pada satu-satunya skrin anda, dan menunggu sehingga panggilan dan video skrin penuh tamat.\n\nApp ini dibuka semasa log masuk. Anda boleh menukarnya dalam menunya.",
+    "welcome.fix_automatically": "Baiki Secara Automatik",
+    "welcome.status_only": "Tunjukkan Status Sahaja",
+    "confirm.title": "Baiki %@?",
+    "confirm.body": "Ini akan mematikan dan menghidupkan %1$@, jadi skrinnya menjadi hitam selama kira-kira 3 saat. Membaiki satu paparan boleh menghentikan bunyi pada paparan lain, termasuk pembesar suara monitor anda.",
+    "confirm.fix": "Baiki",
+    "confirm.cancel": "Batal",
+    "notify.fixed.title": "Pembesar suara monitor anda berfungsi semula",
+    "notify.fixed.body": "%@ telah dimatikan dan dihidupkan selama beberapa saat. Jika app masih senyap, keluar daripadanya dan bukanya semula.",
+    "notify.fixed.body_collateral": "%1$@ telah dimatikan dan dihidupkan selama beberapa saat. Ini menghentikan bunyi pada %2$@. Jika app masih senyap, keluar daripadanya dan bukanya semula.",
+    "notify.still_silent.title": "Pembesar suara monitor anda masih senyap",
+    "notify.still_silent.body": "Cuba cabut %@ dan pasang semula.",
+    "notify.paused.title": "Pembaikan automatik dijeda",
+    "notify.waiting.title": "Pembesar suara monitor anda senyap",
+    "notify.waiting_call.body": "Menunggu panggilan anda tamat, kerana pembaikan menggelapkan %@ selama kira-kira 3 saat. Gunakan Baiki Sekarang dalam menu untuk membaikinya juga.",
+    "notify.waiting_full_screen.body": "Menunggu anda keluar dari skrin penuh, kerana pembaikan menggelapkan %@ selama kira-kira 3 saat. Gunakan Baiki Sekarang dalam menu untuk membaikinya juga.",
+    "notify.stranded.title": "Satu paparan masih dimatikan",
+    "notify.stranded.body": "%@ tidak dapat menghidupkannya semula. Cabut kabelnya dan pasang semula, atau log keluar dan log masuk semula.",
+    "cli.status.working": "Berfungsi",
+    "cli.status.no_sound": "Tiada Bunyi",
+    "cli.status.couldnt_check": "Gagal Menyemak",
+    "cli.status.sound_output": "(output bunyi)",
+    "cli.status.hint_fix": "Jalankan `%@ fix` untuk membaiki paparan yang memainkan bunyi anda.",
+    "cli.status.hint_other": "Output bunyi anda berfungsi. Untuk membaiki paparan lain (ini boleh menghentikan bunyi pada paparan lain): %1$@ fix --uid %2$@",
+    "cli.none": "Tiada paparan yang boleh memainkan bunyi.",
+    "cli.nothing_to_fix": "Bunyi anda tidak dimainkan melalui paparan, jadi tiada apa-apa untuk dibaiki.",
+    "cli.couldnt_check": "Tidak dapat menyemak %@, jadi tiada apa-apa yang dimatikan.",
+    "cli.stranded": "Paparan yang dimatikan oleh pembaikan sebelum ini tidak dapat dihidupkan semula, jadi tiada apa-apa lagi yang dimatikan.",
+    "cli.list.outputs": "Output audio:",
+    "cli.list.displays": "Paparan:",
+    "cli.list.default": "lalai",
+    "cli.list.system_sounds": "bunyi sistem",
+    "cli.list.on_display": "pada paparan %@",
+    "cli.app.opened": "%@ dibuka. Mulai sekarang ia dibuka setiap kali log masuk; cari ikonnya dalam bar menu.",
+    "cli.app.not_found": "Tidak dapat mencari %@. Telah mencari dalam:",
+    "cli.app.open_failed": "Tidak dapat membuka %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Jalankan `%@ --help` untuk cara penggunaan.",
+    "cli.error.needs_value": "%@ memerlukan nilai.",
+    "cli.error.range": "%1$@ mesti nombor dari %2$@ hingga %3$@, bukan “%4$@”.",
+    "cli.error.root": "Jangan jalankan %@ sebagai root atau dengan sudo. Ia hanya perlukan akaun anda sendiri.",
+    "cli.error.one_command": "Hanya satu arahan pada satu masa: menerima “%1$@” dan “%2$@”.",
+    "cli.error.unknown_option": "Pilihan tidak diketahui “%@”.",
+    "cli.error.unknown_command": "Arahan tidak diketahui “%@”.",
+    "cli.error.no_output": "Tiada output audio dengan ID %1$@. Lihat `%2$@ list`.",
+    "cli.error.not_display": "%@ bukan output audio paparan."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "other": "%1$d paparan lain tiada bunyi"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "other": "Tiada bunyi %1$d kali"
+        },
+        "fixed": {
+          "type": "d",
+          "other": "dibaiki %2$d kali"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "other": "%1$d Saat"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "other": "Dibaiki %1$d kali, terkini %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "Pembaikan automatik dijeda selepas %1$d percubaan. Sambung semula paparan, atau gunakan Baiki Sekarang."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "Pembesar suara monitor anda masih senyap selepas %1$d percubaan. Cuba cabut %2$@ dan pasang semula."
+        }
+      }
+    }
+  }
+}

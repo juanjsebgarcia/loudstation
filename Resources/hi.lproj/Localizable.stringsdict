@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d अन्य डिस्प्ले पर ध्वनि नहीं है</string>
+			<key>other</key>
+			<string>%1$d अन्य डिस्प्ले पर ध्वनि नहीं है</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d बार ठीक किया, पिछली बार %2$@</string>
+			<key>other</key>
+			<string>%1$d बार ठीक किया, पिछली बार %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d सेकंड</string>
+			<key>other</key>
+			<string>%1$d सेकंड</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d कोशिश के बाद अपने आप ठीक करना रोका गया। डिस्प्ले दोबारा कनेक्ट करें, या “अभी ठीक करें” चुनें।</string>
+			<key>other</key>
+			<string>%1$d कोशिशों के बाद अपने आप ठीक करना रोका गया। डिस्प्ले दोबारा कनेक्ट करें, या “अभी ठीक करें” चुनें।</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d कोशिश के बाद भी आपके मॉनिटर स्पीकर चुप हैं। %2$@ को निकालकर फिर से लगाकर देखें।</string>
+			<key>other</key>
+			<string>%1$d कोशिशों के बाद भी आपके मॉनिटर स्पीकर चुप हैं। %2$@ को निकालकर फिर से लगाकर देखें।</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%2$d बार ठीक किया</string>
+			<key>other</key>
+			<string>%2$d बार ठीक किया</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d बार ध्वनि नहीं</string>
+			<key>other</key>
+			<string>%1$d बार ध्वनि नहीं</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

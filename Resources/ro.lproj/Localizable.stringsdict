@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Încă %1$d monitoare nu au sunet</string>
+			<key>one</key>
+			<string>Încă %1$d monitor nu are sunet</string>
+			<key>other</key>
+			<string>Încă %1$d de monitoare nu au sunet</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Remediat de %1$d ori, ultima dată %2$@</string>
+			<key>one</key>
+			<string>Remediat de %1$d dată, ultima dată %2$@</string>
+			<key>other</key>
+			<string>Remediat de %1$d de ori, ultima dată %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d secunde</string>
+			<key>one</key>
+			<string>%1$d secundă</string>
+			<key>other</key>
+			<string>%1$d de secunde</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Remedierea automată s-a oprit după %1$d încercări. Reconectați monitorul sau folosiți „Remediați acum”.</string>
+			<key>one</key>
+			<string>Remedierea automată s-a oprit după %1$d încercare. Reconectați monitorul sau folosiți „Remediați acum”.</string>
+			<key>other</key>
+			<string>Remedierea automată s-a oprit după %1$d de încercări. Reconectați monitorul sau folosiți „Remediați acum”.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Difuzoarele monitorului tot nu au sunet după %1$d încercări. Încercați să deconectați %2$@ și să-l conectați la loc.</string>
+			<key>one</key>
+			<string>Difuzoarele monitorului tot nu au sunet după %1$d încercare. Încercați să deconectați %2$@ și să-l conectați la loc.</string>
+			<key>other</key>
+			<string>Difuzoarele monitorului tot nu au sunet după %1$d de încercări. Încercați să deconectați %2$@ și să-l conectați la loc.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>remediat de %2$d ori</string>
+			<key>one</key>
+			<string>remediat de %2$d dată</string>
+			<key>other</key>
+			<string>remediat de %2$d de ori</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Fără sunet de %1$d ori</string>
+			<key>one</key>
+			<string>Fără sunet de %1$d dată</string>
+			<key>other</key>
+			<string>Fără sunet de %1$d de ori</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

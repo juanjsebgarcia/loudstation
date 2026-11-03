@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "fr",
+    "name": "Français",
+    "reviewed": false,
+    "glossary": {
+      "display": "moniteur",
+      "your monitor speakers": "vos haut-parleurs de moniteur",
+      "fix": "réparer",
+      "no sound": "pas de son",
+      "sound output": "sortie audio",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Le son fonctionne sur tous les moniteurs",
+    "headline.speakers_silent": "Pas de son sur vos haut-parleurs de moniteur",
+    "headline.speakers_on": "Sur %@",
+    "headline.fixing": "Réparation de %@…",
+    "headline.checking": "Vérification du son…",
+    "headline.couldnt_check": "Impossible de vérifier tous les moniteurs",
+    "headline.none": "Aucun moniteur ne peut émettre de son",
+    "accessibility.status": "%1$@ : %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "moniteur",
+    "display.fallback": "le moniteur",
+    "row.tag.speakers": "haut-parleurs",
+    "row.tag.sound_output": "sortie audio",
+    "row.with_tags": "%1$@ (%2$@) : %3$@",
+    "row.plain": "%1$@ : %2$@",
+    "status.working": "Fonctionne",
+    "status.no_sound": "Pas de son",
+    "status.checking": "Vérification…",
+    "status.couldnt_check": "Non vérifiable",
+    "status.fixing": "Réparation…",
+    "submenu.speakers_here": "Utiliser ce moniteur pour les haut-parleurs",
+    "submenu.fix_now": "Réparer maintenant",
+    "submenu.fix_now_confirm": "Réparer maintenant…",
+    "submenu.hint_blackout": "L’écran devient noir environ 3 secondes",
+    "submenu.hint_others": "Peut couper le son des autres moniteurs",
+    "submenu.checked": "Vérifié %@",
+    "menu.check_now": "Vérifier maintenant",
+    "menu.follow_sound_output": "Haut-parleurs de moniteur selon la sortie audio",
+    "menu.fix_automatically": "Réparer automatiquement les haut-parleurs",
+    "menu.check_every": "Intervalle de vérification",
+    "menu.interval.minute": "1 minute",
+    "menu.interval.events_only": "Seulement si les moniteurs changent ou au réveil",
+    "menu.open_at_login": "Ouvrir à l’ouverture de session",
+    "menu.last_checked": "Dernière vérification : %@",
+    "menu.show_log": "Afficher le journal",
+    "menu.quit": "Quitter %@",
+    "menu.quit_after_fix": "Quitter à la fin de la réparation",
+    "note.fixing": "Extinction et rallumage de %@…",
+    "note.gave_up": "Réparation automatique arrêtée après deux essais. Rebranchez ce moniteur ou choisissez « Réparer maintenant ».",
+    "note.output_switched": "Le son passe désormais par %@. Il faudra peut-être rouvrir les apps qui jouaient déjà.",
+    "note.too_soon": "Une minute d’attente entre deux réparations.",
+    "note.waiting_call": "En attente de la fin de votre appel. Choisissez « Réparer maintenant » pour réparer quand même.",
+    "note.waiting_full_screen": "En attente de la sortie du plein écran. Choisissez « Réparer maintenant » pour réparer quand même.",
+    "note.collateral": "La réparation de %1$@ a coupé le son de %2$@.",
+    "note.confirming": "Vos haut-parleurs de moniteur n’ont pas de son. Nouvelle vérification avant de réparer…",
+    "note.stranded": "Un moniteur est toujours éteint. Nouvelle tentative en cours ; le rebrancher fonctionne aussi.",
+    "note.busy": "Vérification en cours. Réessayez « Réparer maintenant » dans quelques secondes.",
+    "note.cant_autofix": "Ce moniteur ne peut pas être réparé automatiquement ici. Rebranchez son câble pour le réparer.",
+    "note.speakers_missing": "Le moniteur de vos haut-parleurs n’est pas connecté.",
+    "note.quitting": "Fermeture à la fin de la réparation…",
+    "outcome.fixed": "%@ fonctionne à nouveau. Mettez en pause puis relancez la lecture, ou rouvrez les apps bloquées.",
+    "outcome.still_silent": "%@ n’a toujours pas de son. Essayez de débrancher son câble puis de le rebrancher.",
+    "outcome.unverified": "%@ a été éteint puis rallumé, mais n’a pas pu être vérifié ensuite.",
+    "outcome.unknown_display": "Impossible de savoir quel écran est %@, donc rien n’a été éteint.",
+    "outcome.cycle_failed": "L’extinction et le rallumage de %@ n’ont pas abouti. Détails dans « Afficher le journal ».",
+    "welcome.title": "%@ est dans votre barre des menus",
+    "welcome.body": "L’icône indique si le son de vos moniteurs fonctionne. Vert : tout fonctionne. Orange : un moniteur que vous n’utilisez pas pour le son est devenu muet. Rouge : vos haut-parleurs de moniteur sont devenus muets.\n\nPour réparer des haut-parleurs de moniteur muets, l’app éteint puis rallume leur moniteur. Cet écran devient noir pendant environ 3 secondes et ses fenêtres peuvent bouger un instant. Elle ne le fait jamais sur votre seul écran et attend la fin des appels et des vidéos en plein écran.\n\nElle s’ouvre à l’ouverture de session. Vous pouvez changer cela dans son menu.",
+    "welcome.fix_automatically": "Réparer automatiquement",
+    "welcome.status_only": "Juste afficher l’état",
+    "confirm.title": "Réparer %@ ?",
+    "confirm.body": "%1$@ va s’éteindre puis se rallumer, et restera noir environ 3 secondes. Réparer un moniteur peut couper le son d’un autre, y compris celui de vos haut-parleurs de moniteur.",
+    "confirm.fix": "Réparer",
+    "confirm.cancel": "Annuler",
+    "notify.fixed.title": "Son rétabli sur vos haut-parleurs de moniteur",
+    "notify.fixed.body": "%@ a été éteint puis rallumé quelques secondes. Si une app reste muette, quittez-la puis rouvrez-la.",
+    "notify.fixed.body_collateral": "%1$@ a été éteint puis rallumé quelques secondes. Cela a coupé le son de %2$@. Si une app reste muette, quittez-la puis rouvrez-la.",
+    "notify.still_silent.title": "Vos haut-parleurs de moniteur restent muets",
+    "notify.still_silent.body": "Essayez de débrancher %@ puis de le rebrancher.",
+    "notify.paused.title": "Réparation automatique en pause",
+    "notify.waiting.title": "Vos haut-parleurs de moniteur sont muets",
+    "notify.waiting_call.body": "En attente de la fin de votre appel, car la réparation rend %@ noir environ 3 secondes. Choisissez « Réparer maintenant » dans le menu pour réparer quand même.",
+    "notify.waiting_full_screen.body": "En attente de la sortie du plein écran, car la réparation rend %@ noir environ 3 secondes. Choisissez « Réparer maintenant » dans le menu pour réparer quand même.",
+    "notify.stranded.title": "Un moniteur est toujours éteint",
+    "notify.stranded.body": "%@ n’a pas pu le rallumer. Débranchez son câble puis rebranchez-le, ou fermez la session puis rouvrez-la.",
+    "cli.status.working": "Fonctionne",
+    "cli.status.no_sound": "Pas de son",
+    "cli.status.couldnt_check": "Non vérifiable",
+    "cli.status.sound_output": "(sortie audio)",
+    "cli.status.hint_fix": "Exécutez `%@ fix` pour réparer le moniteur par lequel passe votre son.",
+    "cli.status.hint_other": "Votre sortie audio fonctionne. Pour réparer un autre moniteur (cela peut couper le son des autres) : %1$@ fix --uid %2$@",
+    "cli.none": "Aucun moniteur ne peut émettre de son.",
+    "cli.nothing_to_fix": "Votre son ne passe pas par un moniteur : il n’y a rien à réparer.",
+    "cli.couldnt_check": "Impossible de vérifier %@, donc rien n’a été éteint.",
+    "cli.stranded": "Un moniteur éteint lors d’une réparation précédente n’a pas pu être rallumé, donc rien d’autre n’a été éteint.",
+    "cli.list.outputs": "Sorties audio :",
+    "cli.list.displays": "Moniteurs :",
+    "cli.list.default": "par défaut",
+    "cli.list.system_sounds": "sons système",
+    "cli.list.on_display": "sur le moniteur %@",
+    "cli.app.opened": "%@ est ouvert. Il s’ouvrira désormais à chaque ouverture de session ; cherchez son icône dans la barre des menus.",
+    "cli.app.not_found": "Impossible de trouver %@. Emplacements examinés :",
+    "cli.app.open_failed": "Impossible d’ouvrir %@.",
+    "cli.error.prefix": "%1$@ : %2$@",
+    "cli.error.see_help": "Exécutez `%@ --help` pour voir l’utilisation.",
+    "cli.error.needs_value": "%@ nécessite une valeur.",
+    "cli.error.range": "%1$@ doit être un nombre entre %2$@ et %3$@, et non « %4$@ ».",
+    "cli.error.root": "N’exécutez pas %@ en tant que root ou avec sudo. Votre propre compte suffit.",
+    "cli.error.one_command": "Une seule commande à la fois : « %1$@ » et « %2$@ » reçues.",
+    "cli.error.unknown_option": "Option inconnue « %@ ».",
+    "cli.error.unknown_command": "Commande inconnue « %@ ».",
+    "cli.error.no_output": "Aucune sortie audio avec l’identifiant %1$@. Voir `%2$@ list`.",
+    "cli.error.not_display": "%@ n’est pas la sortie audio d’un moniteur."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d autre moniteur n’a pas de son",
+          "other": "%1$d autres moniteurs n’ont pas de son"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Son perdu %1$d fois",
+          "other": "Son perdu %1$d fois"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "réparé %2$d fois",
+          "other": "réparé %2$d fois"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d seconde",
+          "other": "%1$d secondes"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Réparé %1$d fois, la dernière %2$@",
+          "other": "Réparé %1$d fois, la dernière %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Réparation automatique en pause après %1$d essai. Rebranchez le moniteur ou utilisez « Réparer maintenant ».",
+          "other": "Réparation automatique en pause après %1$d essais. Rebranchez le moniteur ou utilisez « Réparer maintenant »."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Vos haut-parleurs de moniteur restent muets après %1$d essai. Essayez de débrancher %2$@ puis de le rebrancher.",
+          "other": "Vos haut-parleurs de moniteur restent muets après %1$d essais. Essayez de débrancher %2$@ puis de le rebrancher."
+        }
+      }
+    }
+  }
+}

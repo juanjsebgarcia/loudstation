@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>จอภาพอื่นอีก %1$d จอไม่มีเสียง</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>แก้ไขแล้ว %1$d ครั้ง ล่าสุดเมื่อ %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>%1$d วินาที</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>หยุดการแก้ไขอัตโนมัติชั่วคราวหลังจากลอง %1$d ครั้ง เชื่อมต่อจอภาพใหม่ หรือใช้ “แก้ไขเดี๋ยวนี้”</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>ลำโพงจอภาพของคุณยังคงเงียบหลังจากลอง %1$d ครั้ง ลองถอด %2$@ แล้วเสียบกลับเข้าไปใหม่</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@ %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>แก้ไขแล้ว %2$d ครั้ง</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>other</key>
+			<string>ไม่มีเสียง %1$d ครั้ง</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

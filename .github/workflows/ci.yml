@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    # Apple Silicon runner: the app and CLI are arm64-only.
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: make
+
+      - name: Test
+        run: make test
+
+      - name: Binaries run on macOS 13 and later
+        run: |
+          for binary in build/loudstation build/LoudStation.app/Contents/MacOS/LoudStation; do
+            otool -l "$binary" | grep -A3 LC_BUILD_VERSION | grep -q "minos 13.0" || { echo "$binary is not built for macOS 13"; exit 1; }
+          done
+
+      - name: Generated strings are up to date
+        run: |
+          python3 -I Tools/localize.py
+          git diff --exit-code -- Resources Sources/Core/EnglishStrings.swift

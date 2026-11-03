@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d інші монітори без звуку</string>
+			<key>many</key>
+			<string>%1$d інших моніторів без звуку</string>
+			<key>one</key>
+			<string>%1$d інший монітор без звуку</string>
+			<key>other</key>
+			<string>%1$d іншого монітора без звуку</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Виправлено %1$d рази, востаннє %2$@</string>
+			<key>many</key>
+			<string>Виправлено %1$d разів, востаннє %2$@</string>
+			<key>one</key>
+			<string>Виправлено %1$d раз, востаннє %2$@</string>
+			<key>other</key>
+			<string>Виправлено %1$d раза, востаннє %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d секунди</string>
+			<key>many</key>
+			<string>%1$d секунд</string>
+			<key>one</key>
+			<string>%1$d секунда</string>
+			<key>other</key>
+			<string>%1$d секунди</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Автовиправлення призупинено після %1$d спроб. Перепідключіть монітор або виберіть «Виправити зараз».</string>
+			<key>many</key>
+			<string>Автовиправлення призупинено після %1$d спроб. Перепідключіть монітор або виберіть «Виправити зараз».</string>
+			<key>one</key>
+			<string>Автовиправлення призупинено після %1$d спроби. Перепідключіть монітор або виберіть «Виправити зараз».</string>
+			<key>other</key>
+			<string>Автовиправлення призупинено після %1$d спроби. Перепідключіть монітор або виберіть «Виправити зараз».</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Ваші динаміки монітора досі мовчать після %1$d спроб. Спробуйте від’єднати %2$@ і під’єднати знову.</string>
+			<key>many</key>
+			<string>Ваші динаміки монітора досі мовчать після %1$d спроб. Спробуйте від’єднати %2$@ і під’єднати знову.</string>
+			<key>one</key>
+			<string>Ваші динаміки монітора досі мовчать після %1$d спроби. Спробуйте від’єднати %2$@ і під’єднати знову.</string>
+			<key>other</key>
+			<string>Ваші динаміки монітора досі мовчать після %1$d спроби. Спробуйте від’єднати %2$@ і під’єднати знову.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>виправлено %2$d рази</string>
+			<key>many</key>
+			<string>виправлено %2$d разів</string>
+			<key>one</key>
+			<string>виправлено %2$d раз</string>
+			<key>other</key>
+			<string>виправлено %2$d раза</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Звук зникав %1$d рази</string>
+			<key>many</key>
+			<string>Звук зникав %1$d разів</string>
+			<key>one</key>
+			<string>Звук зникав %1$d раз</string>
+			<key>other</key>
+			<string>Звук зникав %1$d раза</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

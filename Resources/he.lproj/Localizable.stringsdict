@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>מסך אחד נוסף ללא צליל</string>
+			<key>other</key>
+			<string>%1$d מסכים נוספים ללא צליל</string>
+			<key>two</key>
+			<string>שני מסכים נוספים ללא צליל</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>תוקן פעם אחת, לאחרונה %2$@</string>
+			<key>other</key>
+			<string>תוקן %1$d פעמים, לאחרונה %2$@</string>
+			<key>two</key>
+			<string>תוקן פעמיים, לאחרונה %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>שנייה אחת</string>
+			<key>other</key>
+			<string>%1$d שניות</string>
+			<key>two</key>
+			<string>%1$d שניות</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>התיקון האוטומטי הושהה אחרי ניסיון אחד. חבר מחדש את המסך או השתמש ב"תקן עכשיו".</string>
+			<key>other</key>
+			<string>התיקון האוטומטי הושהה אחרי %1$d ניסיונות. חבר מחדש את המסך או השתמש ב"תקן עכשיו".</string>
+			<key>two</key>
+			<string>התיקון האוטומטי הושהה אחרי שני ניסיונות. חבר מחדש את המסך או השתמש ב"תקן עכשיו".</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>רמקולי המסך עדיין שותקים אחרי ניסיון אחד. נסה לנתק את %2$@ ולחבר אותו שוב.</string>
+			<key>other</key>
+			<string>רמקולי המסך עדיין שותקים אחרי %1$d ניסיונות. נסה לנתק את %2$@ ולחבר אותו שוב.</string>
+			<key>two</key>
+			<string>רמקולי המסך עדיין שותקים אחרי שני ניסיונות. נסה לנתק את %2$@ ולחבר אותו שוב.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>תוקן פעם אחת</string>
+			<key>other</key>
+			<string>תוקן %2$d פעמים</string>
+			<key>two</key>
+			<string>תוקן פעמיים</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>ללא צליל פעם אחת</string>
+			<key>other</key>
+			<string>ללא צליל %1$d פעמים</string>
+			<key>two</key>
+			<string>ללא צליל פעמיים</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

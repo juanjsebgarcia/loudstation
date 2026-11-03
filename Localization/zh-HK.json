@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "language": "zh-HK",
+    "name": "繁體中文（香港）",
+    "reviewed": false,
+    "glossary": {
+      "display": "顯示器",
+      "your monitor speakers": "你的顯示器揚聲器",
+      "fix": "修復",
+      "no sound": "沒有聲音",
+      "sound output": "聲音輸出",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "所有顯示器的聲音皆正常",
+    "headline.speakers_silent": "你的顯示器揚聲器沒有聲音",
+    "headline.speakers_on": "位於 %@",
+    "headline.fixing": "正在修復 %@⋯",
+    "headline.checking": "正在檢查聲音⋯",
+    "headline.couldnt_check": "無法檢查所有顯示器",
+    "headline.none": "沒有可以播放聲音的顯示器",
+    "accessibility.status": "%1$@：%2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "顯示器",
+    "display.fallback": "該顯示器",
+    "row.tag.speakers": "顯示器揚聲器",
+    "row.tag.sound_output": "聲音輸出",
+    "row.with_tags": "%1$@（%2$@）：%3$@",
+    "row.plain": "%1$@：%2$@",
+    "status.working": "正常",
+    "status.no_sound": "沒有聲音",
+    "status.checking": "正在檢查⋯",
+    "status.couldnt_check": "無法檢查",
+    "status.fixing": "正在修復⋯",
+    "submenu.speakers_here": "將此顯示器用於揚聲器",
+    "submenu.fix_now": "立即修復",
+    "submenu.fix_now_confirm": "立即修復⋯",
+    "submenu.hint_blackout": "螢幕會變黑約 3 秒",
+    "submenu.hint_others": "可能使其他顯示器沒有聲音",
+    "submenu.checked": "檢查時間：%@",
+    "menu.check_now": "立即檢查",
+    "menu.follow_sound_output": "顯示器揚聲器跟隨聲音輸出",
+    "menu.fix_automatically": "自動修復顯示器揚聲器",
+    "menu.check_every": "檢查間隔",
+    "menu.interval.minute": "1 分鐘",
+    "menu.interval.events_only": "僅在顯示器變更或 Mac 喚醒時",
+    "menu.open_at_login": "登入時開啟",
+    "menu.last_checked": "上次檢查：%@",
+    "menu.show_log": "顯示記錄",
+    "menu.quit": "結束 %@",
+    "menu.quit_after_fix": "修復完成後結束",
+    "note.fixing": "正在將 %@ 關閉再重新開啟⋯",
+    "note.gave_up": "嘗試兩次後已停止自動修復此顯示器。請重新連接，或使用「立即修復」。",
+    "note.output_switched": "聲音現在經由 %@ 播放。已在播放的 App 可能需要重新開啟。",
+    "note.too_soon": "每次修復之間需等待一分鐘。",
+    "note.waiting_call": "正在等待通話結束。若仍要修復，請使用「立即修復」。",
+    "note.waiting_full_screen": "正在等待你退出全螢幕。若仍要修復，請使用「立即修復」。",
+    "note.collateral": "修復 %1$@ 後，%2$@ 沒有聲音了。",
+    "note.confirming": "你的顯示器揚聲器沒有聲音。修復前正在再次檢查⋯",
+    "note.stranded": "有一台顯示器仍處於關閉狀態。正在重試；重新連接該顯示器也可以解決。",
+    "note.busy": "仍在檢查中。請過幾秒再試一次「立即修復」。",
+    "note.cant_autofix": "此顯示器無法在這裡自動修復。請重新連接其線材來修復。",
+    "note.speakers_missing": "你的顯示器揚聲器所在的顯示器未連接。",
+    "note.quitting": "將在修復完成後結束⋯",
+    "outcome.fixed": "%@ 已恢復正常。請暫停後再重新播放，或重新開啟卡住的 App。",
+    "outcome.still_silent": "%@ 仍然沒有聲音。請嘗試拔除它的連接線再重新插入。",
+    "outcome.unverified": "已將 %@ 關閉再重新開啟，但之後無法檢查。",
+    "outcome.unknown_display": "無法辨別 %@ 是哪一個螢幕，因此未關閉任何顯示器。",
+    "outcome.cycle_failed": "將 %@ 關閉再重新開啟的操作未完成。請使用「顯示記錄」查看詳細資訊。",
+    "welcome.title": "%@ 位於你的選單列中",
+    "welcome.body": "圖示會顯示顯示器的聲音是否正常。綠色：一切正常。橙色：一台你不用來播放聲音的顯示器沒有聲音了。紅色：你的顯示器揚聲器沒有聲音了。\n\n為了修復沒有聲音的顯示器揚聲器，此 App 會將其所在的顯示器關閉再重新開啟。該螢幕會變黑約 3 秒，視窗也可能會短暫移動。如果你只有一個螢幕，它絕不會這樣做，而且會等到通話和全螢幕影片結束後才進行。\n\n它會在登入時開啟。你可以在它的選單中更改此設定。",
+    "welcome.fix_automatically": "自動修復",
+    "welcome.status_only": "僅顯示狀態",
+    "confirm.title": "要修復 %@ 嗎？",
+    "confirm.body": "這會將 %1$@ 關閉再重新開啟，因此它會變黑約 3 秒。修復一台顯示器可能會使另一台顯示器（包括你的顯示器揚聲器）沒有聲音。",
+    "confirm.fix": "修復",
+    "confirm.cancel": "取消",
+    "notify.fixed.title": "你的顯示器揚聲器已恢復正常",
+    "notify.fixed.body": "已將 %@ 關閉幾秒鐘再重新開啟。如果仍有 App 沒有聲音，請結束並重新開啟該 App。",
+    "notify.fixed.body_collateral": "已將 %1$@ 關閉幾秒鐘再重新開啟。這使 %2$@ 沒有聲音了。如果仍有 App 沒有聲音，請結束並重新開啟該 App。",
+    "notify.still_silent.title": "你的顯示器揚聲器仍然沒有聲音",
+    "notify.still_silent.body": "請嘗試拔除 %@ 再重新插入。",
+    "notify.paused.title": "自動修復已暫停",
+    "notify.waiting.title": "你的顯示器揚聲器沒有聲音",
+    "notify.waiting_call.body": "由於修復會使 %@ 變黑約 3 秒，因此將等到通話結束後再進行。若仍要修復，請使用選單中的「立即修復」。",
+    "notify.waiting_full_screen.body": "由於修復會使 %@ 變黑約 3 秒，因此將等到你退出全螢幕後再進行。若仍要修復，請使用選單中的「立即修復」。",
+    "notify.stranded.title": "有一台顯示器仍處於關閉狀態",
+    "notify.stranded.body": "%@ 無法將該顯示器重新開啟。請拔除它的連接線再重新插入，或登出後再重新登入。",
+    "cli.status.working": "正常",
+    "cli.status.no_sound": "沒有聲音",
+    "cli.status.couldnt_check": "無法檢查",
+    "cli.status.sound_output": "（聲音輸出）",
+    "cli.status.hint_fix": "執行 `%@ fix` 以修復目前播放聲音的顯示器。",
+    "cli.status.hint_other": "你的聲音輸出正常。若要修復其他顯示器（這可能使其他顯示器沒有聲音）：%1$@ fix --uid %2$@",
+    "cli.none": "沒有可以播放聲音的顯示器。",
+    "cli.nothing_to_fix": "你的聲音不是經由顯示器播放，因此無須修復。",
+    "cli.couldnt_check": "無法檢查 %@，因此未關閉任何顯示器。",
+    "cli.stranded": "先前修復時關閉的一台顯示器無法重新開啟，因此未關閉其他顯示器。",
+    "cli.list.outputs": "音訊輸出：",
+    "cli.list.displays": "顯示器：",
+    "cli.list.default": "預設",
+    "cli.list.system_sounds": "系統音效",
+    "cli.list.on_display": "位於顯示器 %@",
+    "cli.app.opened": "已開啟 %@。從現在起，它會在每次登入時開啟；請在選單列中找尋它的圖示。",
+    "cli.app.not_found": "找不到 %@。已搜尋以下位置：",
+    "cli.app.open_failed": "無法開啟 %@。",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "執行 `%@ --help` 以查看使用方法。",
+    "cli.error.needs_value": "%@ 需要一個值。",
+    "cli.error.range": "%1$@ 必須是介於 %2$@ 到 %3$@ 之間的數字，而非「%4$@」。",
+    "cli.error.root": "請勿以 root 身分或透過 sudo 執行 %@。它只需要你自己的帳戶。",
+    "cli.error.one_command": "一次只能使用一個指令：收到了「%1$@」和「%2$@」。",
+    "cli.error.unknown_option": "未知的選項「%@」。",
+    "cli.error.unknown_command": "未知的指令「%@」。",
+    "cli.error.no_output": "沒有 ID 為 %1$@ 的音訊輸出。請參閱 `%2$@ list`。",
+    "cli.error.not_display": "%@ 不是顯示器的音訊輸出。"
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "other": "另有 %1$d 台顯示器沒有聲音"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@，%2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "other": "沒有聲音 %1$d 次"
+        },
+        "fixed": {
+          "type": "d",
+          "other": "已修復 %2$d 次"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "other": "%1$d 秒"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "other": "已修復 %1$d 次，最近一次：%2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "嘗試 %1$d 次後已暫停自動修復。請重新連接顯示器，或使用「立即修復」。"
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "嘗試 %1$d 次後，你的顯示器揚聲器仍然沒有聲音。請嘗試拔除 %2$@ 再重新插入。"
+        }
+      }
+    }
+  }
+}

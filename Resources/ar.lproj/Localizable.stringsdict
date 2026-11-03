@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d شاشات أخرى بلا صوت</string>
+			<key>many</key>
+			<string>%1$d شاشة أخرى بلا صوت</string>
+			<key>one</key>
+			<string>شاشة أخرى واحدة بلا صوت</string>
+			<key>other</key>
+			<string>%1$d شاشة أخرى بلا صوت</string>
+			<key>two</key>
+			<string>شاشتان أخريان بلا صوت</string>
+			<key>zero</key>
+			<string>لا توجد شاشات أخرى بلا صوت</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>تم الإصلاح %1$d مرات، آخرها %2$@</string>
+			<key>many</key>
+			<string>تم الإصلاح %1$d مرة، آخرها %2$@</string>
+			<key>one</key>
+			<string>تم الإصلاح مرة واحدة، آخرها %2$@</string>
+			<key>other</key>
+			<string>تم الإصلاح %1$d مرة، آخرها %2$@</string>
+			<key>two</key>
+			<string>تم الإصلاح مرتين، آخرهما %2$@</string>
+			<key>zero</key>
+			<string>لم يتم الإصلاح بعد</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d ثوانٍ</string>
+			<key>many</key>
+			<string>%1$d ثانية</string>
+			<key>one</key>
+			<string>ثانية واحدة</string>
+			<key>other</key>
+			<string>%1$d ثانية</string>
+			<key>two</key>
+			<string>ثانيتان</string>
+			<key>zero</key>
+			<string>%1$d ثانية</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا بعد %1$d محاولات. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+			<key>many</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا بعد %1$d محاولة. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+			<key>one</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا بعد محاولة واحدة. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+			<key>other</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا بعد %1$d محاولة. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+			<key>two</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا بعد محاولتين. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+			<key>zero</key>
+			<string>تم إيقاف الإصلاح التلقائي مؤقتًا. أعد توصيل الشاشة، أو استخدم «إصلاح الآن».</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>لا تزال سماعات الشاشة صامتة بعد %1$d محاولات. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+			<key>many</key>
+			<string>لا تزال سماعات الشاشة صامتة بعد %1$d محاولة. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+			<key>one</key>
+			<string>لا تزال سماعات الشاشة صامتة بعد محاولة واحدة. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+			<key>other</key>
+			<string>لا تزال سماعات الشاشة صامتة بعد %1$d محاولة. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+			<key>two</key>
+			<string>لا تزال سماعات الشاشة صامتة بعد محاولتين. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+			<key>zero</key>
+			<string>لا تزال سماعات الشاشة صامتة. جرّب فصل الشاشة %2$@ وإعادة توصيلها.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@، %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>تم الإصلاح %2$d مرات</string>
+			<key>many</key>
+			<string>تم الإصلاح %2$d مرة</string>
+			<key>one</key>
+			<string>تم الإصلاح مرة واحدة</string>
+			<key>other</key>
+			<string>تم الإصلاح %2$d مرة</string>
+			<key>two</key>
+			<string>تم الإصلاح مرتين</string>
+			<key>zero</key>
+			<string>لم يتم الإصلاح</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>انقطع الصوت %1$d مرات</string>
+			<key>many</key>
+			<string>انقطع الصوت %1$d مرة</string>
+			<key>one</key>
+			<string>انقطع الصوت مرة واحدة</string>
+			<key>other</key>
+			<string>انقطع الصوت %1$d مرة</string>
+			<key>two</key>
+			<string>انقطع الصوت مرتين</string>
+			<key>zero</key>
+			<string>لم ينقطع الصوت</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

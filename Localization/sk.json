@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "language": "sk",
+    "name": "Slovenčina",
+    "reviewed": false,
+    "glossary": {
+      "display": "monitor",
+      "your monitor speakers": "vaše reproduktory monitora",
+      "fix": "opraviť",
+      "no sound": "bez zvuku",
+      "sound output": "zvukový výstup",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Zvuk funguje na všetkých monitoroch",
+    "headline.speakers_silent": "Z vašich reproduktorov monitora nejde zvuk",
+    "headline.speakers_on": "Monitor: %@",
+    "headline.fixing": "Opravuje sa: %@…",
+    "headline.checking": "Kontroluje sa zvuk…",
+    "headline.couldnt_check": "Nepodarilo sa skontrolovať všetky monitory",
+    "headline.none": "Žiadny monitor nedokáže prehrávať zvuk",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "monitor",
+    "display.fallback": "monitor",
+    "row.tag.speakers": "reproduktory monitora",
+    "row.tag.sound_output": "zvukový výstup",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Funguje",
+    "status.no_sound": "Bez zvuku",
+    "status.checking": "Kontrola…",
+    "status.couldnt_check": "Neskontrolované",
+    "status.fixing": "Opravuje sa…",
+    "submenu.speakers_here": "Použiť tento monitor pre reproduktory",
+    "submenu.fix_now": "Opraviť teraz",
+    "submenu.fix_now_confirm": "Opraviť teraz…",
+    "submenu.hint_blackout": "Obrazovka asi na 3 sekundy stmavne",
+    "submenu.hint_others": "Môže vypnúť zvuk na iných monitoroch",
+    "submenu.checked": "Skontrolované %@",
+    "menu.check_now": "Skontrolovať teraz",
+    "menu.follow_sound_output": "Reproduktory monitora podľa zvukového výstupu",
+    "menu.fix_automatically": "Opravovať reproduktory monitora automaticky",
+    "menu.check_every": "Interval kontroly",
+    "menu.interval.minute": "1 minúta",
+    "menu.interval.events_only": "Len pri zmene monitorov alebo prebudení Macu",
+    "menu.open_at_login": "Otvoriť pri prihlásení",
+    "menu.last_checked": "Naposledy skontrolované %@",
+    "menu.show_log": "Zobraziť protokol",
+    "menu.quit": "Ukončiť %@",
+    "menu.quit_after_fix": "Ukončiť po dokončení opravy",
+    "note.fixing": "Vypína sa a zapína: %@…",
+    "note.gave_up": "Automatická oprava monitora sa po dvoch pokusoch zastavila. Pripojte ho znova alebo použite „Opraviť teraz“.",
+    "note.output_switched": "Zvuk teraz hrá cez: %@. Aplikácie, ktoré už hrali, bude možno treba znova otvoriť.",
+    "note.too_soon": "Medzi opravami sa čaká minúta.",
+    "note.waiting_call": "Čaká sa na koniec hovoru. Ak chcete opraviť hneď, použite „Opraviť teraz“.",
+    "note.waiting_full_screen": "Čaká sa, kým opustíte celú obrazovku. Ak chcete opraviť hneď, použite „Opraviť teraz“.",
+    "note.collateral": "%1$@ je opravený, no zvuk zmizol: %2$@.",
+    "note.confirming": "Vaše reproduktory monitora sú bez zvuku. Pred opravou sa to ešte raz overuje…",
+    "note.stranded": "Jeden monitor je stále vypnutý. Skúšame to znova; pomôže aj jeho opätovné pripojenie.",
+    "note.busy": "Ešte prebieha kontrola. O pár sekúnd skúste znova „Opraviť teraz“.",
+    "note.cant_autofix": "Tento monitor tu nemožno opraviť automaticky. Opravíte ho opätovným pripojením kábla.",
+    "note.speakers_missing": "Monitor s vašimi reproduktormi nie je pripojený.",
+    "note.quitting": "Ukončí sa po dokončení opravy…",
+    "outcome.fixed": "%@ znova funguje. Pozastavte a znova spustite prehrávanie alebo znova otvorte aplikáciu, ktorá sa zasekla.",
+    "outcome.still_silent": "%@ stále nemá zvuk. Skúste odpojiť jeho kábel a znova ho pripojiť.",
+    "outcome.unverified": "%@ sa vypol a zapol, ale potom sa ho nepodarilo skontrolovať.",
+    "outcome.unknown_display": "Nepodarilo sa zistiť, ktorá obrazovka je %@, takže sa nič nevyplo.",
+    "outcome.cycle_failed": "%@: vypnutie a zapnutie sa nedokončilo. Podrobnosti nájdete v „Zobraziť protokol“.",
+    "welcome.title": "%@ je v lište menu",
+    "welcome.body": "Ikona ukazuje, či funguje zvuk vašich monitorov. Zelená: všetko funguje. Oranžová: stíchol monitor, ktorý nepoužívate na zvuk. Červená: stíchli vaše reproduktory monitora.\n\nKeď reproduktory monitora stíchnu, aplikácia ich monitor vypne a zapne. Táto obrazovka asi na 3 sekundy stmavne a jej okná sa môžu na chvíľu posunúť. Nikdy to neurobí s vašou jedinou obrazovkou a počká, kým skončia hovory a video na celú obrazovku.\n\nOtvára sa pri prihlásení. Môžete to zmeniť v jej menu.",
+    "welcome.fix_automatically": "Opravovať automaticky",
+    "welcome.status_only": "Len zobrazovať stav",
+    "confirm.title": "Opraviť %@?",
+    "confirm.body": "%1$@ sa vypne a zapne, takže asi na 3 sekundy stmavne. Oprava jedného monitora môže vypnúť zvuk na inom, aj na vašich reproduktoroch monitora.",
+    "confirm.fix": "Opraviť",
+    "confirm.cancel": "Zrušiť",
+    "notify.fixed.title": "Vaše reproduktory monitora znova fungujú",
+    "notify.fixed.body": "%@ sa na pár sekúnd vypol a zapol. Ak je niektorá aplikácia stále bez zvuku, ukončite ju a znova otvorte.",
+    "notify.fixed.body_collateral": "%1$@ sa na pár sekúnd vypol a zapol. Tým zmizol zvuk: %2$@. Ak je niektorá aplikácia stále bez zvuku, ukončite ju a znova otvorte.",
+    "notify.still_silent.title": "Vaše reproduktory monitora stále mlčia",
+    "notify.still_silent.body": "Skúste odpojiť %@ a znova ho pripojiť.",
+    "notify.paused.title": "Automatická oprava je pozastavená",
+    "notify.waiting.title": "Vaše reproduktory monitora mlčia",
+    "notify.waiting_call.body": "Čaká sa na koniec hovoru, pretože oprava asi na 3 sekundy stmaví %@. Ak chcete opraviť hneď, použite „Opraviť teraz“ v menu.",
+    "notify.waiting_full_screen.body": "Čaká sa, kým opustíte celú obrazovku, pretože oprava asi na 3 sekundy stmaví %@. Ak chcete opraviť hneď, použite „Opraviť teraz“ v menu.",
+    "notify.stranded.title": "Jeden monitor je stále vypnutý",
+    "notify.stranded.body": "Aplikácia %@ ho nedokázala znova zapnúť. Odpojte a znova pripojte jeho kábel alebo sa odhláste a znova prihláste.",
+    "cli.status.working": "Funguje",
+    "cli.status.no_sound": "Bez zvuku",
+    "cli.status.couldnt_check": "Neskontrolované",
+    "cli.status.sound_output": "(zvukový výstup)",
+    "cli.status.hint_fix": "Spustite `%@ fix` na opravu monitora, cez ktorý hrá zvuk.",
+    "cli.status.hint_other": "Váš zvukový výstup funguje. Ak chcete opraviť iný monitor (môže to vypnúť zvuk na ostatných): %1$@ fix --uid %2$@",
+    "cli.none": "Žiadny monitor nedokáže prehrávať zvuk.",
+    "cli.nothing_to_fix": "Zvuk nehrá cez monitor, takže nie je čo opraviť.",
+    "cli.couldnt_check": "Nepodarilo sa skontrolovať %@, takže sa nič nevyplo.",
+    "cli.stranded": "Monitor, ktorý vypla predchádzajúca oprava, sa nepodarilo znova zapnúť, takže sa nič ďalšie nevyplo.",
+    "cli.list.outputs": "Zvukové výstupy:",
+    "cli.list.displays": "Monitory:",
+    "cli.list.default": "predvolený",
+    "cli.list.system_sounds": "systémové zvuky",
+    "cli.list.on_display": "na monitore %@",
+    "cli.app.opened": "Aplikácia %@ je otvorená. Odteraz sa otvorí pri každom prihlásení; jej ikonu nájdete v lište menu.",
+    "cli.app.not_found": "Nepodarilo sa nájsť %@. Prehľadané priečinky:",
+    "cli.app.open_failed": "Nepodarilo sa otvoriť %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Návod na použitie: `%@ --help`.",
+    "cli.error.needs_value": "Voľba %@ vyžaduje hodnotu.",
+    "cli.error.range": "Hodnota %1$@ musí byť číslo od %2$@ do %3$@, nie „%4$@“.",
+    "cli.error.root": "Nespúšťajte %@ ako root ani cez sudo. Stačí mu váš vlastný účet.",
+    "cli.error.one_command": "Naraz len jeden príkaz: zadané „%1$@“ a „%2$@“.",
+    "cli.error.unknown_option": "Neznáma voľba „%@“.",
+    "cli.error.unknown_command": "Neznámy príkaz „%@“.",
+    "cli.error.no_output": "Žiadny zvukový výstup s ID %1$@. Pozrite `%2$@ list`.",
+    "cli.error.not_display": "%@ nie je zvukový výstup monitora."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d ďalší monitor nemá zvuk",
+          "few": "%1$d ďalšie monitory nemajú zvuk",
+          "other": "%1$d ďalších monitorov nemá zvuk"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Bez zvuku %1$d-krát",
+          "few": "Bez zvuku %1$d-krát",
+          "other": "Bez zvuku %1$d-krát"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "opravené %2$d-krát",
+          "few": "opravené %2$d-krát",
+          "other": "opravené %2$d-krát"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d sekunda",
+          "few": "%1$d sekundy",
+          "other": "%1$d sekúnd"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Opravené %1$d-krát, naposledy %2$@",
+          "few": "Opravené %1$d-krát, naposledy %2$@",
+          "other": "Opravené %1$d-krát, naposledy %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatická oprava je pozastavená po %1$d pokuse. Znova pripojte monitor alebo použite „Opraviť teraz“.",
+          "few": "Automatická oprava je pozastavená po %1$d pokusoch. Znova pripojte monitor alebo použite „Opraviť teraz“.",
+          "other": "Automatická oprava je pozastavená po %1$d pokusoch. Znova pripojte monitor alebo použite „Opraviť teraz“."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Vaše reproduktory monitora stále mlčia aj po %1$d pokuse. Skúste odpojiť %2$@ a znova ho pripojiť.",
+          "few": "Vaše reproduktory monitora stále mlčia aj po %1$d pokusoch. Skúste odpojiť %2$@ a znova ho pripojiť.",
+          "other": "Vaše reproduktory monitora stále mlčia aj po %1$d pokusoch. Skúste odpojiť %2$@ a znova ho pripojiť."
+        }
+      }
+    }
+  }
+}

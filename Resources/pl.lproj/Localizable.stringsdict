@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d inne wyświetlacze nie mają dźwięku</string>
+			<key>many</key>
+			<string>%1$d innych wyświetlaczy nie ma dźwięku</string>
+			<key>one</key>
+			<string>%1$d inny wyświetlacz nie ma dźwięku</string>
+			<key>other</key>
+			<string>%1$d innych wyświetlaczy nie ma dźwięku</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Naprawiono %1$d razy, ostatnio %2$@</string>
+			<key>many</key>
+			<string>Naprawiono %1$d razy, ostatnio %2$@</string>
+			<key>one</key>
+			<string>Naprawiono %1$d raz, ostatnio %2$@</string>
+			<key>other</key>
+			<string>Naprawiono %1$d razy, ostatnio %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d sekundy</string>
+			<key>many</key>
+			<string>%1$d sekund</string>
+			<key>one</key>
+			<string>%1$d sekunda</string>
+			<key>other</key>
+			<string>%1$d sekundy</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Automatyczna naprawa wstrzymana po %1$d próbach. Podłącz ponownie wyświetlacz lub użyj Napraw teraz.</string>
+			<key>many</key>
+			<string>Automatyczna naprawa wstrzymana po %1$d próbach. Podłącz ponownie wyświetlacz lub użyj Napraw teraz.</string>
+			<key>one</key>
+			<string>Automatyczna naprawa wstrzymana po %1$d próbie. Podłącz ponownie wyświetlacz lub użyj Napraw teraz.</string>
+			<key>other</key>
+			<string>Automatyczna naprawa wstrzymana po %1$d próbach. Podłącz ponownie wyświetlacz lub użyj Napraw teraz.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Głośniki monitora nadal milczą po %1$d próbach. Spróbuj odłączyć wyświetlacz %2$@ i podłączyć go ponownie.</string>
+			<key>many</key>
+			<string>Głośniki monitora nadal milczą po %1$d próbach. Spróbuj odłączyć wyświetlacz %2$@ i podłączyć go ponownie.</string>
+			<key>one</key>
+			<string>Głośniki monitora nadal milczą po %1$d próbie. Spróbuj odłączyć wyświetlacz %2$@ i podłączyć go ponownie.</string>
+			<key>other</key>
+			<string>Głośniki monitora nadal milczą po %1$d próbach. Spróbuj odłączyć wyświetlacz %2$@ i podłączyć go ponownie.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>naprawiono %2$d razy</string>
+			<key>many</key>
+			<string>naprawiono %2$d razy</string>
+			<key>one</key>
+			<string>naprawiono %2$d raz</string>
+			<key>other</key>
+			<string>naprawiono %2$d razy</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Brak dźwięku %1$d razy</string>
+			<key>many</key>
+			<string>Brak dźwięku %1$d razy</string>
+			<key>one</key>
+			<string>Brak dźwięku %1$d raz</string>
+			<key>other</key>
+			<string>Brak dźwięku %1$d razy</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

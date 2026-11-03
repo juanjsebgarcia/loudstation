@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d ďalšie monitory nemajú zvuk</string>
+			<key>one</key>
+			<string>%1$d ďalší monitor nemá zvuk</string>
+			<key>other</key>
+			<string>%1$d ďalších monitorov nemá zvuk</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Opravené %1$d-krát, naposledy %2$@</string>
+			<key>one</key>
+			<string>Opravené %1$d-krát, naposledy %2$@</string>
+			<key>other</key>
+			<string>Opravené %1$d-krát, naposledy %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d sekundy</string>
+			<key>one</key>
+			<string>%1$d sekunda</string>
+			<key>other</key>
+			<string>%1$d sekúnd</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Automatická oprava je pozastavená po %1$d pokusoch. Znova pripojte monitor alebo použite „Opraviť teraz“.</string>
+			<key>one</key>
+			<string>Automatická oprava je pozastavená po %1$d pokuse. Znova pripojte monitor alebo použite „Opraviť teraz“.</string>
+			<key>other</key>
+			<string>Automatická oprava je pozastavená po %1$d pokusoch. Znova pripojte monitor alebo použite „Opraviť teraz“.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Vaše reproduktory monitora stále mlčia aj po %1$d pokusoch. Skúste odpojiť %2$@ a znova ho pripojiť.</string>
+			<key>one</key>
+			<string>Vaše reproduktory monitora stále mlčia aj po %1$d pokuse. Skúste odpojiť %2$@ a znova ho pripojiť.</string>
+			<key>other</key>
+			<string>Vaše reproduktory monitora stále mlčia aj po %1$d pokusoch. Skúste odpojiť %2$@ a znova ho pripojiť.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>opravené %2$d-krát</string>
+			<key>one</key>
+			<string>opravené %2$d-krát</string>
+			<key>other</key>
+			<string>opravené %2$d-krát</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Bez zvuku %1$d-krát</string>
+			<key>one</key>
+			<string>Bez zvuku %1$d-krát</string>
+			<key>other</key>
+			<string>Bez zvuku %1$d-krát</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

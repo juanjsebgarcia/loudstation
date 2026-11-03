@@ -1,0 +1,3 @@
+/* Fixture for Tests/Unit: a translation table with one good override and one bad format. */
+"menu.check_now" = "Check Now (fixture)";
+"headline.fixing" = "Fixing %d %x";

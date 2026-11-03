@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Još %1$d zaslona nemaju zvuka</string>
+			<key>one</key>
+			<string>Još %1$d zaslon nema zvuka</string>
+			<key>other</key>
+			<string>Još %1$d zaslona nema zvuka</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Popravljeno %1$d puta, zadnji put %2$@</string>
+			<key>one</key>
+			<string>Popravljeno %1$d put, zadnji put %2$@</string>
+			<key>other</key>
+			<string>Popravljeno %1$d puta, zadnji put %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d sekunde</string>
+			<key>one</key>
+			<string>%1$d sekunda</string>
+			<key>other</key>
+			<string>%1$d sekundi</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”.</string>
+			<key>one</key>
+			<string>Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”.</string>
+			<key>other</key>
+			<string>Automatski popravak pauziran je nakon %1$d pokušaja. Ponovno spojite zaslon ili upotrijebite „Popravi sada”.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati.</string>
+			<key>one</key>
+			<string>Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati.</string>
+			<key>other</key>
+			<string>Vaši zvučnici zaslona i dalje šute nakon %1$d pokušaja. Pokušajte iskopčati %2$@ i ponovno ga ukopčati.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>popravljeno %2$d puta</string>
+			<key>one</key>
+			<string>popravljeno %2$d put</string>
+			<key>other</key>
+			<string>popravljeno %2$d puta</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Bez zvuka %1$d puta</string>
+			<key>one</key>
+			<string>Bez zvuka %1$d put</string>
+			<key>other</key>
+			<string>Bez zvuka %1$d puta</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

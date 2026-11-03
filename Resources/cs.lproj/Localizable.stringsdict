@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d další monitory nemají zvuk</string>
+			<key>one</key>
+			<string>%1$d další monitor nemá zvuk</string>
+			<key>other</key>
+			<string>%1$d dalších monitorů nemá zvuk</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d opravy, naposledy %2$@</string>
+			<key>one</key>
+			<string>%1$d oprava, naposledy %2$@</string>
+			<key>other</key>
+			<string>%1$d oprav, naposledy %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d sekundy</string>
+			<key>one</key>
+			<string>%1$d sekunda</string>
+			<key>other</key>
+			<string>%1$d sekund</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Automatická oprava je pozastavena po %1$d pokusech. Znovu připojte monitor nebo použijte Opravit nyní.</string>
+			<key>one</key>
+			<string>Automatická oprava je pozastavena po %1$d pokusu. Znovu připojte monitor nebo použijte Opravit nyní.</string>
+			<key>other</key>
+			<string>Automatická oprava je pozastavena po %1$d pokusech. Znovu připojte monitor nebo použijte Opravit nyní.</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>Reproduktory monitoru stále mlčí po %1$d pokusech. Zkuste monitor %2$@ odpojit a znovu připojit.</string>
+			<key>one</key>
+			<string>Reproduktory monitoru stále mlčí po %1$d pokusu. Zkuste monitor %2$@ odpojit a znovu připojit.</string>
+			<key>other</key>
+			<string>Reproduktory monitoru stále mlčí po %1$d pokusech. Zkuste monitor %2$@ odpojit a znovu připojit.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%2$d opravy</string>
+			<key>one</key>
+			<string>%2$d oprava</string>
+			<key>other</key>
+			<string>%2$d oprav</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>few</key>
+			<string>%1$d výpadky zvuku</string>
+			<key>one</key>
+			<string>%1$d výpadek zvuku</string>
+			<key>other</key>
+			<string>%1$d výpadků zvuku</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

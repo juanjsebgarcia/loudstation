@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "nb",
+    "name": "Norsk bokmål",
+    "reviewed": false,
+    "glossary": {
+      "display": "skjerm",
+      "your monitor speakers": "skjermhøyttalerne dine",
+      "fix": "fikse",
+      "no sound": "ingen lyd",
+      "sound output": "lydutgang",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Lyden virker på alle skjermer",
+    "headline.speakers_silent": "Ingen lyd fra skjermhøyttalerne dine",
+    "headline.speakers_on": "På %@",
+    "headline.fixing": "Fikser %@…",
+    "headline.checking": "Sjekker lyden…",
+    "headline.couldnt_check": "Kunne ikke sjekke alle skjermene",
+    "headline.none": "Ingen skjerm kan spille av lyd",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "skjerm",
+    "display.fallback": "skjermen",
+    "row.tag.speakers": "skjermhøyttalere",
+    "row.tag.sound_output": "lydutgang",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Virker",
+    "status.no_sound": "Ingen lyd",
+    "status.checking": "Sjekker…",
+    "status.couldnt_check": "Ikke sjekket",
+    "status.fixing": "Fikser…",
+    "submenu.speakers_here": "Bruk denne skjermen til høyttalerne",
+    "submenu.fix_now": "Fiks nå",
+    "submenu.fix_now_confirm": "Fiks nå…",
+    "submenu.hint_blackout": "Skjermen blir svart i omtrent 3 sekunder",
+    "submenu.hint_others": "Kan stoppe lyden på andre skjermer",
+    "submenu.checked": "Sjekket %@",
+    "menu.check_now": "Sjekk nå",
+    "menu.follow_sound_output": "Skjermhøyttalerne følger lydutgangen",
+    "menu.fix_automatically": "Fiks skjermhøyttalerne automatisk",
+    "menu.check_every": "Sjekkintervall",
+    "menu.interval.minute": "1 minutt",
+    "menu.interval.events_only": "Bare når skjermer endres eller Macen våkner",
+    "menu.open_at_login": "Åpne ved pålogging",
+    "menu.last_checked": "Sist sjekket %@",
+    "menu.show_log": "Vis logg",
+    "menu.quit": "Avslutt %@",
+    "menu.quit_after_fix": "Avslutt når fiksingen er ferdig",
+    "note.fixing": "Slår %@ av og på…",
+    "note.gave_up": "Automatisk fiksing er stoppet for denne skjermen etter to forsøk. Koble den til på nytt, eller bruk «Fiks nå».",
+    "note.output_switched": "Lyden spilles nå av via %@. Apper som allerede spilte, må kanskje åpnes på nytt.",
+    "note.too_soon": "Venter ett minutt mellom hver fiksing.",
+    "note.waiting_call": "Venter til samtalen er over. Bruk Fiks nå for å fikse det likevel.",
+    "note.waiting_full_screen": "Venter til du går ut av fullskjerm. Bruk Fiks nå for å fikse det likevel.",
+    "note.collateral": "Fiksingen av %1$@ stoppet lyden på %2$@.",
+    "note.confirming": "Skjermhøyttalerne dine har ingen lyd. Sjekker igjen før fiksing…",
+    "note.stranded": "En skjerm er fortsatt slått av. Prøver igjen. Du kan også koble den til på nytt.",
+    "note.busy": "Sjekker fortsatt. Prøv Fiks nå igjen om noen sekunder.",
+    "note.cant_autofix": "Denne skjermen kan ikke fikses automatisk her. Koble til kabelen på nytt for å fikse den.",
+    "note.speakers_missing": "Skjermen med skjermhøyttalerne dine er ikke koblet til.",
+    "note.quitting": "Avslutter når fiksingen er ferdig…",
+    "outcome.fixed": "%@ virker igjen. Sett på pause og spill av på nytt, eller åpne apper som hang, på nytt.",
+    "outcome.still_silent": "%@ har fortsatt ingen lyd. Prøv å koble fra kabelen og koble den til igjen.",
+    "outcome.unverified": "Slo %@ av og på, men kunne ikke sjekke den etterpå.",
+    "outcome.unknown_display": "Kunne ikke finne ut hvilken skjerm %@ er, så ingenting ble slått av.",
+    "outcome.cycle_failed": "Det gikk ikke helt å slå %@ av og på. Du finner detaljene under Vis logg.",
+    "welcome.title": "%@ er i menylinjen",
+    "welcome.body": "Symbolet viser om lyden virker på skjermene dine. Grønn: alt virker. Oransje: en skjerm du ikke bruker til lyd, har blitt stille. Rød: skjermhøyttalerne dine har blitt stille.\n\nFor å fikse stille skjermhøyttalere slår appen skjermen deres av og på. Den skjermen blir svart i omtrent 3 sekunder, og vinduene på den kan flytte seg et øyeblikk. Dette skjer aldri med den eneste skjermen din, og appen venter til samtaler og video i fullskjerm er over.\n\nAppen åpnes ved pålogging. Du kan endre dette i menyen.",
+    "welcome.fix_automatically": "Fiks automatisk",
+    "welcome.status_only": "Bare vis status",
+    "confirm.title": "Fikse %@?",
+    "confirm.body": "Dette slår %1$@ av og på, så den blir svart i omtrent 3 sekunder. Å fikse én skjerm kan stoppe lyden på en annen, også skjermhøyttalerne dine.",
+    "confirm.fix": "Fiks",
+    "confirm.cancel": "Avbryt",
+    "notify.fixed.title": "Skjermhøyttalerne dine virker igjen",
+    "notify.fixed.body": "%@ ble slått av og på i noen sekunder. Hvis en app fortsatt er stille, avslutter du den og åpner den på nytt.",
+    "notify.fixed.body_collateral": "%1$@ ble slått av og på i noen sekunder. Dette stoppet lyden på %2$@. Hvis en app fortsatt er stille, avslutter du den og åpner den på nytt.",
+    "notify.still_silent.title": "Skjermhøyttalerne dine er fortsatt stille",
+    "notify.still_silent.body": "Prøv å koble fra %@ og koble den til igjen.",
+    "notify.paused.title": "Automatisk fiksing er satt på pause",
+    "notify.waiting.title": "Skjermhøyttalerne dine er stille",
+    "notify.waiting_call.body": "Venter til samtalen er over, fordi fiksingen gjør %@ svart i omtrent 3 sekunder. Bruk Fiks nå i menyen for å fikse det likevel.",
+    "notify.waiting_full_screen.body": "Venter til du går ut av fullskjerm, fordi fiksingen gjør %@ svart i omtrent 3 sekunder. Bruk Fiks nå i menyen for å fikse det likevel.",
+    "notify.stranded.title": "En skjerm er fortsatt slått av",
+    "notify.stranded.body": "%@ kunne ikke slå den på igjen. Koble fra kabelen og koble den til igjen, eller logg ut og inn igjen.",
+    "cli.status.working": "Virker",
+    "cli.status.no_sound": "Ingen lyd",
+    "cli.status.couldnt_check": "Ikke sjekket",
+    "cli.status.sound_output": "(lydutgang)",
+    "cli.status.hint_fix": "Kjør `%@ fix` for å fikse skjermen lyden spilles av gjennom.",
+    "cli.status.hint_other": "Lydutgangen din virker. Slik fikser du en annen skjerm (dette kan stoppe lyden på de andre): %1$@ fix --uid %2$@",
+    "cli.none": "Ingen skjerm kan spille av lyd.",
+    "cli.nothing_to_fix": "Lyden din spilles ikke av gjennom en skjerm, så det er ingenting å fikse.",
+    "cli.couldnt_check": "Kunne ikke sjekke %@, så ingenting ble slått av.",
+    "cli.stranded": "En skjerm som ble slått av under en tidligere fiksing, kunne ikke slås på igjen, så ingenting annet ble slått av.",
+    "cli.list.outputs": "Lydutganger:",
+    "cli.list.displays": "Skjermer:",
+    "cli.list.default": "standard",
+    "cli.list.system_sounds": "systemlyder",
+    "cli.list.on_display": "på skjerm %@",
+    "cli.app.opened": "Åpnet %@. Fra nå av åpnes den ved hver pålogging. Se etter symbolet i menylinjen.",
+    "cli.app.not_found": "Fant ikke %@. Så i:",
+    "cli.app.open_failed": "Kunne ikke åpne %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Kjør `%@ --help` for å se hvordan kommandoen brukes.",
+    "cli.error.needs_value": "%@ trenger en verdi.",
+    "cli.error.range": "%1$@ må være et tall fra %2$@ til %3$@, ikke «%4$@».",
+    "cli.error.root": "Ikke kjør %@ som root eller med sudo. Den trenger bare din egen konto.",
+    "cli.error.one_command": "Bare én kommando om gangen: fikk «%1$@» og «%2$@».",
+    "cli.error.unknown_option": "Ukjent valg «%@».",
+    "cli.error.unknown_command": "Ukjent kommando «%@».",
+    "cli.error.no_output": "Ingen lydutgang med ID %1$@. Se `%2$@ list`.",
+    "cli.error.not_display": "%@ er ikke en skjerms lydutgang."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d annen skjerm har ingen lyd",
+          "other": "%1$d andre skjermer har ingen lyd"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Ingen lyd %1$d gang",
+          "other": "Ingen lyd %1$d ganger"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "fikset %2$d gang",
+          "other": "fikset %2$d ganger"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d sekund",
+          "other": "%1$d sekunder"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Fikset %1$d gang, sist %2$@",
+          "other": "Fikset %1$d ganger, sist %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatisk fiksing satt på pause etter %1$d forsøk. Koble til skjermen på nytt, eller bruk Fiks nå.",
+          "other": "Automatisk fiksing satt på pause etter %1$d forsøk. Koble til skjermen på nytt, eller bruk Fiks nå."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Skjermhøyttalerne dine er fortsatt stille etter %1$d forsøk. Prøv å koble fra %2$@ og koble den til igjen.",
+          "other": "Skjermhøyttalerne dine er fortsatt stille etter %1$d forsøk. Prøv å koble fra %2$@ og koble den til igjen."
+        }
+      }
+    }
+  }
+}

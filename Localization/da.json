@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "da",
+    "name": "Dansk",
+    "reviewed": false,
+    "glossary": {
+      "display": "skærm",
+      "your monitor speakers": "dine skærmhøjttalere",
+      "fix": "ordne",
+      "no sound": "ingen lyd",
+      "sound output": "lydudgang",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Lyden virker på alle skærme",
+    "headline.speakers_silent": "Ingen lyd fra dine skærmhøjttalere",
+    "headline.speakers_on": "På %@",
+    "headline.fixing": "Ordner %@…",
+    "headline.checking": "Tjekker lyden…",
+    "headline.couldnt_check": "Kunne ikke tjekke alle skærme",
+    "headline.none": "Ingen skærm kan afspille lyd",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "skærm",
+    "display.fallback": "skærmen",
+    "row.tag.speakers": "skærmhøjttalere",
+    "row.tag.sound_output": "lydudgang",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Virker",
+    "status.no_sound": "Ingen lyd",
+    "status.checking": "Tjekker…",
+    "status.couldnt_check": "Ikke tjekket",
+    "status.fixing": "Ordner…",
+    "submenu.speakers_here": "Brug denne skærm til højttalerne",
+    "submenu.fix_now": "Ordn nu",
+    "submenu.fix_now_confirm": "Ordn nu…",
+    "submenu.hint_blackout": "Skærmen bliver sort i ca. 3 sekunder",
+    "submenu.hint_others": "Kan stoppe lyden på andre skærme",
+    "submenu.checked": "Tjekket %@",
+    "menu.check_now": "Tjek nu",
+    "menu.follow_sound_output": "Skærmhøjttalerne følger lydudgangen",
+    "menu.fix_automatically": "Ordn skærmhøjttalerne automatisk",
+    "menu.check_every": "Tjekinterval",
+    "menu.interval.minute": "1 minut",
+    "menu.interval.events_only": "Kun når skærme ændres, eller computeren vågner",
+    "menu.open_at_login": "Åbn ved login",
+    "menu.last_checked": "Sidst tjekket %@",
+    "menu.show_log": "Vis log",
+    "menu.quit": "Afslut %@",
+    "menu.quit_after_fix": "Afslut, når det er ordnet",
+    "note.fixing": "Slukker og tænder %@…",
+    "note.gave_up": "Automatisk ordning er stoppet for denne skærm efter to forsøg. Tilslut den igen, eller brug “Ordn nu”.",
+    "note.output_switched": "Lyden afspilles nu via %@. Apps, der allerede spillede, skal måske åbnes igen.",
+    "note.too_soon": "Venter et minut, før der ordnes igen.",
+    "note.waiting_call": "Venter, til dit opkald er slut. Vælg Ordn nu for at ordne det alligevel.",
+    "note.waiting_full_screen": "Venter, til du forlader fuld skærm. Vælg Ordn nu for at ordne det alligevel.",
+    "note.collateral": "Da %1$@ blev ordnet, stoppede lyden på %2$@.",
+    "note.confirming": "Dine skærmhøjttalere har ingen lyd. Tjekker igen, før der ordnes…",
+    "note.stranded": "En skærm er stadig slukket. Prøver igen. Det hjælper også at tilslutte den igen.",
+    "note.busy": "Tjekker stadig. Prøv Ordn nu igen om et par sekunder.",
+    "note.cant_autofix": "Denne skærm kan ikke ordnes automatisk her. Tilslut dens kabel igen for at ordne den.",
+    "note.speakers_missing": "Skærmen med dine skærmhøjttalere er ikke tilsluttet.",
+    "note.quitting": "Afslutter, når det er ordnet…",
+    "outcome.fixed": "%@ virker igen. Sæt på pause, og afspil igen, eller åbn de apps, der hang, igen.",
+    "outcome.still_silent": "%@ har stadig ingen lyd. Prøv at tage kablet ud og sætte det i igen.",
+    "outcome.unverified": "%@ blev slukket og tændt, men kunne ikke tjekkes bagefter.",
+    "outcome.unknown_display": "Kunne ikke se, hvilken skærm %@ er, så intet blev slukket.",
+    "outcome.cycle_failed": "Det lykkedes ikke helt at slukke og tænde %@. Se detaljerne under Vis log.",
+    "welcome.title": "%@ er i din menulinje",
+    "welcome.body": "Symbolet viser, om lyden virker på dine skærme. Grøn: alt virker. Orange: en skærm, du ikke bruger til lyd, er blevet tavs. Rød: dine skærmhøjttalere er blevet tavse.\n\nFor at ordne tavse skærmhøjttalere slukker og tænder appen deres skærm. Skærmen bliver sort i ca. 3 sekunder, og dens vinduer kan flytte sig et øjeblik. Det sker aldrig med din eneste skærm, og appen venter, til opkald og video i fuld skærm er slut.\n\nAppen åbner ved login. Det kan du ændre i dens menu.",
+    "welcome.fix_automatically": "Ordn automatisk",
+    "welcome.status_only": "Vis kun status",
+    "confirm.title": "Ordn %@?",
+    "confirm.body": "%1$@ bliver slukket og tændt, så den bliver sort i ca. 3 sekunder. Når én skærm ordnes, kan lyden stoppe på en anden, også dine skærmhøjttalere.",
+    "confirm.fix": "Ordn",
+    "confirm.cancel": "Annuller",
+    "notify.fixed.title": "Dine skærmhøjttalere virker igen",
+    "notify.fixed.body": "%@ blev slukket og tændt i et par sekunder. Hvis en app stadig er tavs, så afslut den, og åbn den igen.",
+    "notify.fixed.body_collateral": "%1$@ blev slukket og tændt i et par sekunder. Det stoppede lyden på %2$@. Hvis en app stadig er tavs, så afslut den, og åbn den igen.",
+    "notify.still_silent.title": "Dine skærmhøjttalere er stadig tavse",
+    "notify.still_silent.body": "Prøv at frakoble %@ og tilslutte den igen.",
+    "notify.paused.title": "Ordn automatisk er sat på pause",
+    "notify.waiting.title": "Dine skærmhøjttalere er tavse",
+    "notify.waiting_call.body": "Venter, til dit opkald er slut, fordi %@ bliver sort i ca. 3 sekunder, når den ordnes. Vælg Ordn nu i menuen for at ordne det alligevel.",
+    "notify.waiting_full_screen.body": "Venter, til du forlader fuld skærm, fordi %@ bliver sort i ca. 3 sekunder, når den ordnes. Vælg Ordn nu i menuen for at ordne det alligevel.",
+    "notify.stranded.title": "En skærm er stadig slukket",
+    "notify.stranded.body": "%@ kunne ikke tænde den igen. Tag kablet ud, og sæt det i igen, eller log ud og ind igen.",
+    "cli.status.working": "Virker",
+    "cli.status.no_sound": "Ingen lyd",
+    "cli.status.couldnt_check": "Ikke tjekket",
+    "cli.status.sound_output": "(lydudgang)",
+    "cli.status.hint_fix": "Kør `%@ fix` for at ordne den skærm, lyden afspilles gennem.",
+    "cli.status.hint_other": "Din lydudgang virker. Sådan ordner du en anden skærm (det kan stoppe lyden på de andre): %1$@ fix --uid %2$@",
+    "cli.none": "Ingen skærm kan afspille lyd.",
+    "cli.nothing_to_fix": "Din lyd afspilles ikke gennem en skærm, så der er intet at ordne.",
+    "cli.couldnt_check": "Kunne ikke tjekke %@, så intet blev slukket.",
+    "cli.stranded": "En skærm, der blev slukket under et tidligere forsøg, kunne ikke tændes igen, så intet andet blev slukket.",
+    "cli.list.outputs": "Lydudgange:",
+    "cli.list.displays": "Skærme:",
+    "cli.list.default": "standard",
+    "cli.list.system_sounds": "systemlyde",
+    "cli.list.on_display": "på skærm %@",
+    "cli.app.opened": "%@ er åbnet. Fra nu af åbner den ved hvert login. Se efter symbolet i menulinjen.",
+    "cli.app.not_found": "Kunne ikke finde %@. Ledte i:",
+    "cli.app.open_failed": "Kunne ikke åbne %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Kør `%@ --help` for at se, hvordan kommandoen bruges.",
+    "cli.error.needs_value": "%@ skal have en værdi.",
+    "cli.error.range": "%1$@ skal være et tal fra %2$@ til %3$@, ikke “%4$@”.",
+    "cli.error.root": "Kør ikke %@ som root eller med sudo. Den behøver kun din egen konto.",
+    "cli.error.one_command": "Kun én kommando ad gangen: fik “%1$@” og “%2$@”.",
+    "cli.error.unknown_option": "Ukendt indstilling “%@”.",
+    "cli.error.unknown_command": "Ukendt kommando “%@”.",
+    "cli.error.no_output": "Ingen lydudgang med ID %1$@. Se `%2$@ list`.",
+    "cli.error.not_display": "%@ er ikke en skærms lydudgang."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d anden skærm har ingen lyd",
+          "other": "%1$d andre skærme har ingen lyd"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Ingen lyd %1$d gang",
+          "other": "Ingen lyd %1$d gange"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "ordnet %2$d gang",
+          "other": "ordnet %2$d gange"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d sekund",
+          "other": "%1$d sekunder"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Ordnet %1$d gang, senest %2$@",
+          "other": "Ordnet %1$d gange, senest %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Ordn automatisk er sat på pause efter %1$d forsøg. Tilslut skærmen igen, eller vælg Ordn nu.",
+          "other": "Ordn automatisk er sat på pause efter %1$d forsøg. Tilslut skærmen igen, eller vælg Ordn nu."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Dine skærmhøjttalere er stadig tavse efter %1$d forsøg. Prøv at frakoble %2$@ og tilslutte den igen.",
+          "other": "Dine skærmhøjttalere er stadig tavse efter %1$d forsøg. Prøv at frakoble %2$@ og tilslutte den igen."
+        }
+      }
+    }
+  }
+}

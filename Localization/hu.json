@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "hu",
+    "name": "Magyar",
+    "reviewed": false,
+    "glossary": {
+      "display": "kijelző",
+      "your monitor speakers": "a kijelzőhangszórók",
+      "fix": "javítás",
+      "no sound": "nincs hang",
+      "sound output": "hangkimenet",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "A hang minden kijelzőn működik",
+    "headline.speakers_silent": "Nem szólnak a kijelzőhangszórók",
+    "headline.speakers_on": "Kijelző: %@",
+    "headline.fixing": "Javítás: %@…",
+    "headline.checking": "Hang ellenőrzése…",
+    "headline.couldnt_check": "Nem sikerült minden kijelzőt ellenőrizni",
+    "headline.none": "Egyik kijelző sem tud hangot lejátszani",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "kijelző",
+    "display.fallback": "kijelző",
+    "row.tag.speakers": "kijelzőhangszórók",
+    "row.tag.sound_output": "hangkimenet",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Működik",
+    "status.no_sound": "Nincs hang",
+    "status.checking": "Ellenőrzés…",
+    "status.couldnt_check": "Nem ellenőrzött",
+    "status.fixing": "Javítás…",
+    "submenu.speakers_here": "Hangszórók beállítása erre a kijelzőre",
+    "submenu.fix_now": "Javítás most",
+    "submenu.fix_now_confirm": "Javítás most…",
+    "submenu.hint_blackout": "A képernyő kb. 3 másodpercre elsötétül",
+    "submenu.hint_others": "Más kijelzőkön elnémulhat a hang",
+    "submenu.checked": "Ellenőrizve: %@",
+    "menu.check_now": "Ellenőrzés most",
+    "menu.follow_sound_output": "A kijelzőhangszórók követik a hangkimenetet",
+    "menu.fix_automatically": "Kijelzőhangszórók automatikus javítása",
+    "menu.check_every": "Ellenőrzés gyakorisága",
+    "menu.interval.minute": "1 perc",
+    "menu.interval.events_only": "Csak kijelzőváltáskor vagy a Mac ébredésekor",
+    "menu.open_at_login": "Megnyitás bejelentkezéskor",
+    "menu.last_checked": "Utolsó ellenőrzés: %@",
+    "menu.show_log": "Napló megjelenítése",
+    "menu.quit": "Kilépés: %@",
+    "menu.quit_after_fix": "Kilépés a javítás után",
+    "note.fixing": "Ki- és bekapcsolás: %@…",
+    "note.gave_up": "Két próba után leállt a kijelző automatikus javítása. Csatlakoztassa újra, vagy válassza: „Javítás most”.",
+    "note.output_switched": "A hang most ezen szól: %@. Az addig lejátszó appokat lehet, hogy újra kell nyitni.",
+    "note.too_soon": "Két javítás között egy percet várunk.",
+    "note.waiting_call": "Várakozás a hívás végéig. A „Javítás most” paranccsal azonnal javíthat.",
+    "note.waiting_full_screen": "Várakozás a teljes képernyős mód elhagyásáig. A „Javítás most” paranccsal azonnal javíthat.",
+    "note.collateral": "Javítva: %1$@, de elnémult: %2$@.",
+    "note.confirming": "A kijelzőhangszórók nem adnak hangot. Javítás előtt újra ellenőrizzük…",
+    "note.stranded": "Egy kijelző még mindig ki van kapcsolva. Újrapróbáljuk; az újracsatlakoztatás is segít.",
+    "note.busy": "Ellenőrzés folyamatban. Néhány másodperc múlva próbálja újra a „Javítás most” parancsot.",
+    "note.cant_autofix": "Ez a kijelző itt nem javítható automatikusan. A javításhoz csatlakoztassa újra a kábelét.",
+    "note.speakers_missing": "A kijelzőhangszórókhoz tartozó kijelző nincs csatlakoztatva.",
+    "note.quitting": "Kilépés a javítás befejezése után…",
+    "outcome.fixed": "Újra működik: %@. Állítsa le, majd indítsa újra a lejátszást, vagy nyissa meg újra az elakadt appot.",
+    "outcome.still_silent": "Továbbra sincs hang: %@. Próbálja kihúzni a kábelét, majd visszadugni.",
+    "outcome.unverified": "Ki- és bekapcsolva: %@, de utána nem sikerült ellenőrizni.",
+    "outcome.unknown_display": "Nem derült ki, melyik képernyő ez: %@, ezért semmi sem lett kikapcsolva.",
+    "outcome.cycle_failed": "Nem fejeződött be a ki- és bekapcsolás: %@. A részletek a „Napló megjelenítése” alatt találhatók.",
+    "welcome.title": "%@ mostantól a menüsorban van",
+    "welcome.body": "Az ikon mutatja, működik-e a kijelzők hangja. Zöld: minden működik. Narancs: elnémult egy kijelző, amelyet nem használ hanghoz. Piros: elnémultak a kijelzőhangszórók.\n\nAz elnémult kijelzőhangszórók javításához az app ki- és bekapcsolja a hozzájuk tartozó kijelzőt. Ez a képernyő kb. 3 másodpercre elsötétül, és az ablakai egy pillanatra elmozdulhatnak. Az app ezt soha nem teszi az egyetlen képernyőjével, és megvárja a hívások és a teljes képernyős videók végét.\n\nBejelentkezéskor megnyílik. Ezt a menüjében módosíthatja.",
+    "welcome.fix_automatically": "Automatikus javítás",
+    "welcome.status_only": "Csak állapotjelzés",
+    "confirm.title": "%@ javítása?",
+    "confirm.body": "A művelet ki- és bekapcsolja a kijelzőt (%1$@), így az kb. 3 másodpercre elsötétül. Egy kijelző javítása egy másikon megszakíthatja a hangot, akár a kijelzőhangszórókon is.",
+    "confirm.fix": "Javítás",
+    "confirm.cancel": "Mégsem",
+    "notify.fixed.title": "A kijelzőhangszórók újra működnek",
+    "notify.fixed.body": "Néhány másodpercre ki- és bekapcsoltuk: %@. Ha egy app továbbra is néma, lépjen ki belőle, és nyissa meg újra.",
+    "notify.fixed.body_collateral": "Néhány másodpercre ki- és bekapcsoltuk: %1$@. Emiatt elnémult: %2$@. Ha egy app továbbra is néma, lépjen ki belőle, és nyissa meg újra.",
+    "notify.still_silent.title": "A kijelzőhangszórók még mindig némák",
+    "notify.still_silent.body": "Próbálja kihúzni, majd visszadugni a kijelzőt (%@).",
+    "notify.paused.title": "Az automatikus javítás szünetel",
+    "notify.waiting.title": "A kijelzőhangszórók némák",
+    "notify.waiting_call.body": "Várakozás a hívás végéig, mert a javítás kb. 3 másodpercre elsötétíti a kijelzőt (%@). A menü „Javítás most” parancsával azonnal javíthat.",
+    "notify.waiting_full_screen.body": "Várakozás a teljes képernyős mód végéig, mert a javítás kb. 3 másodpercre elsötétíti a kijelzőt (%@). A menü „Javítás most” parancsával azonnal javíthat.",
+    "notify.stranded.title": "Egy kijelző még ki van kapcsolva",
+    "notify.stranded.body": "%@ nem tudta visszakapcsolni. Húzza ki és dugja vissza a kábelét, vagy jelentkezzen ki, majd be.",
+    "cli.status.working": "Működik",
+    "cli.status.no_sound": "Nincs hang",
+    "cli.status.couldnt_check": "Nem ellenőrzött",
+    "cli.status.sound_output": "(hangkimenet)",
+    "cli.status.hint_fix": "A hangot lejátszó kijelző javításához futtassa ezt: `%@ fix`.",
+    "cli.status.hint_other": "A hangkimenet működik. Másik kijelző javításához (ez megszakíthatja a hangot a többin): %1$@ fix --uid %2$@",
+    "cli.none": "Egyik kijelző sem tud hangot lejátszani.",
+    "cli.nothing_to_fix": "A hang nem kijelzőn szól, így nincs mit javítani.",
+    "cli.couldnt_check": "Nem sikerült ellenőrizni: %@, ezért semmi sem lett kikapcsolva.",
+    "cli.stranded": "Egy korábbi javítás által kikapcsolt kijelzőt nem sikerült visszakapcsolni, ezért más nem lett kikapcsolva.",
+    "cli.list.outputs": "Hangkimenetek:",
+    "cli.list.displays": "Kijelzők:",
+    "cli.list.default": "alapértelmezett",
+    "cli.list.system_sounds": "rendszerhangok",
+    "cli.list.on_display": "kijelző: %@",
+    "cli.app.opened": "Megnyitva: %@. Mostantól minden bejelentkezéskor megnyílik; az ikonját a menüsorban találja.",
+    "cli.app.not_found": "Nem található: %@. Átnézett mappák:",
+    "cli.app.open_failed": "Nem sikerült megnyitni: %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Használat: `%@ --help`.",
+    "cli.error.needs_value": "Értéket kell megadni ehhez: %@.",
+    "cli.error.range": "%1$@: %2$@ és %3$@ közötti számnak kell lennie, nem „%4$@”.",
+    "cli.error.root": "Ne futtassa a(z) %@ parancsot root-ként vagy sudóval. Csak a saját fiókjára van szüksége.",
+    "cli.error.one_command": "Egyszerre csak egy parancs adható meg, de kettő érkezett: „%1$@” és „%2$@”.",
+    "cli.error.unknown_option": "Ismeretlen kapcsoló: „%@”.",
+    "cli.error.unknown_command": "Ismeretlen parancs: „%@”.",
+    "cli.error.no_output": "Nincs hangkimenet ezzel az azonosítóval: %1$@. Lásd: `%2$@ list`.",
+    "cli.error.not_display": "Ez nem kijelző hangkimenete: %@."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "További %1$d kijelzőn nincs hang",
+          "other": "További %1$d kijelzőn nincs hang"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "%1$d alkalommal nem volt hang",
+          "other": "%1$d alkalommal nem volt hang"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "%2$d alkalommal javítva",
+          "other": "%2$d alkalommal javítva"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d másodperc",
+          "other": "%1$d másodperc"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "%1$d alkalommal javítva, legutóbb: %2$@",
+          "other": "%1$d alkalommal javítva, legutóbb: %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Az automatikus javítás %1$d próba után szünetel. Csatlakoztassa újra, vagy válassza a „Javítás most” pontot.",
+          "other": "Az automatikus javítás %1$d próba után szünetel. Csatlakoztassa újra, vagy válassza a „Javítás most” pontot."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "A kijelzőhangszórók %1$d próba után is némák. Próbálja kihúzni, majd visszadugni a kijelzőt (%2$@).",
+          "other": "A kijelzőhangszórók %1$d próba után is némák. Próbálja kihúzni, majd visszadugni a kijelzőt (%2$@)."
+        }
+      }
+    }
+  }
+}

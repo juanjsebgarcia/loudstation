@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "language": "ro",
+    "name": "Română",
+    "reviewed": false,
+    "glossary": {
+      "display": "monitor",
+      "your monitor speakers": "difuzoarele monitorului",
+      "fix": "remediați / remediere",
+      "no sound": "fără sunet",
+      "sound output": "ieșirea de sunet",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Sunetul funcționează pe toate monitoarele",
+    "headline.speakers_silent": "Difuzoarele monitorului nu au sunet",
+    "headline.speakers_on": "Pe %@",
+    "headline.fixing": "Se remediază %@…",
+    "headline.checking": "Se verifică sunetul…",
+    "headline.couldnt_check": "Nu s-au putut verifica toate monitoarele",
+    "headline.none": "Niciun monitor nu poate reda sunet",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "monitor",
+    "display.fallback": "monitorul",
+    "row.tag.speakers": "difuzoare monitor",
+    "row.tag.sound_output": "ieșirea de sunet",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Funcționează",
+    "status.no_sound": "Fără sunet",
+    "status.checking": "Se verifică…",
+    "status.couldnt_check": "Neverificat",
+    "status.fixing": "Se remediază…",
+    "submenu.speakers_here": "Folosiți acest monitor pentru difuzoare",
+    "submenu.fix_now": "Remediați acum",
+    "submenu.fix_now_confirm": "Remediați acum…",
+    "submenu.hint_blackout": "Ecranul devine negru pentru circa 3 secunde",
+    "submenu.hint_others": "Poate opri sunetul pe alte monitoare",
+    "submenu.checked": "Verificat %@",
+    "menu.check_now": "Verificați acum",
+    "menu.follow_sound_output": "Difuzoarele monitorului urmează ieșirea de sunet",
+    "menu.fix_automatically": "Remediați automat difuzoarele monitorului",
+    "menu.check_every": "Verificați la fiecare",
+    "menu.interval.minute": "1 minut",
+    "menu.interval.events_only": "Doar la schimbări de monitoare sau la trezire",
+    "menu.open_at_login": "Deschideți la autentificare",
+    "menu.last_checked": "Ultima verificare: %@",
+    "menu.show_log": "Afișați jurnalul",
+    "menu.quit": "Ieșiți din %@",
+    "menu.quit_after_fix": "Ieșiți după terminarea remedierii",
+    "note.fixing": "Se oprește și se repornește %@…",
+    "note.gave_up": "Remedierea automată s-a oprit după două încercări. Reconectați monitorul sau folosiți „Remediați acum”.",
+    "note.output_switched": "Sunetul se aude acum prin %@. Aplicațiile care redau deja poate trebuie redeschise.",
+    "note.too_soon": "Se așteaptă un minut între remedieri.",
+    "note.waiting_call": "Se așteaptă terminarea apelului. Folosiți „Remediați acum” pentru a remedia oricum.",
+    "note.waiting_full_screen": "Se așteaptă ieșirea din ecranul complet. Folosiți „Remediați acum” pentru a remedia oricum.",
+    "note.collateral": "Remedierea monitorului %1$@ a oprit sunetul pe %2$@.",
+    "note.confirming": "Difuzoarele monitorului sunt fără sunet. Se verifică din nou înainte de remediere…",
+    "note.stranded": "Un monitor este încă oprit. Se încearcă din nou; îl puteți și reconecta.",
+    "note.busy": "Încă se verifică. Încercați din nou „Remediați acum” în câteva secunde.",
+    "note.cant_autofix": "Acest monitor nu poate fi remediat automat aici. Reconectați-i cablul pentru a-l remedia.",
+    "note.speakers_missing": "Monitorul cu difuzoarele dvs. nu este conectat.",
+    "note.quitting": "Aplicația se închide după terminarea remedierii…",
+    "outcome.fixed": "%@ funcționează din nou. Puneți pe pauză și reluați redarea sau redeschideți aplicațiile care s-au blocat.",
+    "outcome.still_silent": "%@ tot nu are sunet. Încercați să deconectați cablul și să-l conectați la loc.",
+    "outcome.unverified": "%@ a fost oprit și repornit, dar nu s-a putut verifica după aceea.",
+    "outcome.unknown_display": "Nu s-a putut afla ce ecran este %@, așa că nu s-a oprit nimic.",
+    "outcome.cycle_failed": "Oprirea și repornirea monitorului %@ nu s-a încheiat. Detaliile sunt în „Afișați jurnalul”.",
+    "welcome.title": "%@ se află în bara de meniu",
+    "welcome.body": "Pictograma arată dacă sunetul monitoarelor funcționează. Verde: totul funcționează. Portocaliu: un monitor pe care nu îl folosiți pentru sunet a amuțit. Roșu: difuzoarele monitorului au amuțit.\n\nPentru a remedia difuzoarele monitorului, aplicația oprește și repornește monitorul lor. Ecranul acela devine negru pentru circa 3 secunde, iar ferestrele lui se pot muta pentru o clipă. Nu face niciodată asta pe singurul dvs. ecran și așteaptă să se termine apelurile și videoclipurile pe ecran complet.\n\nSe deschide la autentificare. Puteți schimba asta din meniul aplicației.",
+    "welcome.fix_automatically": "Remediați automat",
+    "welcome.status_only": "Afișați doar starea",
+    "confirm.title": "Remediați %@?",
+    "confirm.body": "Această acțiune oprește și repornește %1$@, așa că ecranul devine negru pentru circa 3 secunde. Remedierea unui monitor poate opri sunetul pe altul, inclusiv pe difuzoarele monitorului.",
+    "confirm.fix": "Remediați",
+    "confirm.cancel": "Anulați",
+    "notify.fixed.title": "Difuzoarele monitorului funcționează din nou",
+    "notify.fixed.body": "%@ a fost oprit și repornit pentru câteva secunde. Dacă o aplicație tot nu are sunet, ieșiți din ea și redeschideți-o.",
+    "notify.fixed.body_collateral": "%1$@ a fost oprit și repornit pentru câteva secunde. Astfel s-a oprit sunetul pe %2$@. Dacă o aplicație tot nu are sunet, ieșiți din ea și redeschideți-o.",
+    "notify.still_silent.title": "Difuzoarele monitorului tot nu au sunet",
+    "notify.still_silent.body": "Încercați să deconectați %@ și să-l conectați la loc.",
+    "notify.paused.title": "Remedierea automată este în pauză",
+    "notify.waiting.title": "Difuzoarele monitorului nu au sunet",
+    "notify.waiting_call.body": "Se așteaptă terminarea apelului, deoarece remedierea înnegrește %@ pentru circa 3 secunde. Folosiți „Remediați acum” din meniu pentru a remedia oricum.",
+    "notify.waiting_full_screen.body": "Se așteaptă ieșirea din ecranul complet, deoarece remedierea înnegrește %@ pentru circa 3 secunde. Folosiți „Remediați acum” din meniu pentru a remedia oricum.",
+    "notify.stranded.title": "Un monitor este încă oprit",
+    "notify.stranded.body": "%@ nu l-a putut reporni. Deconectați cablul și conectați-l la loc sau încheiați sesiunea și autentificați-vă din nou.",
+    "cli.status.working": "Funcționează",
+    "cli.status.no_sound": "Fără sunet",
+    "cli.status.couldnt_check": "Neverificat",
+    "cli.status.sound_output": "(ieșirea de sunet)",
+    "cli.status.hint_fix": "Rulați `%@ fix` pentru a remedia monitorul prin care se redă sunetul.",
+    "cli.status.hint_other": "Ieșirea de sunet funcționează. Pentru a remedia alt monitor (poate opri sunetul pe celelalte): %1$@ fix --uid %2$@",
+    "cli.none": "Niciun monitor nu poate reda sunet.",
+    "cli.nothing_to_fix": "Sunetul nu se redă printr-un monitor, așa că nu este nimic de remediat.",
+    "cli.couldnt_check": "Nu s-a putut verifica %@, așa că nu s-a oprit nimic.",
+    "cli.stranded": "Un monitor oprit de o remediere anterioară nu a putut fi repornit, așa că nu s-a mai oprit nimic altceva.",
+    "cli.list.outputs": "Ieșiri audio:",
+    "cli.list.displays": "Monitoare:",
+    "cli.list.default": "implicită",
+    "cli.list.system_sounds": "sunete de sistem",
+    "cli.list.on_display": "pe monitorul %@",
+    "cli.app.opened": "S-a deschis %@. De acum se deschide la fiecare autentificare; căutați pictograma sa în bara de meniu.",
+    "cli.app.not_found": "Nu s-a găsit %@. S-a căutat în:",
+    "cli.app.open_failed": "Nu s-a putut deschide %@.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Rulați `%@ --help` pentru instrucțiuni de utilizare.",
+    "cli.error.needs_value": "%@ necesită o valoare.",
+    "cli.error.range": "%1$@ trebuie să fie un număr între %2$@ și %3$@, nu „%4$@”.",
+    "cli.error.root": "Nu rulați %@ ca root sau cu sudo. Are nevoie doar de contul dvs.",
+    "cli.error.one_command": "O singură comandă pe rând: s-au primit „%1$@” și „%2$@”.",
+    "cli.error.unknown_option": "Opțiune necunoscută: „%@”.",
+    "cli.error.unknown_command": "Comandă necunoscută: „%@”.",
+    "cli.error.no_output": "Nu există nicio ieșire audio cu ID-ul %1$@. Consultați `%2$@ list`.",
+    "cli.error.not_display": "%@ nu este ieșirea audio a unui monitor."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "Încă %1$d monitor nu are sunet",
+          "few": "Încă %1$d monitoare nu au sunet",
+          "other": "Încă %1$d de monitoare nu au sunet"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "Fără sunet de %1$d dată",
+          "few": "Fără sunet de %1$d ori",
+          "other": "Fără sunet de %1$d de ori"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "remediat de %2$d dată",
+          "few": "remediat de %2$d ori",
+          "other": "remediat de %2$d de ori"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d secundă",
+          "few": "%1$d secunde",
+          "other": "%1$d de secunde"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "Remediat de %1$d dată, ultima dată %2$@",
+          "few": "Remediat de %1$d ori, ultima dată %2$@",
+          "other": "Remediat de %1$d de ori, ultima dată %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Remedierea automată s-a oprit după %1$d încercare. Reconectați monitorul sau folosiți „Remediați acum”.",
+          "few": "Remedierea automată s-a oprit după %1$d încercări. Reconectați monitorul sau folosiți „Remediați acum”.",
+          "other": "Remedierea automată s-a oprit după %1$d de încercări. Reconectați monitorul sau folosiți „Remediați acum”."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Difuzoarele monitorului tot nu au sunet după %1$d încercare. Încercați să deconectați %2$@ și să-l conectați la loc.",
+          "few": "Difuzoarele monitorului tot nu au sunet după %1$d încercări. Încercați să deconectați %2$@ și să-l conectați la loc.",
+          "other": "Difuzoarele monitorului tot nu au sunet după %1$d de încercări. Încercați să deconectați %2$@ și să-l conectați la loc."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "nl",
+    "name": "Nederlands",
+    "reviewed": false,
+    "glossary": {
+      "display": "beeldscherm",
+      "your monitor speakers": "je monitorluidsprekers",
+      "fix": "herstellen",
+      "no sound": "geen geluid",
+      "sound output": "geluidsuitvoer",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Geluid werkt op elk beeldscherm",
+    "headline.speakers_silent": "Geen geluid uit je monitorluidsprekers",
+    "headline.speakers_on": "Op %@",
+    "headline.fixing": "%@ herstellen…",
+    "headline.checking": "Geluid controleren…",
+    "headline.couldnt_check": "Kon niet elk beeldscherm controleren",
+    "headline.none": "Geen beeldscherm kan geluid afspelen",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "beeldscherm",
+    "display.fallback": "het beeldscherm",
+    "row.tag.speakers": "monitorluidsprekers",
+    "row.tag.sound_output": "geluidsuitvoer",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Werkt",
+    "status.no_sound": "Geen geluid",
+    "status.checking": "Controleren…",
+    "status.couldnt_check": "Controle mislukt",
+    "status.fixing": "Herstellen…",
+    "submenu.speakers_here": "Gebruik dit beeldscherm voor luidsprekers",
+    "submenu.fix_now": "Herstel nu",
+    "submenu.fix_now_confirm": "Herstel nu…",
+    "submenu.hint_blackout": "Het scherm wordt ongeveer 3 seconden zwart",
+    "submenu.hint_others": "Kan het geluid op andere beeldschermen stoppen",
+    "submenu.checked": "Gecontroleerd: %@",
+    "menu.check_now": "Controleer nu",
+    "menu.follow_sound_output": "Monitorluidsprekers volgen geluidsuitvoer",
+    "menu.fix_automatically": "Herstel monitorluidsprekers automatisch",
+    "menu.check_every": "Controle-interval",
+    "menu.interval.minute": "1 minuut",
+    "menu.interval.events_only": "Alleen bij beeldschermwijziging of ontwaken",
+    "menu.open_at_login": "Open bij inloggen",
+    "menu.last_checked": "Laatst gecontroleerd: %@",
+    "menu.show_log": "Toon log",
+    "menu.quit": "Stop %@",
+    "menu.quit_after_fix": "Stop als het herstel klaar is",
+    "note.fixing": "%@ wordt uit- en weer aangezet…",
+    "note.gave_up": "Automatisch herstellen gestopt na twee pogingen. Sluit het beeldscherm opnieuw aan of kies “Herstel nu”.",
+    "note.output_switched": "Het geluid speelt nu via %@. Apps die al aan het afspelen waren, moet je misschien opnieuw openen.",
+    "note.too_soon": "Tussen twee herstelpogingen zit een minuut.",
+    "note.waiting_call": "Wacht tot je gesprek is afgelopen. Kies “Herstel nu” om toch te herstellen.",
+    "note.waiting_full_screen": "Wacht tot je schermvullende weergave verlaat. Kies “Herstel nu” om toch te herstellen.",
+    "note.collateral": "Het herstel van %1$@ heeft het geluid op %2$@ gestopt.",
+    "note.confirming": "Je monitorluidsprekers hebben geen geluid. Opnieuw controleren vóór het herstellen…",
+    "note.stranded": "Een beeldscherm staat nog uit. Er wordt opnieuw geprobeerd; opnieuw aansluiten werkt ook.",
+    "note.busy": "Nog bezig met controleren. Probeer “Herstel nu” over een paar seconden opnieuw.",
+    "note.cant_autofix": "Dit beeldscherm kan hier niet automatisch worden hersteld. Sluit de kabel opnieuw aan om het te herstellen.",
+    "note.speakers_missing": "Het beeldscherm van je monitorluidsprekers is niet aangesloten.",
+    "note.quitting": "Stopt als het herstel klaar is…",
+    "outcome.fixed": "%@ werkt weer. Pauzeer en speel opnieuw af, of open apps die vastzaten opnieuw.",
+    "outcome.still_silent": "%@ heeft nog steeds geen geluid. Koppel de kabel los en sluit hem weer aan.",
+    "outcome.unverified": "%@ is uit- en weer aangezet, maar kon daarna niet worden gecontroleerd.",
+    "outcome.unknown_display": "Kon niet bepalen welk scherm %@ is, dus er is niets uitgezet.",
+    "outcome.cycle_failed": "Het uit- en aanzetten van %@ is niet voltooid. De details staan in “Toon log”.",
+    "welcome.title": "%@ staat in je menubalk",
+    "welcome.body": "Het symbool laat zien of het geluid van je beeldschermen werkt. Groen: alles werkt. Oranje: een beeldscherm dat je niet voor geluid gebruikt, is stil gevallen. Rood: je monitorluidsprekers zijn stil gevallen.\n\nOm stille monitorluidsprekers te herstellen, zet de app hun beeldscherm uit en weer aan. Dat scherm wordt ongeveer 3 seconden zwart en de vensters erop kunnen even verschuiven. Dit gebeurt nooit met je enige scherm, en de app wacht tot gesprekken en schermvullende video’s voorbij zijn.\n\nDe app wordt geopend bij het inloggen. Je kunt dat wijzigen in het menu.",
+    "welcome.fix_automatically": "Herstel automatisch",
+    "welcome.status_only": "Toon alleen status",
+    "confirm.title": "%@ herstellen?",
+    "confirm.body": "Hierdoor wordt %1$@ uit- en weer aangezet en is het ongeveer 3 seconden zwart. Het herstellen van één beeldscherm kan het geluid op een ander stoppen, ook op je monitorluidsprekers.",
+    "confirm.fix": "Herstel",
+    "confirm.cancel": "Annuleer",
+    "notify.fixed.title": "Je monitorluidsprekers werken weer",
+    "notify.fixed.body": "%@ is een paar seconden uit- en weer aangezet. Als een app nog steeds stil is, stop de app en open hem opnieuw.",
+    "notify.fixed.body_collateral": "%1$@ is een paar seconden uit- en weer aangezet. Daardoor is het geluid op %2$@ gestopt. Als een app nog steeds stil is, stop de app en open hem opnieuw.",
+    "notify.still_silent.title": "Je monitorluidsprekers zijn nog steeds stil",
+    "notify.still_silent.body": "Probeer %@ los te koppelen en weer aan te sluiten.",
+    "notify.paused.title": "Automatisch herstellen gepauzeerd",
+    "notify.waiting.title": "Je monitorluidsprekers zijn stil",
+    "notify.waiting_call.body": "Wacht tot je gesprek is afgelopen, omdat herstellen %@ ongeveer 3 seconden zwart maakt. Kies “Herstel nu” in het menu om toch te herstellen.",
+    "notify.waiting_full_screen.body": "Wacht tot je schermvullende weergave verlaat, omdat herstellen %@ ongeveer 3 seconden zwart maakt. Kies “Herstel nu” in het menu om toch te herstellen.",
+    "notify.stranded.title": "Een beeldscherm staat nog uit",
+    "notify.stranded.body": "%@ kon het niet weer aanzetten. Koppel de kabel los en sluit hem weer aan, of log uit en weer in.",
+    "cli.status.working": "Werkt",
+    "cli.status.no_sound": "Geen geluid",
+    "cli.status.couldnt_check": "Controle mislukt",
+    "cli.status.sound_output": "(geluidsuitvoer)",
+    "cli.status.hint_fix": "Voer `%@ fix` uit om het beeldscherm te herstellen waarover je geluid speelt.",
+    "cli.status.hint_other": "Je geluidsuitvoer werkt. Om een ander beeldscherm te herstellen (dit kan het geluid op de andere stoppen): %1$@ fix --uid %2$@",
+    "cli.none": "Geen beeldscherm kan geluid afspelen.",
+    "cli.nothing_to_fix": "Je geluid speelt niet via een beeldscherm, dus er valt niets te herstellen.",
+    "cli.couldnt_check": "Kon %@ niet controleren, dus er is niets uitgezet.",
+    "cli.stranded": "Een beeldscherm dat bij een eerder herstel is uitgezet, kon niet weer worden aangezet, dus er is verder niets uitgezet.",
+    "cli.list.outputs": "Audio-uitgangen:",
+    "cli.list.displays": "Beeldschermen:",
+    "cli.list.default": "standaard",
+    "cli.list.system_sounds": "systeemgeluiden",
+    "cli.list.on_display": "op beeldscherm %@",
+    "cli.app.opened": "%@ is geopend. Vanaf nu opent de app bij elke keer inloggen; zoek het symbool in de menubalk.",
+    "cli.app.not_found": "Kon %@ niet vinden. Gezocht in:",
+    "cli.app.open_failed": "Kon %@ niet openen.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Voer `%@ --help` uit voor gebruiksinformatie.",
+    "cli.error.needs_value": "%@ heeft een waarde nodig.",
+    "cli.error.range": "%1$@ moet een getal van %2$@ tot %3$@ zijn, niet “%4$@”.",
+    "cli.error.root": "Voer %@ niet uit als root of met sudo. Je eigen account is genoeg.",
+    "cli.error.one_command": "Maar één opdracht tegelijk: “%1$@” en “%2$@” ontvangen.",
+    "cli.error.unknown_option": "Onbekende optie “%@”.",
+    "cli.error.unknown_command": "Onbekende opdracht “%@”.",
+    "cli.error.no_output": "Geen audio-uitgang met ID %1$@. Zie `%2$@ list`.",
+    "cli.error.not_display": "%@ is geen audio-uitgang van een beeldscherm."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d ander beeldscherm heeft geen geluid",
+          "other": "%1$d andere beeldschermen hebben geen geluid"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "%1$d keer geen geluid",
+          "other": "%1$d keer geen geluid"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "%2$d keer hersteld",
+          "other": "%2$d keer hersteld"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d seconde",
+          "other": "%1$d seconden"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "%1$d keer hersteld, laatst %2$@",
+          "other": "%1$d keer hersteld, laatst %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatisch herstellen gepauzeerd na %1$d poging. Sluit het beeldscherm opnieuw aan of kies “Herstel nu”.",
+          "other": "Automatisch herstellen gepauzeerd na %1$d pogingen. Sluit het beeldscherm opnieuw aan of kies “Herstel nu”."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Je monitorluidsprekers zijn na %1$d poging nog steeds stil. Probeer %2$@ los te koppelen en weer aan te sluiten.",
+          "other": "Je monitorluidsprekers zijn na %1$d pogingen nog steeds stil. Probeer %2$@ los te koppelen en weer aan te sluiten."
+        }
+      }
+    }
+  }
+}

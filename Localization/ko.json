@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "language": "ko",
+    "name": "한국어",
+    "reviewed": false,
+    "glossary": {
+      "display": "디스플레이",
+      "your monitor speakers": "모니터 스피커",
+      "fix": "복구",
+      "no sound": "소리 없음",
+      "sound output": "사운드 출력",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "모든 디스플레이에서 소리가 나옵니다",
+    "headline.speakers_silent": "모니터 스피커에서 소리가 나지 않습니다",
+    "headline.speakers_on": "%@에 연결됨",
+    "headline.fixing": "%@ 복구 중…",
+    "headline.checking": "소리 확인 중…",
+    "headline.couldnt_check": "일부 디스플레이를 확인하지 못했습니다",
+    "headline.none": "소리를 재생할 수 있는 디스플레이가 없습니다",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "디스플레이",
+    "display.fallback": "디스플레이",
+    "row.tag.speakers": "모니터 스피커",
+    "row.tag.sound_output": "사운드 출력",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "정상",
+    "status.no_sound": "소리 없음",
+    "status.checking": "확인 중…",
+    "status.couldnt_check": "확인 불가",
+    "status.fixing": "복구 중…",
+    "submenu.speakers_here": "이 디스플레이를 모니터 스피커용으로 설정",
+    "submenu.fix_now": "지금 복구",
+    "submenu.fix_now_confirm": "지금 복구…",
+    "submenu.hint_blackout": "화면이 약 3초 동안 검게 바뀝니다",
+    "submenu.hint_others": "다른 디스플레이의 소리가 멈출 수 있습니다",
+    "submenu.checked": "확인 시각: %@",
+    "menu.check_now": "지금 확인",
+    "menu.follow_sound_output": "모니터 스피커를 사운드 출력과 일치시키기",
+    "menu.fix_automatically": "모니터 스피커 자동 복구",
+    "menu.check_every": "확인 주기",
+    "menu.interval.minute": "1분",
+    "menu.interval.events_only": "디스플레이가 바뀌거나 Mac이 깨어날 때만",
+    "menu.open_at_login": "로그인 시 열기",
+    "menu.last_checked": "마지막 확인: %@",
+    "menu.show_log": "로그 보기",
+    "menu.quit": "%@ 종료",
+    "menu.quit_after_fix": "복구가 끝나면 종료",
+    "note.fixing": "%@ 끄고 다시 켜는 중…",
+    "note.gave_up": "두 번 시도한 후 이 디스플레이의 자동 복구를 중단했습니다. 다시 연결하거나 ‘지금 복구’를 사용하십시오.",
+    "note.output_switched": "이제 %@에서 소리가 재생됩니다. 이미 재생 중이던 앱은 다시 열어야 할 수 있습니다.",
+    "note.too_soon": "다음 복구까지 1분 기다립니다.",
+    "note.waiting_call": "통화가 끝날 때까지 기다립니다. 바로 복구하려면 ‘지금 복구’를 사용하십시오.",
+    "note.waiting_full_screen": "전체 화면을 종료할 때까지 기다립니다. 바로 복구하려면 ‘지금 복구’를 사용하십시오.",
+    "note.collateral": "%1$@ 복구로 인해 %2$@의 소리가 멈췄습니다.",
+    "note.confirming": "모니터 스피커에 소리가 없습니다. 복구하기 전에 다시 확인하는 중…",
+    "note.stranded": "디스플레이가 아직 꺼져 있습니다. 다시 시도하는 중이며, 디스플레이를 다시 연결해도 됩니다.",
+    "note.busy": "아직 확인 중입니다. 몇 초 후에 ‘지금 복구’를 다시 시도하십시오.",
+    "note.cant_autofix": "이 디스플레이는 여기에서 자동 복구할 수 없습니다. 케이블을 다시 연결하여 복구하십시오.",
+    "note.speakers_missing": "모니터 스피커의 디스플레이가 연결되어 있지 않습니다.",
+    "note.quitting": "복구가 끝나면 종료합니다…",
+    "outcome.fixed": "%@에서 다시 소리가 나옵니다. 일시 정지 후 다시 재생하거나, 멈춘 앱을 다시 여십시오.",
+    "outcome.still_silent": "%@에서 여전히 소리가 나지 않습니다. 케이블을 뽑았다가 다시 꽂아 보십시오.",
+    "outcome.unverified": "%@을(를) 껐다가 켰지만 이후에 확인하지 못했습니다.",
+    "outcome.unknown_display": "%@이(가) 어느 화면인지 알 수 없어 아무것도 끄지 않았습니다.",
+    "outcome.cycle_failed": "%@을(를) 껐다가 켜는 작업을 완료하지 못했습니다. 자세한 내용은 ‘로그 보기’에서 확인하십시오.",
+    "welcome.title": "%@이(가) 메뉴 막대에 있습니다",
+    "welcome.body": "아이콘에서 디스플레이의 소리가 정상인지 확인할 수 있습니다. 초록색: 모두 정상입니다. 주황색: 소리 재생에 사용하지 않는 디스플레이에서 소리가 나지 않습니다. 빨간색: 모니터 스피커에서 소리가 나지 않습니다.\n\n소리가 나지 않는 모니터 스피커를 복구하기 위해 이 앱은 해당 디스플레이를 껐다가 켭니다. 그 화면은 약 3초 동안 검게 바뀌고 윈도우가 잠시 이동할 수 있습니다. 화면이 하나뿐일 때는 이 작업을 하지 않으며, 통화나 전체 화면 비디오가 끝날 때까지 기다립니다.\n\n이 앱은 로그인 시 열립니다. 이 설정은 앱의 메뉴에서 변경할 수 있습니다.",
+    "welcome.fix_automatically": "자동으로 복구",
+    "welcome.status_only": "상태만 표시",
+    "confirm.title": "%@을(를) 복구하겠습니까?",
+    "confirm.body": "%1$@을(를) 껐다가 켜므로 약 3초 동안 화면이 검게 바뀝니다. 디스플레이 하나를 복구하면 모니터 스피커를 포함한 다른 디스플레이의 소리가 멈출 수 있습니다.",
+    "confirm.fix": "복구",
+    "confirm.cancel": "취소",
+    "notify.fixed.title": "모니터 스피커에서 다시 소리가 나옵니다",
+    "notify.fixed.body": "%@을(를) 몇 초 동안 껐다가 켰습니다. 여전히 소리가 나지 않는 앱이 있으면 종료한 후 다시 여세요.",
+    "notify.fixed.body_collateral": "%1$@을(를) 몇 초 동안 껐다가 켰습니다. 이로 인해 %2$@의 소리가 멈췄습니다. 여전히 소리가 나지 않는 앱이 있으면 종료한 후 다시 여세요.",
+    "notify.still_silent.title": "모니터 스피커에서 여전히 소리가 나지 않습니다",
+    "notify.still_silent.body": "%@의 케이블을 뽑았다가 다시 꽂아 보십시오.",
+    "notify.paused.title": "자동 복구 일시 정지됨",
+    "notify.waiting.title": "모니터 스피커에서 소리가 나지 않습니다",
+    "notify.waiting_call.body": "복구하면 %@ 화면이 약 3초 동안 검게 바뀌므로 통화가 끝날 때까지 기다립니다. 바로 복구하려면 메뉴에서 ‘지금 복구’를 사용하십시오.",
+    "notify.waiting_full_screen.body": "복구하면 %@ 화면이 약 3초 동안 검게 바뀌므로 전체 화면을 종료할 때까지 기다립니다. 바로 복구하려면 메뉴에서 ‘지금 복구’를 사용하십시오.",
+    "notify.stranded.title": "디스플레이가 아직 꺼져 있습니다",
+    "notify.stranded.body": "%@이(가) 디스플레이를 다시 켜지 못했습니다. 케이블을 뽑았다가 다시 꽂거나, 로그아웃한 후 다시 로그인하십시오.",
+    "cli.status.working": "정상",
+    "cli.status.no_sound": "소리 없음",
+    "cli.status.couldnt_check": "확인 불가",
+    "cli.status.sound_output": "(사운드 출력)",
+    "cli.status.hint_fix": "소리가 재생되는 디스플레이를 복구하려면 `%@ fix`를 실행하십시오.",
+    "cli.status.hint_other": "사운드 출력이 정상입니다. 다른 디스플레이를 복구하려면(다른 디스플레이의 소리가 멈출 수 있음): %1$@ fix --uid %2$@",
+    "cli.none": "소리를 재생할 수 있는 디스플레이가 없습니다.",
+    "cli.nothing_to_fix": "소리가 디스플레이를 통해 재생되지 않으므로 복구할 항목이 없습니다.",
+    "cli.couldnt_check": "%@을(를) 확인할 수 없어 아무것도 끄지 않았습니다.",
+    "cli.stranded": "이전 복구에서 끈 디스플레이를 다시 켜지 못해 다른 디스플레이는 끄지 않았습니다.",
+    "cli.list.outputs": "오디오 출력:",
+    "cli.list.displays": "디스플레이:",
+    "cli.list.default": "기본값",
+    "cli.list.system_sounds": "시스템 사운드",
+    "cli.list.on_display": "디스플레이 %@",
+    "cli.app.opened": "%@을(를) 열었습니다. 이제 로그인할 때마다 열리며, 메뉴 막대에서 아이콘을 찾을 수 있습니다.",
+    "cli.app.not_found": "%@을(를) 찾을 수 없습니다. 찾아본 위치:",
+    "cli.app.open_failed": "%@을(를) 열 수 없습니다.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "사용법을 보려면 `%@ --help`를 실행하십시오.",
+    "cli.error.needs_value": "%@에 값이 필요합니다.",
+    "cli.error.range": "%1$@은(는) %2$@에서 %3$@ 사이의 숫자여야 합니다. 입력한 값: “%4$@”",
+    "cli.error.root": "%@을(를) root로 또는 sudo로 실행하지 마십시오. 사용자 계정만 있으면 됩니다.",
+    "cli.error.one_command": "한 번에 하나의 명령만 사용할 수 있습니다. 입력한 명령: “%1$@”, “%2$@”",
+    "cli.error.unknown_option": "알 수 없는 옵션: “%@”",
+    "cli.error.unknown_command": "알 수 없는 명령: “%@”",
+    "cli.error.no_output": "ID가 %1$@인 오디오 출력이 없습니다. `%2$@ list`를 참조하십시오.",
+    "cli.error.not_display": "%@은(는) 디스플레이의 오디오 출력이 아닙니다."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "other": "다른 디스플레이 %1$d대에서 소리가 나지 않습니다"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "other": "소리 없음 %1$d회"
+        },
+        "fixed": {
+          "type": "d",
+          "other": "복구 %2$d회"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "other": "%1$d초"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "other": "복구 %1$d회, 최근 %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "%1$d회 시도 후 자동 복구가 일시 정지되었습니다. 디스플레이를 다시 연결하거나 ‘지금 복구’를 사용하십시오."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "other": "%1$d회 시도했지만 모니터 스피커에서 여전히 소리가 나지 않습니다. %2$@을(를) 뽑았다가 다시 꽂아 보십시오."
+        }
+      }
+    }
+  }
+}

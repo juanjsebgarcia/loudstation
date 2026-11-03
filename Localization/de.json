@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "language": "de",
+    "name": "Deutsch",
+    "reviewed": false,
+    "glossary": {
+      "display": "Display",
+      "your monitor speakers": "deine Monitorlautsprecher",
+      "fix": "reparieren",
+      "no sound": "kein Ton",
+      "sound output": "Tonausgabe",
+      "LoudStation": "LoudStation"
+    }
+  },
+  "strings": {
+    "headline.all_working": "Ton funktioniert auf allen Displays",
+    "headline.speakers_silent": "Kein Ton aus deinen Monitorlautsprechern",
+    "headline.speakers_on": "Angeschlossen an %@",
+    "headline.fixing": "%@ wird repariert …",
+    "headline.checking": "Ton wird geprüft …",
+    "headline.couldnt_check": "Nicht alle Displays konnten geprüft werden",
+    "headline.none": "Kein Display kann Ton wiedergeben",
+    "accessibility.status": "%1$@: %2$@",
+    "display.with_connection": "%1$@ (%2$@)",
+    "display.with_connection_number": "%1$@ (%2$@ %3$d)",
+    "display.connection_generic": "Display",
+    "display.fallback": "das Display",
+    "row.tag.speakers": "Monitorlautsprecher",
+    "row.tag.sound_output": "Tonausgabe",
+    "row.with_tags": "%1$@ (%2$@): %3$@",
+    "row.plain": "%1$@: %2$@",
+    "status.working": "Funktioniert",
+    "status.no_sound": "Kein Ton",
+    "status.checking": "Wird geprüft …",
+    "status.couldnt_check": "Nicht prüfbar",
+    "status.fixing": "Wird repariert …",
+    "submenu.speakers_here": "Dieses Display für Monitorlautsprecher nutzen",
+    "submenu.fix_now": "Jetzt reparieren",
+    "submenu.fix_now_confirm": "Jetzt reparieren …",
+    "submenu.hint_blackout": "Das Display wird etwa 3 Sekunden schwarz",
+    "submenu.hint_others": "Kann den Ton auf anderen Displays stoppen",
+    "submenu.checked": "Geprüft: %@",
+    "menu.check_now": "Jetzt prüfen",
+    "menu.follow_sound_output": "Monitorlautsprecher folgen der Tonausgabe",
+    "menu.fix_automatically": "Monitorlautsprecher automatisch reparieren",
+    "menu.check_every": "Prüfintervall",
+    "menu.interval.minute": "1 Minute",
+    "menu.interval.events_only": "Nur wenn Displays wechseln oder der Mac aufwacht",
+    "menu.open_at_login": "Beim Anmelden öffnen",
+    "menu.last_checked": "Zuletzt geprüft: %@",
+    "menu.show_log": "Protokoll anzeigen",
+    "menu.quit": "%@ beenden",
+    "menu.quit_after_fix": "Nach der Reparatur beenden",
+    "note.fixing": "%@ wird aus- und wieder eingeschaltet …",
+    "note.gave_up": "Automatische Reparatur nach zwei Versuchen beendet. Display neu anschließen oder „Jetzt reparieren“ wählen.",
+    "note.output_switched": "Der Ton läuft jetzt über %@. Apps, die schon abgespielt haben, musst du eventuell neu öffnen.",
+    "note.too_soon": "Zwischen zwei Reparaturen wird eine Minute gewartet.",
+    "note.waiting_call": "Warten, bis dein Anruf endet. Wähle „Jetzt reparieren“, um trotzdem zu reparieren.",
+    "note.waiting_full_screen": "Warten, bis du den Vollbildmodus verlässt. Wähle „Jetzt reparieren“, um trotzdem zu reparieren.",
+    "note.collateral": "Die Reparatur von %1$@ hat den Ton auf %2$@ gestoppt.",
+    "note.confirming": "Deine Monitorlautsprecher haben keinen Ton. Vor der Reparatur wird erneut geprüft …",
+    "note.stranded": "Ein Display ist noch ausgeschaltet. Neuer Versuch läuft; erneutes Anschließen hilft auch.",
+    "note.busy": "Die Prüfung läuft noch. Wähle in ein paar Sekunden erneut „Jetzt reparieren“.",
+    "note.cant_autofix": "Dieses Display kann hier nicht automatisch repariert werden. Schließe sein Kabel erneut an.",
+    "note.speakers_missing": "Das Display deiner Monitorlautsprecher ist nicht angeschlossen.",
+    "note.quitting": "Wird nach der Reparatur beendet …",
+    "outcome.fixed": "%@ funktioniert wieder. Pausiere die Wiedergabe und starte sie neu, oder öffne hängende Apps erneut.",
+    "outcome.still_silent": "%@ hat immer noch keinen Ton. Zieh das Kabel ab und steck es wieder ein.",
+    "outcome.unverified": "%@ wurde aus- und wieder eingeschaltet, konnte danach aber nicht geprüft werden.",
+    "outcome.unknown_display": "Unklar, welches Display %@ ist, daher wurde nichts ausgeschaltet.",
+    "outcome.cycle_failed": "Das Aus- und Einschalten von %@ wurde nicht abgeschlossen. Details findest du unter „Protokoll anzeigen“.",
+    "welcome.title": "%@ ist jetzt in deiner Menüleiste",
+    "welcome.body": "Das Symbol zeigt, ob der Ton deiner Displays funktioniert. Grün: Alles funktioniert. Orange: Ein Display, das du nicht für Ton nutzt, ist verstummt. Rot: Deine Monitorlautsprecher sind verstummt.\n\nUm verstummte Monitorlautsprecher zu reparieren, schaltet die App ihr Display aus und wieder ein. Dieses Display wird etwa 3 Sekunden schwarz, und seine Fenster können sich kurz verschieben. Bei deinem einzigen Display passiert das nie, und die App wartet, bis Anrufe und Vollbildvideos vorbei sind.\n\nDie App wird beim Anmelden geöffnet. Das kannst du in ihrem Menü ändern.",
+    "welcome.fix_automatically": "Automatisch reparieren",
+    "welcome.status_only": "Nur Status anzeigen",
+    "confirm.title": "%@ reparieren?",
+    "confirm.body": "Dabei wird %1$@ aus- und wieder eingeschaltet und ist etwa 3 Sekunden schwarz. Die Reparatur eines Displays kann den Ton auf einem anderen stoppen, auch bei deinen Monitorlautsprechern.",
+    "confirm.fix": "Reparieren",
+    "confirm.cancel": "Abbrechen",
+    "notify.fixed.title": "Deine Monitorlautsprecher funktionieren wieder",
+    "notify.fixed.body": "%@ wurde für ein paar Sekunden aus- und wieder eingeschaltet. Ist eine App noch stumm, beende sie und öffne sie erneut.",
+    "notify.fixed.body_collateral": "%1$@ wurde für ein paar Sekunden aus- und wieder eingeschaltet. Dadurch ist der Ton auf %2$@ ausgefallen. Ist eine App noch stumm, beende sie und öffne sie erneut.",
+    "notify.still_silent.title": "Deine Monitorlautsprecher sind noch stumm",
+    "notify.still_silent.body": "Zieh das Kabel von %@ ab und steck es wieder ein.",
+    "notify.paused.title": "Automatische Reparatur pausiert",
+    "notify.waiting.title": "Deine Monitorlautsprecher sind stumm",
+    "notify.waiting_call.body": "Warten, bis dein Anruf endet, denn die Reparatur macht %@ etwa 3 Sekunden schwarz. Wähle im Menü „Jetzt reparieren“, um trotzdem zu reparieren.",
+    "notify.waiting_full_screen.body": "Warten, bis du den Vollbildmodus verlässt, denn die Reparatur macht %@ etwa 3 Sekunden schwarz. Wähle im Menü „Jetzt reparieren“, um trotzdem zu reparieren.",
+    "notify.stranded.title": "Ein Display ist noch ausgeschaltet",
+    "notify.stranded.body": "%@ konnte es nicht wieder einschalten. Zieh das Kabel ab und steck es wieder ein, oder melde dich ab und wieder an.",
+    "cli.status.working": "Funktioniert",
+    "cli.status.no_sound": "Kein Ton",
+    "cli.status.couldnt_check": "Nicht prüfbar",
+    "cli.status.sound_output": "(Tonausgabe)",
+    "cli.status.hint_fix": "Führe `%@ fix` aus, um das Display zu reparieren, über das dein Ton läuft.",
+    "cli.status.hint_other": "Deine Tonausgabe funktioniert. Um ein anderes Display zu reparieren (das kann den Ton auf den anderen stoppen): %1$@ fix --uid %2$@",
+    "cli.none": "Kein Display kann Ton wiedergeben.",
+    "cli.nothing_to_fix": "Dein Ton läuft nicht über ein Display, daher gibt es nichts zu reparieren.",
+    "cli.couldnt_check": "%@ konnte nicht geprüft werden, daher wurde nichts ausgeschaltet.",
+    "cli.stranded": "Ein Display, das bei einer früheren Reparatur ausgeschaltet wurde, ließ sich nicht wieder einschalten. Daher wurde nichts weiter ausgeschaltet.",
+    "cli.list.outputs": "Audioausgänge:",
+    "cli.list.displays": "Displays:",
+    "cli.list.default": "Standard",
+    "cli.list.system_sounds": "Systemtöne",
+    "cli.list.on_display": "auf Display %@",
+    "cli.app.opened": "%@ wurde geöffnet. Die App wird ab jetzt bei jeder Anmeldung geöffnet; ihr Symbol findest du in der Menüleiste.",
+    "cli.app.not_found": "%@ nicht gefunden. Gesucht in:",
+    "cli.app.open_failed": "%@ konnte nicht geöffnet werden.",
+    "cli.error.prefix": "%1$@: %2$@",
+    "cli.error.see_help": "Führe `%@ --help` aus, um die Verwendung zu sehen.",
+    "cli.error.needs_value": "%@ benötigt einen Wert.",
+    "cli.error.range": "%1$@ muss eine Zahl von %2$@ bis %3$@ sein, nicht „%4$@“.",
+    "cli.error.root": "Führe %@ nicht als root oder mit sudo aus. Dein eigenes Konto genügt.",
+    "cli.error.one_command": "Nur ein Befehl auf einmal: „%1$@“ und „%2$@“ erhalten.",
+    "cli.error.unknown_option": "Unbekannte Option „%@“.",
+    "cli.error.unknown_command": "Unbekannter Befehl „%@“.",
+    "cli.error.no_output": "Kein Audioausgang mit der ID %1$@. Siehe `%2$@ list`.",
+    "cli.error.not_display": "%@ ist kein Audioausgang eines Displays."
+  },
+  "plurals": {
+    "headline.others_silent": {
+      "format": "%1$#@displays@",
+      "vars": {
+        "displays": {
+          "type": "d",
+          "one": "%1$d anderes Display hat keinen Ton",
+          "other": "%1$d andere Displays haben keinen Ton"
+        }
+      }
+    },
+    "submenu.counts": {
+      "format": "%1$#@silent@, %2$#@fixed@",
+      "vars": {
+        "silent": {
+          "type": "d",
+          "one": "%1$d-mal ohne Ton",
+          "other": "%1$d-mal ohne Ton"
+        },
+        "fixed": {
+          "type": "d",
+          "one": "%2$d-mal repariert",
+          "other": "%2$d-mal repariert"
+        }
+      }
+    },
+    "menu.interval.seconds": {
+      "format": "%1$#@seconds@",
+      "vars": {
+        "seconds": {
+          "type": "d",
+          "one": "%1$d Sekunde",
+          "other": "%1$d Sekunden"
+        }
+      }
+    },
+    "menu.fix_summary": {
+      "format": "%1$#@fixes@",
+      "vars": {
+        "fixes": {
+          "type": "d",
+          "one": "%1$d-mal repariert, zuletzt %2$@",
+          "other": "%1$d-mal repariert, zuletzt %2$@"
+        }
+      }
+    },
+    "note.paused": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Automatische Reparatur nach %1$d Versuch pausiert. Schließ das Display neu an oder wähle „Jetzt reparieren“.",
+          "other": "Automatische Reparatur nach %1$d Versuchen pausiert. Schließ das Display neu an oder wähle „Jetzt reparieren“."
+        }
+      }
+    },
+    "notify.paused.body": {
+      "format": "%1$#@tries@",
+      "vars": {
+        "tries": {
+          "type": "d",
+          "one": "Deine Monitorlautsprecher sind nach %1$d Versuch noch stumm. Zieh das Kabel von %2$@ ab und steck es wieder ein.",
+          "other": "Deine Monitorlautsprecher sind nach %1$d Versuchen noch stumm. Zieh das Kabel von %2$@ ab und steck es wieder ein."
+        }
+      }
+    }
+  }
+}

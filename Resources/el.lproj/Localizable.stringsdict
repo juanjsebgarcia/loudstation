@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>headline.others_silent</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@displays@</string>
+		<key>displays</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Ακόμα %1$d οθόνη δεν έχει ήχο</string>
+			<key>other</key>
+			<string>Ακόμα %1$d οθόνες δεν έχουν ήχο</string>
+		</dict>
+	</dict>
+	<key>menu.fix_summary</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@fixes@</string>
+		<key>fixes</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Διορθώθηκε %1$d φορά, τελευταία %2$@</string>
+			<key>other</key>
+			<string>Διορθώθηκε %1$d φορές, τελευταία %2$@</string>
+		</dict>
+	</dict>
+	<key>menu.interval.seconds</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@seconds@</string>
+		<key>seconds</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%1$d δευτερόλεπτο</string>
+			<key>other</key>
+			<string>%1$d δευτερόλεπτα</string>
+		</dict>
+	</dict>
+	<key>note.paused</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Η αυτόματη διόρθωση σταμάτησε μετά από %1$d προσπάθεια. Συνδέστε ξανά την οθόνη ή επιλέξτε «Διόρθωση τώρα».</string>
+			<key>other</key>
+			<string>Η αυτόματη διόρθωση σταμάτησε μετά από %1$d προσπάθειες. Συνδέστε ξανά την οθόνη ή επιλέξτε «Διόρθωση τώρα».</string>
+		</dict>
+	</dict>
+	<key>notify.paused.body</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@tries@</string>
+		<key>tries</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Τα ηχεία της οθόνης σας παραμένουν σιωπηλά μετά από %1$d προσπάθεια. Δοκιμάστε να αποσυνδέσετε την οθόνη %2$@ και να τη συνδέσετε ξανά.</string>
+			<key>other</key>
+			<string>Τα ηχεία της οθόνης σας παραμένουν σιωπηλά μετά από %1$d προσπάθειες. Δοκιμάστε να αποσυνδέσετε την οθόνη %2$@ και να τη συνδέσετε ξανά.</string>
+		</dict>
+	</dict>
+	<key>submenu.counts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%1$#@silent@, %2$#@fixed@</string>
+		<key>fixed</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>διορθώθηκε %2$d φορά</string>
+			<key>other</key>
+			<string>διορθώθηκε %2$d φορές</string>
+		</dict>
+		<key>silent</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>Χωρίς ήχο %1$d φορά</string>
+			<key>other</key>
+			<string>Χωρίς ήχο %1$d φορές</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
