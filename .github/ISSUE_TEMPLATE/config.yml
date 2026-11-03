@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report the underlying bug to Apple
+    url: https://github.com/juanjsebgarcia/loudstation/blob/main/docs/apple-feedback-report.md
+    about: LoudStation works around a macOS fault. A Feedback Assistant report with this ready-made text helps Apple fix it.

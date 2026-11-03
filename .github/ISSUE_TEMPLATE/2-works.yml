@@ -1,0 +1,42 @@
+name: It works on my setup
+description: Tell us LoudStation fixed your monitor speakers, so the compatibility table can grow.
+title: "Works: [Mac model] + [display model] via [connection]"
+labels: ["works on my setup"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        LoudStation has so far only been tested on one Mac. A short report of a setup where it works is genuinely useful, to us and to anyone searching for their own hardware.
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and chip
+      placeholder: Mac mini 2024, M4
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 26.4 (Tahoe)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: LoudStation version
+      placeholder: loudstation 0.3.0
+    validations:
+      required: true
+  - type: textarea
+    id: displays
+    attributes:
+      label: Displays and how they connect
+      description: Each external display, its connection, any dock or hub, and which one your speakers are plugged into.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything worth knowing
+      description: How often it goes silent, whether fixes ever stopped sound on another display, anything odd.

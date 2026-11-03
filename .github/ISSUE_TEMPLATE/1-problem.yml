@@ -1,0 +1,70 @@
+name: No sound, or a fix went wrong
+description: Your monitor speakers are silent, LoudStation didn't fix them, or a fix caused a problem.
+title: "[Mac model] + [display model] via [connection]: short description"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The details below help find patterns across setups, and help others with the same hardware find this issue.
+        Please check what you paste: the log replaces your home folder and display serial numbers, but command output is pasted as is.
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model and chip
+      placeholder: MacBook Pro 16-inch 2021, M1 Max
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: Apple menu > About This Mac.
+      placeholder: macOS 27.2 (Golden Gate)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: LoudStation version
+      description: The output of `loudstation --version`.
+      placeholder: loudstation 0.3.0
+    validations:
+      required: true
+  - type: textarea
+    id: displays
+    attributes:
+      label: Displays and how they connect
+      description: Each external display, how it connects (HDMI, DisplayPort, USB-C, Thunderbolt), through which dock, hub or adapter, and which one your speakers or headphones are plugged into.
+      placeholder: |
+        Dell U2518D, HDMI through a USB-C hub - speakers plugged in here
+        Dell U2518D, DisplayPort over USB-C
+        Dell U2520D, USB-C
+        Lid closed.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of `loudstation`
+      description: Run it in Terminal while the problem is happening. It only checks; it never switches a display off.
+      render: text
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Menu > Show Log, then the lines from around the time it happened (`~/Library/Logs/loudstation.log`).
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Replugging the display's cable brings the sound back (if not, it may be a different fault; see "Probably not this bug" in the README).
