@@ -4,6 +4,8 @@
 
 **No sound from your monitor speakers on an Apple Silicon Mac?** If speakers or headphones plugged into an external display (USB-C, DisplayPort, HDMI or a dock) go silent after you plug in or wake the Mac, and Spotify, YouTube or Netflix freeze or won't play, LoudStation spots it from the menu bar and fixes it without you unplugging anything.
 
+<p align="center"><img src="docs/screenshot.png" width="516" alt="The LoudStation menu: one display working with the monitor speakers, two other displays with no sound, and the Check Now, Fix Automatically and Check Every options"></p>
+
 > Apple Silicon only (M1, M2, M3, M4 and later); runs on macOS 13 and later, in 37 languages. Tested so far only on macOS 27 (Golden Gate) on an M1 Max with three Dell displays. Reports from other setups are very welcome.
 
 ## The symptoms
