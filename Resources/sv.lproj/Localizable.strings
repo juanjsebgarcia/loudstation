@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Inget ljud från dina skärmhögtalare";
 "menu.check_every" = "Kontrollintervall";
 "menu.check_now" = "Kontrollera nu";
+"menu.check_updates" = "Sök efter uppdateringar…";
+"menu.check_updates_automatically" = "Sök efter uppdateringar automatiskt";
 "menu.fix_automatically" = "Åtgärda skärmhögtalarna automatiskt";
 "menu.follow_sound_output" = "Skärmhögtalarna följer ljudutgången";
 "menu.interval.events_only" = "Bara när skärmar ändras eller datorn vaknar";
@@ -55,6 +57,7 @@
 "menu.quit" = "Avsluta %@";
 "menu.quit_after_fix" = "Avsluta när åtgärden är klar";
 "menu.show_log" = "Visa logg";
+"menu.update_available" = "Uppdatering tillgänglig: %1$@ %2$@…";
 "note.busy" = "Kontrollerar fortfarande. Prova Åtgärda nu igen om några sekunder.";
 "note.cant_autofix" = "Den här skärmen kan inte åtgärdas automatiskt här. Anslut kabeln på nytt för att åtgärda den.";
 "note.collateral" = "När %1$@ åtgärdades slutade ljudet på %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Skärmen blir svart i cirka 3 sekunder";
 "submenu.hint_others" = "Kan stoppa ljudet på andra skärmar";
 "submenu.speakers_here" = "Använd den här skärmen för högtalarna";
+"update.available.body_homebrew" = "Du har version %1$@. Uppdatera genom att köra det här kommandot i Terminal. Det installerar den nya versionen och öppnar %2$@ igen.\n\n%3$@";
+"update.available.body_source" = "Du har version %1$@. Uppdatera genom att hämta den nya versionens källkod från versionsinformationen och köra %3$@ i dess mapp. Det öppnar också %2$@ igen.";
+"update.available.title" = "%1$@ %2$@ finns tillgänglig";
+"update.button.copy" = "Kopiera kommando";
+"update.button.later" = "Senare";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Versionsinformation";
+"update.current.body" = "Version %@ är den senaste versionen.";
+"update.current.title" = "%@ är uppdaterad";
+"update.failed.body" = "Kontrollera internetanslutningen och försök igen senare.";
+"update.failed.title" = "Kunde inte söka efter uppdateringar";
 "welcome.body" = "Symbolen visar om ljudet fungerar på dina skärmar. Grön: allt fungerar. Orange: en skärm som du inte använder för ljud har tystnat. Röd: dina skärmhögtalare har tystnat.\n\nFör att åtgärda tysta skärmhögtalare stänger appen av och slår på deras skärm. Den skärmen blir svart i cirka 3 sekunder och dess fönster kan flytta sig en kort stund. Appen gör aldrig detta med din enda skärm, och den väntar tills samtal och video i helskärm är slut.\n\nAppen öppnas vid inloggning. Det kan du ändra i dess meny.";
 "welcome.fix_automatically" = "Åtgärda automatiskt";
 "welcome.status_only" = "Visa bara status";

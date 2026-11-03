@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Pilihan tidak diketahui “%@”.",
     "cli.error.unknown_command": "Arahan tidak diketahui “%@”.",
     "cli.error.no_output": "Tiada output audio dengan ID %1$@. Lihat `%2$@ list`.",
-    "cli.error.not_display": "%@ bukan output audio paparan."
+    "cli.error.not_display": "%@ bukan output audio paparan.",
+    "menu.check_updates": "Semak Kemas Kini…",
+    "menu.check_updates_automatically": "Semak Kemas Kini Secara Automatik",
+    "menu.update_available": "Kemas Kini Tersedia: %1$@ %2$@…",
+    "update.available.title": "%1$@ %2$@ kini tersedia",
+    "update.available.body_homebrew": "Anda menggunakan versi %1$@. Untuk mengemas kini, jalankan arahan ini dalam Terminal. Arahan ini memasang versi baharu dan membuka semula %2$@.\n\n%3$@",
+    "update.available.body_source": "Anda menggunakan versi %1$@. Untuk mengemas kini, muat turun kod sumber versi baharu daripada Nota Keluaran dan jalankan %3$@ dalam foldernya. Ini juga membuka semula %2$@.",
+    "update.button.copy": "Salin Arahan",
+    "update.button.release_notes": "Nota Keluaran",
+    "update.button.later": "Kemudian",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ sudah terkini",
+    "update.current.body": "Versi %@ ialah versi terkini.",
+    "update.failed.title": "Tidak dapat menyemak kemas kini",
+    "update.failed.body": "Semak sambungan internet anda dan cuba lagi kemudian."
   },
   "plurals": {
     "headline.others_silent": {

@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Opção desconhecida: «%@».",
     "cli.error.unknown_command": "Comando desconhecido: «%@».",
     "cli.error.no_output": "Não existe nenhuma saída de áudio com o ID %1$@. Consulte `%2$@ list`.",
-    "cli.error.not_display": "%@ não é a saída de áudio de um ecrã."
+    "cli.error.not_display": "%@ não é a saída de áudio de um ecrã.",
+    "menu.check_updates": "Procurar atualizações…",
+    "menu.check_updates_automatically": "Procurar atualizações automaticamente",
+    "menu.update_available": "Atualização disponível: %1$@ %2$@…",
+    "update.available.title": "%1$@ %2$@ está disponível",
+    "update.available.body_homebrew": "Tem a versão %1$@. Para atualizar, execute este comando no Terminal. Instala a nova versão e volta a abrir %2$@.\n\n%3$@",
+    "update.available.body_source": "Tem a versão %1$@. Para atualizar, descarregue o código-fonte da nova versão a partir das notas de lançamento e execute %3$@ na respetiva pasta. Isso também volta a abrir %2$@.",
+    "update.button.copy": "Copiar comando",
+    "update.button.release_notes": "Notas de lançamento",
+    "update.button.later": "Mais tarde",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ está atualizado",
+    "update.current.body": "A versão %@ é a mais recente.",
+    "update.failed.title": "Não foi possível procurar atualizações",
+    "update.failed.body": "Verifique a ligação à internet e tente novamente mais tarde."
   },
   "plurals": {
     "headline.others_silent": {

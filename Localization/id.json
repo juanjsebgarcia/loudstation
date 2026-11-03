@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Pilihan tidak dikenal “%@”.",
     "cli.error.unknown_command": "Perintah tidak dikenal “%@”.",
     "cli.error.no_output": "Tidak ada output audio dengan ID %1$@. Lihat `%2$@ list`.",
-    "cli.error.not_display": "%@ bukan output audio sebuah layar."
+    "cli.error.not_display": "%@ bukan output audio sebuah layar.",
+    "menu.check_updates": "Periksa Pembaruan…",
+    "menu.check_updates_automatically": "Periksa Pembaruan Secara Otomatis",
+    "menu.update_available": "Pembaruan Tersedia: %1$@ %2$@…",
+    "update.available.body_homebrew": "Anda menggunakan versi %1$@. Untuk memperbarui, jalankan perintah ini di Terminal. Perintah ini menginstal versi baru dan membuka kembali %2$@.\n\n%3$@",
+    "update.available.body_source": "Anda menggunakan versi %1$@. Untuk memperbarui, unduh kode sumber versi baru dari catatan rilisnya, lalu jalankan %3$@ di foldernya. Ini juga membuka kembali %2$@.",
+    "update.available.title": "%1$@ %2$@ tersedia",
+    "update.button.copy": "Salin Perintah",
+    "update.button.later": "Nanti",
+    "update.button.ok": "OKE",
+    "update.button.release_notes": "Catatan Rilis",
+    "update.current.body": "Versi %@ adalah versi terbaru.",
+    "update.current.title": "%@ sudah terbaru",
+    "update.failed.body": "Periksa koneksi internet Anda dan coba lagi nanti.",
+    "update.failed.title": "Tidak dapat memeriksa pembaruan"
   },
   "plurals": {
     "headline.others_silent": {

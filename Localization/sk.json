@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Neznáma voľba „%@“.",
     "cli.error.unknown_command": "Neznámy príkaz „%@“.",
     "cli.error.no_output": "Žiadny zvukový výstup s ID %1$@. Pozrite `%2$@ list`.",
-    "cli.error.not_display": "%@ nie je zvukový výstup monitora."
+    "cli.error.not_display": "%@ nie je zvukový výstup monitora.",
+    "menu.check_updates": "Skontrolovať aktualizácie…",
+    "menu.check_updates_automatically": "Kontrolovať aktualizácie automaticky",
+    "menu.update_available": "Dostupná aktualizácia: %1$@ %2$@…",
+    "update.available.body_homebrew": "Máte verziu %1$@. Ak chcete aktualizovať, spustite tento príkaz v Termináli. Nainštaluje novú verziu a znova otvorí aplikáciu %2$@.\n\n%3$@",
+    "update.available.body_source": "Máte verziu %1$@. Ak chcete aktualizovať, stiahnite zdrojový kód novej verzie z jej poznámok k vydaniu a v jej priečinku spustite %3$@. Tým sa aplikácia %2$@ aj znova otvorí.",
+    "update.available.title": "%1$@ %2$@ je k dispozícii",
+    "update.button.copy": "Kopírovať príkaz",
+    "update.button.later": "Neskôr",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Poznámky k vydaniu",
+    "update.current.body": "Verzia %@ je najnovšia.",
+    "update.current.title": "Aplikácia %@ je aktuálna",
+    "update.failed.body": "Skontrolujte pripojenie na internet a skúste to znova neskôr.",
+    "update.failed.title": "Nepodarilo sa skontrolovať aktualizácie"
   },
   "plurals": {
     "headline.others_silent": {

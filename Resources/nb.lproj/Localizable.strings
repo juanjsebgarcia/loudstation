@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Ingen lyd fra skjermhøyttalerne dine";
 "menu.check_every" = "Sjekkintervall";
 "menu.check_now" = "Sjekk nå";
+"menu.check_updates" = "Se etter oppdateringer…";
+"menu.check_updates_automatically" = "Se etter oppdateringer automatisk";
 "menu.fix_automatically" = "Fiks skjermhøyttalerne automatisk";
 "menu.follow_sound_output" = "Skjermhøyttalerne følger lydutgangen";
 "menu.interval.events_only" = "Bare når skjermer endres eller Macen våkner";
@@ -55,6 +57,7 @@
 "menu.quit" = "Avslutt %@";
 "menu.quit_after_fix" = "Avslutt når fiksingen er ferdig";
 "menu.show_log" = "Vis logg";
+"menu.update_available" = "Oppdatering tilgjengelig: %1$@ %2$@…";
 "note.busy" = "Sjekker fortsatt. Prøv Fiks nå igjen om noen sekunder.";
 "note.cant_autofix" = "Denne skjermen kan ikke fikses automatisk her. Koble til kabelen på nytt for å fikse den.";
 "note.collateral" = "Fiksingen av %1$@ stoppet lyden på %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Skjermen blir svart i omtrent 3 sekunder";
 "submenu.hint_others" = "Kan stoppe lyden på andre skjermer";
 "submenu.speakers_here" = "Bruk denne skjermen til høyttalerne";
+"update.available.body_homebrew" = "Du har versjon %1$@. For å oppdatere kjører du denne kommandoen i Terminal. Den installerer den nye versjonen og åpner %2$@ på nytt.\n\n%3$@";
+"update.available.body_source" = "Du har versjon %1$@. For å oppdatere laster du ned kildekoden til den nye versjonen fra utgivelsesnotatene og kjører %3$@ i mappen. Det åpner også %2$@ på nytt.";
+"update.available.title" = "%1$@ %2$@ er tilgjengelig";
+"update.button.copy" = "Kopier kommando";
+"update.button.later" = "Senere";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Utgivelsesnotater";
+"update.current.body" = "Versjon %@ er den nyeste versjonen.";
+"update.current.title" = "%@ er oppdatert";
+"update.failed.body" = "Sjekk internettilkoblingen og prøv igjen senere.";
+"update.failed.title" = "Kunne ikke se etter oppdateringer";
 "welcome.body" = "Symbolet viser om lyden virker på skjermene dine. Grønn: alt virker. Oransje: en skjerm du ikke bruker til lyd, har blitt stille. Rød: skjermhøyttalerne dine har blitt stille.\n\nFor å fikse stille skjermhøyttalere slår appen skjermen deres av og på. Den skjermen blir svart i omtrent 3 sekunder, og vinduene på den kan flytte seg et øyeblikk. Dette skjer aldri med den eneste skjermen din, og appen venter til samtaler og video i fullskjerm er over.\n\nAppen åpnes ved pålogging. Du kan endre dette i menyen.";
 "welcome.fix_automatically" = "Fiks automatisk";
 "welcome.status_only" = "Bare vis status";

@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Tuntematon valinta ”%@”.",
     "cli.error.unknown_command": "Tuntematon komento ”%@”.",
     "cli.error.no_output": "Äänen ulostuloa tunnuksella %1$@ ei ole. Katso `%2$@ list`.",
-    "cli.error.not_display": "%@ ei ole näytön äänen ulostulo."
+    "cli.error.not_display": "%@ ei ole näytön äänen ulostulo.",
+    "menu.check_updates": "Tarkista päivitykset…",
+    "menu.check_updates_automatically": "Tarkista päivitykset automaattisesti",
+    "menu.update_available": "Päivitys saatavilla: %1$@ %2$@…",
+    "update.available.body_homebrew": "Käytössäsi on versio %1$@. Päivitä suorittamalla tämä komento Päätteessä. Komento asentaa uuden version ja avaa appin %2$@ uudelleen.\n\n%3$@",
+    "update.available.body_source": "Käytössäsi on versio %1$@. Päivitä lataamalla uuden version lähdekoodi sen julkaisutiedoista ja suorittamalla %3$@ lähdekoodin kansiossa. Tämä avaa myös appin %2$@ uudelleen.",
+    "update.available.title": "%1$@ %2$@ on saatavilla",
+    "update.button.copy": "Kopioi komento",
+    "update.button.later": "Myöhemmin",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Julkaisutiedot",
+    "update.current.body": "Versio %@ on uusin versio.",
+    "update.current.title": "%@ on ajan tasalla",
+    "update.failed.body": "Tarkista internetyhteytesi ja yritä myöhemmin uudelleen.",
+    "update.failed.title": "Päivityksiä ei voitu tarkistaa"
   },
   "plurals": {
     "headline.others_silent": {

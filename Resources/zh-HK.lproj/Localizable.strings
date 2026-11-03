@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "你的顯示器揚聲器沒有聲音";
 "menu.check_every" = "檢查間隔";
 "menu.check_now" = "立即檢查";
+"menu.check_updates" = "檢查更新項目⋯";
+"menu.check_updates_automatically" = "自動檢查更新項目";
 "menu.fix_automatically" = "自動修復顯示器揚聲器";
 "menu.follow_sound_output" = "顯示器揚聲器跟隨聲音輸出";
 "menu.interval.events_only" = "僅在顯示器變更或 Mac 喚醒時";
@@ -55,6 +57,7 @@
 "menu.quit" = "結束 %@";
 "menu.quit_after_fix" = "修復完成後結束";
 "menu.show_log" = "顯示記錄";
+"menu.update_available" = "有可用的更新項目：%1$@ %2$@⋯";
 "note.busy" = "仍在檢查中。請過幾秒再試一次「立即修復」。";
 "note.cant_autofix" = "此顯示器無法在這裡自動修復。請重新連接其線材來修復。";
 "note.collateral" = "修復 %1$@ 後，%2$@ 沒有聲音了。";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "螢幕會變黑約 3 秒";
 "submenu.hint_others" = "可能使其他顯示器沒有聲音";
 "submenu.speakers_here" = "將此顯示器用於揚聲器";
+"update.available.body_homebrew" = "你正在使用版本 %1$@。如要更新，請在「終端機」中執行此指令。它會安裝新版本並重新開啟 %2$@。\n\n%3$@";
+"update.available.body_source" = "你正在使用版本 %1$@。如要更新，請從新版本的版本附註下載其原始碼，並在其檔案夾中執行 %3$@。這也會重新開啟 %2$@。";
+"update.available.title" = "%1$@ %2$@ 現已推出";
+"update.button.copy" = "拷貝指令";
+"update.button.later" = "稍後";
+"update.button.ok" = "好";
+"update.button.release_notes" = "版本附註";
+"update.current.body" = "版本 %@ 是最新版本。";
+"update.current.title" = "%@ 已是最新版本";
+"update.failed.body" = "請檢查你的互聯網連線，稍後再試一次。";
+"update.failed.title" = "無法檢查更新項目";
 "welcome.body" = "圖示會顯示顯示器的聲音是否正常。綠色：一切正常。橙色：一台你不用來播放聲音的顯示器沒有聲音了。紅色：你的顯示器揚聲器沒有聲音了。\n\n為了修復沒有聲音的顯示器揚聲器，此 App 會將其所在的顯示器關閉再重新開啟。該螢幕會變黑約 3 秒，視窗也可能會短暫移動。如果你只有一個螢幕，它絕不會這樣做，而且會等到通話和全螢幕影片結束後才進行。\n\n它會在登入時開啟。你可以在它的選單中更改此設定。";
 "welcome.fix_automatically" = "自動修復";
 "welcome.status_only" = "僅顯示狀態";

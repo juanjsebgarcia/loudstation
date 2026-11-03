@@ -92,11 +92,15 @@ The menu bar icon is LoudStation's own mark, a display with a sound wave on it, 
 
 The menu lists each display with its status (Working, No Sound, Checking…, Couldn't Check) and how often it has been fixed. Each display has a submenu with **Set This Display as Speaker Output**, to say which display your speakers are plugged into; it also makes that display your Mac's sound output (choose it again to go back to following the sound output), and **Fix Now**, which asks first for a display without your monitor speakers.
 
-Below the list are **Check Now** (⌘R), **Monitor Speakers Follow Sound Output**, **Fix Monitor Speakers Automatically**, **Check Every** (10, 20 or 60 (default) seconds, or only when displays change or the Mac wakes), **Open at Login**, **Show Log** (⌘L) and **Quit LoudStation** (⌘Q).
+Below the list are **Check Now** (⌘R), **Monitor Speakers Follow Sound Output**, **Fix Monitor Speakers Automatically**, **Check Every** (10, 20 or 60 (default) seconds, or only when displays change or the Mac wakes), **Open at Login**, **Check for Updates Automatically**, **Check for Updates…**, **Show Log** (⌘L) and **Quit LoudStation** (⌘Q).
 
 It sends a notification when it restores sound, when your monitor speakers are still silent after a fix, when it pauses automatic fixing, and when it is waiting for a call or full-screen use to end.
 
 If you cannot see the icon, it may be hidden behind the notch or by a menu bar manager.
+
+### Updates
+
+Once a day LoudStation asks GitHub's public API whether a newer release exists. When one does, the menu shows **Update Available**, which tells you how to update: for Homebrew, `brew update && brew upgrade loudstation && loudstation app` (with a button to copy it), which replaces the running copy with the new one; for a copy built from a clone, `make install` with the new source. It never downloads or installs anything itself. The request is a single anonymous `GET` of `api.github.com/repos/juanjsebgarcia/loudstation/releases/latest`, so GitHub sees your IP address, LoudStation's version and standard HTTP headers (with the language fixed to English), and nothing else. Turn off **Check for Updates Automatically** to stop it; **Check for Updates…** still checks when you ask.
 
 After a fix, or after you switch the speaker output, an app that was already playing may keep using the audio connection it opened before and stay silent. Pausing and playing again often helps; if not, quit and reopen that app.
 
@@ -143,7 +147,7 @@ Most translations have not yet been checked by a native speaker. Corrections are
 - Checking plays a moment of silence to a display. Timer checks only touch your monitor speakers' display, every minute by default, and are skipped in Low Power Mode. If your display, soundbar or receiver clicks when a stream starts, set Check Every to the option that checks only when displays change or the Mac wakes, and please open an issue.
 - Switching a display off and on moves its windows to another screen and back. macOS does not always restore every window, Space or Stage Manager set exactly, and protected video (HDCP) may go black briefly on other displays while the link renegotiates.
 - Some monitors with automatic input selection, USB-C KVMs and TVs may switch input or go to standby during the three seconds without a signal.
-- After `brew upgrade`, the running app stays the old version until you quit and reopen it or log in again.
+- After `brew upgrade`, the running app stays the old version until you run `loudstation app` (which takes over from it) or log in again.
 - It treats the symptom. The evidence in [`docs/`](docs/README.md) points to a fault in macOS's DCP firmware and display-audio drivers, which only Apple can change. Please report it to Apple too; [`docs/apple-feedback-report.md`](docs/apple-feedback-report.md) is a ready-made report.
 
 ## Licence

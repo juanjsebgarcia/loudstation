@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Okänt alternativ ”%@”.",
     "cli.error.unknown_command": "Okänt kommando ”%@”.",
     "cli.error.no_output": "Det finns ingen ljudutgång med ID %1$@. Se `%2$@ list`.",
-    "cli.error.not_display": "%@ är inte en skärms ljudutgång."
+    "cli.error.not_display": "%@ är inte en skärms ljudutgång.",
+    "menu.check_updates": "Sök efter uppdateringar…",
+    "menu.check_updates_automatically": "Sök efter uppdateringar automatiskt",
+    "menu.update_available": "Uppdatering tillgänglig: %1$@ %2$@…",
+    "update.available.body_homebrew": "Du har version %1$@. Uppdatera genom att köra det här kommandot i Terminal. Det installerar den nya versionen och öppnar %2$@ igen.\n\n%3$@",
+    "update.available.body_source": "Du har version %1$@. Uppdatera genom att hämta den nya versionens källkod från versionsinformationen och köra %3$@ i dess mapp. Det öppnar också %2$@ igen.",
+    "update.available.title": "%1$@ %2$@ finns tillgänglig",
+    "update.button.copy": "Kopiera kommando",
+    "update.button.later": "Senare",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Versionsinformation",
+    "update.current.body": "Version %@ är den senaste versionen.",
+    "update.current.title": "%@ är uppdaterad",
+    "update.failed.body": "Kontrollera internetanslutningen och försök igen senare.",
+    "update.failed.title": "Kunde inte söka efter uppdateringar"
   },
   "plurals": {
     "headline.others_silent": {

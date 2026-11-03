@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Difuzoarele monitorului nu au sunet";
 "menu.check_every" = "Verificați la fiecare";
 "menu.check_now" = "Verificați acum";
+"menu.check_updates" = "Căutați actualizări…";
+"menu.check_updates_automatically" = "Căutați automat actualizări";
 "menu.fix_automatically" = "Remediați automat difuzoarele monitorului";
 "menu.follow_sound_output" = "Difuzoarele monitorului urmează ieșirea de sunet";
 "menu.interval.events_only" = "Doar la schimbări de monitoare sau la trezire";
@@ -55,6 +57,7 @@
 "menu.quit" = "Ieșiți din %@";
 "menu.quit_after_fix" = "Ieșiți după terminarea remedierii";
 "menu.show_log" = "Afișați jurnalul";
+"menu.update_available" = "Actualizare disponibilă: %1$@ %2$@…";
 "note.busy" = "Încă se verifică. Încercați din nou „Remediați acum” în câteva secunde.";
 "note.cant_autofix" = "Acest monitor nu poate fi remediat automat aici. Reconectați-i cablul pentru a-l remedia.";
 "note.collateral" = "Remedierea monitorului %1$@ a oprit sunetul pe %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Ecranul devine negru pentru circa 3 secunde";
 "submenu.hint_others" = "Poate opri sunetul pe alte monitoare";
 "submenu.speakers_here" = "Folosiți acest monitor pentru difuzoare";
+"update.available.body_homebrew" = "Aveți versiunea %1$@. Pentru actualizare, rulați această comandă în Terminal. Comanda instalează noua versiune și redeschide %2$@.\n\n%3$@";
+"update.available.body_source" = "Aveți versiunea %1$@. Pentru actualizare, descărcați codul sursă al noii versiuni din notele de lansare și rulați %3$@ în dosarul acestuia. Astfel se redeschide și %2$@.";
+"update.available.title" = "%1$@ %2$@ este disponibil";
+"update.button.copy" = "Copiați comanda";
+"update.button.later" = "Mai târziu";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Note de lansare";
+"update.current.body" = "Versiunea %@ este cea mai recentă.";
+"update.current.title" = "%@ este actualizat";
+"update.failed.body" = "Verificați conexiunea la internet și încercați din nou mai târziu.";
+"update.failed.title" = "Nu s-au putut căuta actualizări";
 "welcome.body" = "Pictograma arată dacă sunetul monitoarelor funcționează. Verde: totul funcționează. Portocaliu: un monitor pe care nu îl folosiți pentru sunet a amuțit. Roșu: difuzoarele monitorului au amuțit.\n\nPentru a remedia difuzoarele monitorului, aplicația oprește și repornește monitorul lor. Ecranul acela devine negru pentru circa 3 secunde, iar ferestrele lui se pot muta pentru o clipă. Nu face niciodată asta pe singurul dvs. ecran și așteaptă să se termine apelurile și videoclipurile pe ecran complet.\n\nSe deschide la autentificare. Puteți schimba asta din meniul aplicației.";
 "welcome.fix_automatically" = "Remediați automat";
 "welcome.status_only" = "Afișați doar starea";

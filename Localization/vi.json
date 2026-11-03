@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Tùy chọn không xác định “%@”.",
     "cli.error.unknown_command": "Lệnh không xác định “%@”.",
     "cli.error.no_output": "Không có đầu ra âm thanh nào có ID %1$@. Xem `%2$@ list`.",
-    "cli.error.not_display": "%@ không phải là đầu ra âm thanh của màn hình."
+    "cli.error.not_display": "%@ không phải là đầu ra âm thanh của màn hình.",
+    "menu.check_updates": "Kiểm tra bản cập nhật…",
+    "menu.check_updates_automatically": "Tự động kiểm tra bản cập nhật",
+    "menu.update_available": "Có bản cập nhật: %1$@ %2$@…",
+    "update.available.body_homebrew": "Bạn đang dùng phiên bản %1$@. Để cập nhật, hãy chạy lệnh này trong Terminal. Lệnh này sẽ cài đặt phiên bản mới và mở lại %2$@.\n\n%3$@",
+    "update.available.body_source": "Bạn đang dùng phiên bản %1$@. Để cập nhật, hãy tải mã nguồn của phiên bản mới từ ghi chú phát hành rồi chạy %3$@ trong thư mục đó. Thao tác này cũng mở lại %2$@.",
+    "update.available.title": "Đã có %1$@ %2$@",
+    "update.button.copy": "Sao chép lệnh",
+    "update.button.later": "Để sau",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Ghi chú phát hành",
+    "update.current.body": "Phiên bản %@ là phiên bản mới nhất.",
+    "update.current.title": "%@ đã là bản mới nhất",
+    "update.failed.body": "Hãy kiểm tra kết nối Internet rồi thử lại sau.",
+    "update.failed.title": "Không thể kiểm tra bản cập nhật"
   },
   "plurals": {
     "headline.others_silent": {

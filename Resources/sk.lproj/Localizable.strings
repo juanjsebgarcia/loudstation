@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Z vašich reproduktorov monitora nejde zvuk";
 "menu.check_every" = "Interval kontroly";
 "menu.check_now" = "Skontrolovať teraz";
+"menu.check_updates" = "Skontrolovať aktualizácie…";
+"menu.check_updates_automatically" = "Kontrolovať aktualizácie automaticky";
 "menu.fix_automatically" = "Opravovať reproduktory monitora automaticky";
 "menu.follow_sound_output" = "Reproduktory monitora podľa zvukového výstupu";
 "menu.interval.events_only" = "Len pri zmene monitorov alebo prebudení Macu";
@@ -55,6 +57,7 @@
 "menu.quit" = "Ukončiť %@";
 "menu.quit_after_fix" = "Ukončiť po dokončení opravy";
 "menu.show_log" = "Zobraziť protokol";
+"menu.update_available" = "Dostupná aktualizácia: %1$@ %2$@…";
 "note.busy" = "Ešte prebieha kontrola. O pár sekúnd skúste znova „Opraviť teraz“.";
 "note.cant_autofix" = "Tento monitor tu nemožno opraviť automaticky. Opravíte ho opätovným pripojením kábla.";
 "note.collateral" = "%1$@ je opravený, no zvuk zmizol: %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Obrazovka asi na 3 sekundy stmavne";
 "submenu.hint_others" = "Môže vypnúť zvuk na iných monitoroch";
 "submenu.speakers_here" = "Použiť tento monitor pre reproduktory";
+"update.available.body_homebrew" = "Máte verziu %1$@. Ak chcete aktualizovať, spustite tento príkaz v Termináli. Nainštaluje novú verziu a znova otvorí aplikáciu %2$@.\n\n%3$@";
+"update.available.body_source" = "Máte verziu %1$@. Ak chcete aktualizovať, stiahnite zdrojový kód novej verzie z jej poznámok k vydaniu a v jej priečinku spustite %3$@. Tým sa aplikácia %2$@ aj znova otvorí.";
+"update.available.title" = "%1$@ %2$@ je k dispozícii";
+"update.button.copy" = "Kopírovať príkaz";
+"update.button.later" = "Neskôr";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Poznámky k vydaniu";
+"update.current.body" = "Verzia %@ je najnovšia.";
+"update.current.title" = "Aplikácia %@ je aktuálna";
+"update.failed.body" = "Skontrolujte pripojenie na internet a skúste to znova neskôr.";
+"update.failed.title" = "Nepodarilo sa skontrolovať aktualizácie";
 "welcome.body" = "Ikona ukazuje, či funguje zvuk vašich monitorov. Zelená: všetko funguje. Oranžová: stíchol monitor, ktorý nepoužívate na zvuk. Červená: stíchli vaše reproduktory monitora.\n\nKeď reproduktory monitora stíchnu, aplikácia ich monitor vypne a zapne. Táto obrazovka asi na 3 sekundy stmavne a jej okná sa môžu na chvíľu posunúť. Nikdy to neurobí s vašou jedinou obrazovkou a počká, kým skončia hovory a video na celú obrazovku.\n\nOtvára sa pri prihlásení. Môžete to zmeniť v jej menu.";
 "welcome.fix_automatically" = "Opravovať automaticky";
 "welcome.status_only" = "Len zobrazovať stav";

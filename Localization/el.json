@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Άγνωστη επιλογή «%@».",
     "cli.error.unknown_command": "Άγνωστη εντολή «%@».",
     "cli.error.no_output": "Δεν υπάρχει έξοδος ήχου με ID %1$@. Δείτε `%2$@ list`.",
-    "cli.error.not_display": "Το %@ δεν είναι έξοδος ήχου οθόνης."
+    "cli.error.not_display": "Το %@ δεν είναι έξοδος ήχου οθόνης.",
+    "menu.check_updates": "Έλεγχος για ενημερώσεις…",
+    "menu.check_updates_automatically": "Αυτόματος έλεγχος για ενημερώσεις",
+    "menu.update_available": "Διαθέσιμη ενημέρωση: %1$@ %2$@…",
+    "update.available.body_homebrew": "Έχετε την έκδοση %1$@. Για να κάνετε ενημέρωση, εκτελέστε αυτή την εντολή στο Τερματικό. Εγκαθιστά τη νέα έκδοση και ανοίγει ξανά το %2$@.\n\n%3$@",
+    "update.available.body_source": "Έχετε την έκδοση %1$@. Για να κάνετε ενημέρωση, κατεβάστε τον πηγαίο κώδικα της νέας έκδοσης από τις σημειώσεις έκδοσης και εκτελέστε %3$@ στον φάκελό του. Έτσι ανοίγει ξανά και το %2$@.",
+    "update.available.title": "Το %1$@ %2$@ είναι διαθέσιμο",
+    "update.button.copy": "Αντιγραφή εντολής",
+    "update.button.later": "Αργότερα",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Σημειώσεις έκδοσης",
+    "update.current.body": "Η έκδοση %@ είναι η πιο πρόσφατη.",
+    "update.current.title": "Το %@ είναι ενημερωμένο",
+    "update.failed.body": "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά αργότερα.",
+    "update.failed.title": "Δεν ήταν δυνατός ο έλεγχος για ενημερώσεις"
   },
   "plurals": {
     "headline.others_silent": {

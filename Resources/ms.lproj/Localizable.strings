@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Tiada bunyi daripada pembesar suara monitor anda";
 "menu.check_every" = "Semak Setiap";
 "menu.check_now" = "Semak Sekarang";
+"menu.check_updates" = "Semak Kemas Kini…";
+"menu.check_updates_automatically" = "Semak Kemas Kini Secara Automatik";
 "menu.fix_automatically" = "Baiki Pembesar Suara Monitor Secara Automatik";
 "menu.follow_sound_output" = "Pembesar Suara Monitor Ikut Output Bunyi";
 "menu.interval.events_only" = "Hanya Apabila Paparan Berubah atau Mac Bangun";
@@ -55,6 +57,7 @@
 "menu.quit" = "Keluar dari %@";
 "menu.quit_after_fix" = "Keluar Apabila Pembaikan Selesai";
 "menu.show_log" = "Tunjukkan Log";
+"menu.update_available" = "Kemas Kini Tersedia: %1$@ %2$@…";
 "note.busy" = "Masih menyemak. Cuba Baiki Sekarang sekali lagi dalam beberapa saat.";
 "note.cant_autofix" = "Paparan ini tidak boleh dibaiki secara automatik di sini. Sambungkan semula kabelnya untuk membaikinya.";
 "note.collateral" = "Membaiki %1$@ telah menghentikan bunyi pada %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Skrin menjadi hitam selama kira-kira 3 saat";
 "submenu.hint_others" = "Boleh menghentikan bunyi pada paparan lain";
 "submenu.speakers_here" = "Guna Paparan Ini untuk Pembesar Suara";
+"update.available.body_homebrew" = "Anda menggunakan versi %1$@. Untuk mengemas kini, jalankan arahan ini dalam Terminal. Arahan ini memasang versi baharu dan membuka semula %2$@.\n\n%3$@";
+"update.available.body_source" = "Anda menggunakan versi %1$@. Untuk mengemas kini, muat turun kod sumber versi baharu daripada Nota Keluaran dan jalankan %3$@ dalam foldernya. Ini juga membuka semula %2$@.";
+"update.available.title" = "%1$@ %2$@ kini tersedia";
+"update.button.copy" = "Salin Arahan";
+"update.button.later" = "Kemudian";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Nota Keluaran";
+"update.current.body" = "Versi %@ ialah versi terkini.";
+"update.current.title" = "%@ sudah terkini";
+"update.failed.body" = "Semak sambungan internet anda dan cuba lagi kemudian.";
+"update.failed.title" = "Tidak dapat menyemak kemas kini";
 "welcome.body" = "Ikon menunjukkan sama ada bunyi paparan anda berfungsi. Hijau: semuanya berfungsi. Jingga: paparan yang anda tidak gunakan untuk bunyi telah senyap. Merah: pembesar suara monitor anda telah senyap.\n\nUntuk membaiki pembesar suara monitor yang senyap, app ini mematikan dan menghidupkan paparannya. Skrin itu menjadi hitam selama kira-kira 3 saat dan tetingkapnya mungkin beralih seketika. App ini tidak akan melakukannya pada satu-satunya skrin anda, dan menunggu sehingga panggilan dan video skrin penuh tamat.\n\nApp ini dibuka semasa log masuk. Anda boleh menukarnya dalam menunya.";
 "welcome.fix_automatically" = "Baiki Secara Automatik";
 "welcome.status_only" = "Tunjukkan Status Sahaja";

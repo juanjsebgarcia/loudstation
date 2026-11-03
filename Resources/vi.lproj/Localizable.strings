@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Loa màn hình của bạn không có âm thanh";
 "menu.check_every" = "Kiểm tra mỗi";
 "menu.check_now" = "Kiểm tra ngay";
+"menu.check_updates" = "Kiểm tra bản cập nhật…";
+"menu.check_updates_automatically" = "Tự động kiểm tra bản cập nhật";
 "menu.fix_automatically" = "Tự động sửa loa màn hình";
 "menu.follow_sound_output" = "Loa màn hình theo đầu ra âm thanh";
 "menu.interval.events_only" = "Chỉ khi màn hình thay đổi hoặc máy Mac thức";
@@ -55,6 +57,7 @@
 "menu.quit" = "Thoát %@";
 "menu.quit_after_fix" = "Thoát khi sửa xong";
 "menu.show_log" = "Hiển thị nhật ký";
+"menu.update_available" = "Có bản cập nhật: %1$@ %2$@…";
 "note.busy" = "Vẫn đang kiểm tra. Hãy thử lại “Sửa ngay” sau vài giây.";
 "note.cant_autofix" = "Không thể tự động sửa màn hình này ở đây. Hãy kết nối lại cáp của màn hình để sửa.";
 "note.collateral" = "Việc sửa %1$@ đã làm mất âm thanh trên %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Màn hình sẽ tối đen trong khoảng 3 giây";
 "submenu.hint_others" = "Có thể làm mất âm thanh trên các màn hình khác";
 "submenu.speakers_here" = "Dùng màn hình này cho loa";
+"update.available.body_homebrew" = "Bạn đang dùng phiên bản %1$@. Để cập nhật, hãy chạy lệnh này trong Terminal. Lệnh này sẽ cài đặt phiên bản mới và mở lại %2$@.\n\n%3$@";
+"update.available.body_source" = "Bạn đang dùng phiên bản %1$@. Để cập nhật, hãy tải mã nguồn của phiên bản mới từ ghi chú phát hành rồi chạy %3$@ trong thư mục đó. Thao tác này cũng mở lại %2$@.";
+"update.available.title" = "Đã có %1$@ %2$@";
+"update.button.copy" = "Sao chép lệnh";
+"update.button.later" = "Để sau";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Ghi chú phát hành";
+"update.current.body" = "Phiên bản %@ là phiên bản mới nhất.";
+"update.current.title" = "%@ đã là bản mới nhất";
+"update.failed.body" = "Hãy kiểm tra kết nối Internet rồi thử lại sau.";
+"update.failed.title" = "Không thể kiểm tra bản cập nhật";
 "welcome.body" = "Biểu tượng cho biết âm thanh trên các màn hình của bạn có hoạt động hay không. Xanh lục: mọi thứ đều hoạt động. Cam: một màn hình bạn không dùng để phát âm thanh đã mất tiếng. Đỏ: loa màn hình của bạn đã mất tiếng.\n\nĐể sửa loa màn hình bị mất tiếng, ứng dụng sẽ tắt và bật lại màn hình gắn loa đó. Màn hình đó sẽ tối đen trong khoảng 3 giây và các cửa sổ có thể di chuyển trong giây lát. Ứng dụng không bao giờ làm việc này với màn hình duy nhất của bạn và sẽ chờ đến khi cuộc gọi và video toàn màn hình kết thúc.\n\nỨng dụng mở khi đăng nhập. Bạn có thể thay đổi điều này trong menu của ứng dụng.";
 "welcome.fix_automatically" = "Tự động sửa";
 "welcome.status_only" = "Chỉ hiện trạng thái";

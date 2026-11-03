@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "모니터 스피커에서 소리가 나지 않습니다";
 "menu.check_every" = "확인 주기";
 "menu.check_now" = "지금 확인";
+"menu.check_updates" = "업데이트 확인…";
+"menu.check_updates_automatically" = "자동으로 업데이트 확인";
 "menu.fix_automatically" = "모니터 스피커 자동 복구";
 "menu.follow_sound_output" = "모니터 스피커를 사운드 출력과 일치시키기";
 "menu.interval.events_only" = "디스플레이가 바뀌거나 Mac이 깨어날 때만";
@@ -55,6 +57,7 @@
 "menu.quit" = "%@ 종료";
 "menu.quit_after_fix" = "복구가 끝나면 종료";
 "menu.show_log" = "로그 보기";
+"menu.update_available" = "업데이트 사용 가능: %1$@ %2$@…";
 "note.busy" = "아직 확인 중입니다. 몇 초 후에 ‘지금 복구’를 다시 시도하십시오.";
 "note.cant_autofix" = "이 디스플레이는 여기에서 자동 복구할 수 없습니다. 케이블을 다시 연결하여 복구하십시오.";
 "note.collateral" = "%1$@ 복구로 인해 %2$@의 소리가 멈췄습니다.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "화면이 약 3초 동안 검게 바뀝니다";
 "submenu.hint_others" = "다른 디스플레이의 소리가 멈출 수 있습니다";
 "submenu.speakers_here" = "이 디스플레이를 모니터 스피커용으로 설정";
+"update.available.body_homebrew" = "현재 버전은 %1$@입니다. 업데이트하려면 터미널에서 다음 명령을 실행하십시오. 새 버전이 설치되고 %2$@이(가) 다시 열립니다.\n\n%3$@";
+"update.available.body_source" = "현재 버전은 %1$@입니다. 업데이트하려면 릴리스 노트에서 새 버전의 소스를 다운로드하고 해당 폴더에서 %3$@을(를) 실행하십시오. 그러면 %2$@도 다시 열립니다.";
+"update.available.title" = "%1$@ %2$@ 버전을 사용할 수 있습니다";
+"update.button.copy" = "명령어 복사";
+"update.button.later" = "나중에";
+"update.button.ok" = "확인";
+"update.button.release_notes" = "릴리스 노트";
+"update.current.body" = "%@ 버전이 최신 버전입니다.";
+"update.current.title" = "%@이(가) 최신 상태입니다";
+"update.failed.body" = "인터넷 연결을 확인한 후 나중에 다시 시도하십시오.";
+"update.failed.title" = "업데이트를 확인할 수 없음";
 "welcome.body" = "아이콘에서 디스플레이의 소리가 정상인지 확인할 수 있습니다. 초록색: 모두 정상입니다. 주황색: 소리 재생에 사용하지 않는 디스플레이에서 소리가 나지 않습니다. 빨간색: 모니터 스피커에서 소리가 나지 않습니다.\n\n소리가 나지 않는 모니터 스피커를 복구하기 위해 이 앱은 해당 디스플레이를 껐다가 켭니다. 그 화면은 약 3초 동안 검게 바뀌고 윈도우가 잠시 이동할 수 있습니다. 화면이 하나뿐일 때는 이 작업을 하지 않으며, 통화나 전체 화면 비디오가 끝날 때까지 기다립니다.\n\n이 앱은 로그인 시 열립니다. 이 설정은 앱의 메뉴에서 변경할 수 있습니다.";
 "welcome.fix_automatically" = "자동으로 복구";
 "welcome.status_only" = "상태만 표시";

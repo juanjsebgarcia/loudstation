@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Nema zvuka iz vaših zvučnika zaslona";
 "menu.check_every" = "Interval provjere";
 "menu.check_now" = "Provjeri sada";
+"menu.check_updates" = "Provjeri ima li ažuriranja…";
+"menu.check_updates_automatically" = "Automatski provjeravaj ima li ažuriranja";
 "menu.fix_automatically" = "Automatski popravljaj zvučnike zaslona";
 "menu.follow_sound_output" = "Zvučnici zaslona prate izlaz zvuka";
 "menu.interval.events_only" = "Samo kad se zasloni promijene ili se Mac probudi";
@@ -55,6 +57,7 @@
 "menu.quit" = "Zatvori %@";
 "menu.quit_after_fix" = "Zatvori kad popravak završi";
 "menu.show_log" = "Prikaži zapisnik";
+"menu.update_available" = "Dostupno ažuriranje: %1$@ %2$@…";
 "note.busy" = "Provjera je još u tijeku. Pokušajte „Popravi sada” ponovno za nekoliko sekundi.";
 "note.cant_autofix" = "Ovaj zaslon ovdje se ne može automatski popraviti. Ponovno spojite njegov kabel.";
 "note.collateral" = "%1$@ je popravljen, ali zvuk je nestao: %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Zaslon se zatamni na oko 3 sekunde";
 "submenu.hint_others" = "Može prekinuti zvuk na drugim zaslonima";
 "submenu.speakers_here" = "Koristi ovaj zaslon za zvučnike";
+"update.available.body_homebrew" = "Imate verziju %1$@. Za ažuriranje pokrenite ovu naredbu u Terminalu. Ona instalira novu verziju i ponovno otvara aplikaciju %2$@.\n\n%3$@";
+"update.available.body_source" = "Imate verziju %1$@. Za ažuriranje preuzmite izvorni kod nove verzije iz njezinih bilješki o izdanju i pokrenite %3$@ u mapi izvornog koda. Time se ponovno otvara i aplikacija %2$@.";
+"update.available.title" = "Dostupna je aplikacija %1$@ %2$@";
+"update.button.copy" = "Kopiraj naredbu";
+"update.button.later" = "Kasnije";
+"update.button.ok" = "U redu";
+"update.button.release_notes" = "Bilješke o izdanju";
+"update.current.body" = "Verzija %@ je najnovija.";
+"update.current.title" = "Aplikacija %@ je ažurna";
+"update.failed.body" = "Provjerite internetsku vezu i pokušajte ponovno kasnije.";
+"update.failed.title" = "Provjera ažuriranja nije uspjela";
 "welcome.body" = "Ikona pokazuje radi li zvuk vaših zaslona. Zelena: sve radi. Narančasta: utihnuo je zaslon koji ne koristite za zvuk. Crvena: utihnuli su vaši zvučnici zaslona.\n\nKad zvučnici zaslona utihnu, aplikacija isključi i uključi njihov zaslon. Taj se zaslon zatamni na oko 3 sekunde, a njegovi se prozori mogu nakratko pomaknuti. To nikad ne radi vašem jedinom zaslonu i čeka da završe pozivi i videozapisi preko cijelog zaslona.\n\nOtvara se pri prijavi. To možete promijeniti u njezinu izborniku.";
 "welcome.fix_automatically" = "Popravljaj automatski";
 "welcome.status_only" = "Samo prikazuj stanje";

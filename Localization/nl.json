@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Onbekende optie “%@”.",
     "cli.error.unknown_command": "Onbekende opdracht “%@”.",
     "cli.error.no_output": "Geen audio-uitgang met ID %1$@. Zie `%2$@ list`.",
-    "cli.error.not_display": "%@ is geen audio-uitgang van een beeldscherm."
+    "cli.error.not_display": "%@ is geen audio-uitgang van een beeldscherm.",
+    "menu.check_updates": "Controleer op updates…",
+    "menu.check_updates_automatically": "Controleer automatisch op updates",
+    "menu.update_available": "Update beschikbaar: %1$@ %2$@…",
+    "update.available.title": "%1$@ %2$@ is beschikbaar",
+    "update.available.body_homebrew": "Je hebt versie %1$@. Voer deze opdracht uit in Terminal om bij te werken. Hiermee wordt de nieuwe versie geïnstalleerd en %2$@ opnieuw geopend.\n\n%3$@",
+    "update.available.body_source": "Je hebt versie %1$@. Om bij te werken download je de broncode van de nieuwe versie via de release-opmerkingen en voer je %3$@ uit in die map. Daarmee wordt %2$@ ook opnieuw geopend.",
+    "update.button.copy": "Kopieer opdracht",
+    "update.button.release_notes": "Release-opmerkingen",
+    "update.button.later": "Later",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ is up-to-date",
+    "update.current.body": "Versie %@ is de nieuwste versie.",
+    "update.failed.title": "Kan niet controleren op updates",
+    "update.failed.body": "Controleer je internetverbinding en probeer het later opnieuw."
   },
   "plurals": {
     "headline.others_silent": {

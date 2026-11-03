@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Nem szólnak a kijelzőhangszórók";
 "menu.check_every" = "Ellenőrzés gyakorisága";
 "menu.check_now" = "Ellenőrzés most";
+"menu.check_updates" = "Frissítések keresése…";
+"menu.check_updates_automatically" = "Frissítések automatikus keresése";
 "menu.fix_automatically" = "Kijelzőhangszórók automatikus javítása";
 "menu.follow_sound_output" = "A kijelzőhangszórók követik a hangkimenetet";
 "menu.interval.events_only" = "Csak kijelzőváltáskor vagy a Mac ébredésekor";
@@ -55,6 +57,7 @@
 "menu.quit" = "Kilépés: %@";
 "menu.quit_after_fix" = "Kilépés a javítás után";
 "menu.show_log" = "Napló megjelenítése";
+"menu.update_available" = "Frissítés érhető el: %1$@ %2$@…";
 "note.busy" = "Ellenőrzés folyamatban. Néhány másodperc múlva próbálja újra a „Javítás most” parancsot.";
 "note.cant_autofix" = "Ez a kijelző itt nem javítható automatikusan. A javításhoz csatlakoztassa újra a kábelét.";
 "note.collateral" = "Javítva: %1$@, de elnémult: %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "A képernyő kb. 3 másodpercre elsötétül";
 "submenu.hint_others" = "Más kijelzőkön elnémulhat a hang";
 "submenu.speakers_here" = "Hangszórók beállítása erre a kijelzőre";
+"update.available.body_homebrew" = "A jelenlegi verzió: %1$@. A frissítéshez futtassa ezt a parancsot a Terminálban. A parancs telepíti az új verziót, és újra megnyitja ezt: %2$@.\n\n%3$@";
+"update.available.body_source" = "A jelenlegi verzió: %1$@. A frissítéshez töltse le az új verzió forráskódját a kiadási megjegyzésekből, és a mappájában futtassa ezt a parancsot: %3$@. Ezzel újra megnyílik ez is: %2$@.";
+"update.available.title" = "%1$@ %2$@ elérhető";
+"update.button.copy" = "Parancs másolása";
+"update.button.later" = "Később";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Kiadási megjegyzések";
+"update.current.body" = "Ez a legújabb verzió: %@.";
+"update.current.title" = "%@ naprakész";
+"update.failed.body" = "Ellenőrizze az internetkapcsolatot, és próbálja újra később.";
+"update.failed.title" = "Nem sikerült frissítéseket keresni";
 "welcome.body" = "Az ikon mutatja, működik-e a kijelzők hangja. Zöld: minden működik. Narancs: elnémult egy kijelző, amelyet nem használ hanghoz. Piros: elnémultak a kijelzőhangszórók.\n\nAz elnémult kijelzőhangszórók javításához az app ki- és bekapcsolja a hozzájuk tartozó kijelzőt. Ez a képernyő kb. 3 másodpercre elsötétül, és az ablakai egy pillanatra elmozdulhatnak. Az app ezt soha nem teszi az egyetlen képernyőjével, és megvárja a hívások és a teljes képernyős videók végét.\n\nBejelentkezéskor megnyílik. Ezt a menüjében módosíthatja.";
 "welcome.fix_automatically" = "Automatikus javítás";
 "welcome.status_only" = "Csak állapotjelzés";

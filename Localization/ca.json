@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Opció desconeguda «%@».",
     "cli.error.unknown_command": "Ordre desconeguda «%@».",
     "cli.error.no_output": "No hi ha cap sortida d’àudio amb l’ID %1$@. Consulta `%2$@ list`.",
-    "cli.error.not_display": "%@ no és la sortida d’àudio d’una pantalla."
+    "cli.error.not_display": "%@ no és la sortida d’àudio d’una pantalla.",
+    "menu.check_updates": "Buscar actualitzacions…",
+    "menu.check_updates_automatically": "Buscar actualitzacions automàticament",
+    "menu.update_available": "Actualització disponible: %1$@ %2$@…",
+    "update.available.body_homebrew": "Tens la versió %1$@. Per actualitzar, executa aquesta ordre al Terminal. Instal·la la nova versió i torna a obrir %2$@.\n\n%3$@",
+    "update.available.body_source": "Tens la versió %1$@. Per actualitzar, baixa el codi font de la nova versió des de les notes de la versió i executa %3$@ a la seva carpeta. Això també torna a obrir %2$@.",
+    "update.available.title": "%1$@ %2$@ ja està disponible",
+    "update.button.copy": "Copiar l’ordre",
+    "update.button.later": "Més tard",
+    "update.button.ok": "D’acord",
+    "update.button.release_notes": "Notes de la versió",
+    "update.current.body": "La versió %@ és la més recent.",
+    "update.current.title": "%@ està actualitzat",
+    "update.failed.body": "Comprova la connexió a internet i torna-ho a provar més tard.",
+    "update.failed.title": "No s’han pogut buscar actualitzacions"
   },
   "plurals": {
     "headline.others_silent": {

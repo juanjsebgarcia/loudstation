@@ -234,7 +234,9 @@ func openApp() -> Int32 {
     let path = stablePath(app.path)
     let open = Process()
     open.executableURL = URL(fileURLWithPath: "/usr/bin/open")
-    open.arguments = [path]
+    // A new instance even if an older copy is still running from the same path (Homebrew's opt
+    // link), so it can take over; a copy of the same version simply quits again.
+    open.arguments = ["-n", path]
     do {
         try open.run()
         open.waitUntilExit()

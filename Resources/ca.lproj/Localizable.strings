@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "No surt so dels altaveus del monitor";
 "menu.check_every" = "Interval de comprovació";
 "menu.check_now" = "Comprovar ara";
+"menu.check_updates" = "Buscar actualitzacions…";
+"menu.check_updates_automatically" = "Buscar actualitzacions automàticament";
 "menu.fix_automatically" = "Reparar els altaveus del monitor automàticament";
 "menu.follow_sound_output" = "Altaveus del monitor segons la sortida de so";
 "menu.interval.events_only" = "Només en canviar pantalles o en despertar el Mac";
@@ -55,6 +57,7 @@
 "menu.quit" = "Sortir de %@";
 "menu.quit_after_fix" = "Sortir quan acabi la reparació";
 "menu.show_log" = "Mostrar el registre";
+"menu.update_available" = "Actualització disponible: %1$@ %2$@…";
 "note.busy" = "Encara s’està comprovant. Torna a provar «Reparar ara» d’aquí a uns segons.";
 "note.cant_autofix" = "Aquesta pantalla no es pot reparar automàticament aquí. Torna a connectar-ne el cable per reparar-la.";
 "note.collateral" = "En reparar %1$@ s’ha aturat el so de %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "La pantalla es posa negra uns 3 segons";
 "submenu.hint_others" = "Pot aturar el so d’altres pantalles";
 "submenu.speakers_here" = "Usar aquesta pantalla per als altaveus";
+"update.available.body_homebrew" = "Tens la versió %1$@. Per actualitzar, executa aquesta ordre al Terminal. Instal·la la nova versió i torna a obrir %2$@.\n\n%3$@";
+"update.available.body_source" = "Tens la versió %1$@. Per actualitzar, baixa el codi font de la nova versió des de les notes de la versió i executa %3$@ a la seva carpeta. Això també torna a obrir %2$@.";
+"update.available.title" = "%1$@ %2$@ ja està disponible";
+"update.button.copy" = "Copiar l’ordre";
+"update.button.later" = "Més tard";
+"update.button.ok" = "D’acord";
+"update.button.release_notes" = "Notes de la versió";
+"update.current.body" = "La versió %@ és la més recent.";
+"update.current.title" = "%@ està actualitzat";
+"update.failed.body" = "Comprova la connexió a internet i torna-ho a provar més tard.";
+"update.failed.title" = "No s’han pogut buscar actualitzacions";
 "welcome.body" = "La icona mostra si el so de les teves pantalles funciona. Verd: tot funciona. Taronja: una pantalla que no fas servir per al so s’ha quedat en silenci. Vermell: els altaveus del monitor s’han quedat en silenci.\n\nPer reparar els altaveus del monitor silenciats, l’app n’apaga i n’encén la pantalla. Aquesta pantalla es posa negra uns 3 segons i les finestres es poden moure un moment. Mai no ho fa amb la teva única pantalla, i espera que acabin les trucades i els vídeos a pantalla completa.\n\nS’obre en iniciar la sessió. Pots canviar-ho al seu menú.";
 "welcome.fix_automatically" = "Reparar automàticament";
 "welcome.status_only" = "Només mostrar l’estat";

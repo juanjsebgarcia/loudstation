@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Ekran hoparlörlerinizden ses gelmiyor";
 "menu.check_every" = "Denetleme sıklığı";
 "menu.check_now" = "Şimdi denetle";
+"menu.check_updates" = "Güncellemeleri denetle…";
+"menu.check_updates_automatically" = "Güncellemeleri otomatik denetle";
 "menu.fix_automatically" = "Ekran hoparlörlerini otomatik düzelt";
 "menu.follow_sound_output" = "Ekran hoparlörleri ses çıkışını izler";
 "menu.interval.events_only" = "Yalnızca ekranlar değişince veya Mac uyanınca";
@@ -55,6 +57,7 @@
 "menu.quit" = "%@ uygulamasından çık";
 "menu.quit_after_fix" = "Düzeltme bitince çık";
 "menu.show_log" = "Günlüğü göster";
+"menu.update_available" = "Güncelleme mevcut: %1$@ %2$@…";
 "note.busy" = "Hâlâ denetleniyor. Birkaç saniye sonra “Şimdi düzelt” komutunu yeniden deneyin.";
 "note.cant_autofix" = "Bu ekran burada otomatik olarak düzeltilemiyor. Düzeltmek için kablosunu yeniden bağlayın.";
 "note.collateral" = "%1$@ düzeltildi ancak şunun sesi kesildi: %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Ekran yaklaşık 3 saniye kararır";
 "submenu.hint_others" = "Diğer ekranlarda sesi kesebilir";
 "submenu.speakers_here" = "Hoparlörler için bu ekranı kullan";
+"update.available.body_homebrew" = "%1$@ sürümünü kullanıyorsunuz. Güncellemek için bu komutu Terminal’de çalıştırın. Komut yeni sürümü yükler ve %2$@ uygulamasını yeniden açar.\n\n%3$@";
+"update.available.body_source" = "%1$@ sürümünü kullanıyorsunuz. Güncellemek için yeni sürümün kaynak kodunu sürüm notlarından indirin ve klasöründe %3$@ komutunu çalıştırın. Bu, %2$@ uygulamasını da yeniden açar.";
+"update.available.title" = "%1$@ %2$@ kullanılabilir";
+"update.button.copy" = "Komutu kopyala";
+"update.button.later" = "Sonra";
+"update.button.ok" = "Tamam";
+"update.button.release_notes" = "Sürüm notları";
+"update.current.body" = "%@ sürümü en son sürüm.";
+"update.current.title" = "%@ güncel";
+"update.failed.body" = "İnternet bağlantınızı denetleyin ve daha sonra yeniden deneyin.";
+"update.failed.title" = "Güncellemeler denetlenemedi";
 "welcome.body" = "Simge, ekranlarınızın sesinin çalışıp çalışmadığını gösterir. Yeşil: her şey çalışıyor. Turuncu: ses için kullanmadığınız bir ekranın sesi kesildi. Kırmızı: ekran hoparlörlerinizin sesi kesildi.\n\nSesi kesilen ekran hoparlörlerini düzeltmek için uygulama, bağlı oldukları ekranı kapatıp açar. Bu ekran yaklaşık 3 saniye kararır ve pencereleri bir anlığına yer değiştirebilir. Bunu tek ekranınızda asla yapmaz; aramaların ve tam ekran videoların bitmesini bekler.\n\nGirişte açılır. Bunu menüsünden değiştirebilirsiniz.";
 "welcome.fix_automatically" = "Otomatik düzelt";
 "welcome.status_only" = "Yalnızca durumu göster";

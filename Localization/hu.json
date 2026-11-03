@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Ismeretlen kapcsoló: „%@”.",
     "cli.error.unknown_command": "Ismeretlen parancs: „%@”.",
     "cli.error.no_output": "Nincs hangkimenet ezzel az azonosítóval: %1$@. Lásd: `%2$@ list`.",
-    "cli.error.not_display": "Ez nem kijelző hangkimenete: %@."
+    "cli.error.not_display": "Ez nem kijelző hangkimenete: %@.",
+    "menu.check_updates": "Frissítések keresése…",
+    "menu.check_updates_automatically": "Frissítések automatikus keresése",
+    "menu.update_available": "Frissítés érhető el: %1$@ %2$@…",
+    "update.available.body_homebrew": "A jelenlegi verzió: %1$@. A frissítéshez futtassa ezt a parancsot a Terminálban. A parancs telepíti az új verziót, és újra megnyitja ezt: %2$@.\n\n%3$@",
+    "update.available.body_source": "A jelenlegi verzió: %1$@. A frissítéshez töltse le az új verzió forráskódját a kiadási megjegyzésekből, és a mappájában futtassa ezt a parancsot: %3$@. Ezzel újra megnyílik ez is: %2$@.",
+    "update.available.title": "%1$@ %2$@ elérhető",
+    "update.button.copy": "Parancs másolása",
+    "update.button.later": "Később",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Kiadási megjegyzések",
+    "update.current.body": "Ez a legújabb verzió: %@.",
+    "update.current.title": "%@ naprakész",
+    "update.failed.body": "Ellenőrizze az internetkapcsolatot, és próbálja újra később.",
+    "update.failed.title": "Nem sikerült frissítéseket keresni"
   },
   "plurals": {
     "headline.others_silent": {

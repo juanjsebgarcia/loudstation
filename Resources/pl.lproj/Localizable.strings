@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Brak dźwięku z głośników monitora";
 "menu.check_every" = "Częstotliwość sprawdzania";
 "menu.check_now" = "Sprawdź teraz";
+"menu.check_updates" = "Sprawdź uaktualnienia…";
+"menu.check_updates_automatically" = "Sprawdzaj uaktualnienia automatycznie";
 "menu.fix_automatically" = "Naprawiaj głośniki monitora automatycznie";
 "menu.follow_sound_output" = "Głośniki monitora podążają za wyjściem dźwięku";
 "menu.interval.events_only" = "Przy zmianie wyświetlaczy lub wybudzeniu Maca";
@@ -55,6 +57,7 @@
 "menu.quit" = "Zakończ %@";
 "menu.quit_after_fix" = "Zakończ, gdy naprawa się skończy";
 "menu.show_log" = "Pokaż dziennik";
+"menu.update_available" = "Dostępne uaktualnienie: %1$@ %2$@…";
 "note.busy" = "Sprawdzanie nadal trwa. Spróbuj użyć Napraw teraz za kilka sekund.";
 "note.cant_autofix" = "Tego wyświetlacza nie można tu naprawić automatycznie. Aby go naprawić, podłącz ponownie jego kabel.";
 "note.collateral" = "Naprawa wyświetlacza %1$@ wyłączyła dźwięk na: %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Ekran zgaśnie na około 3 sekundy";
 "submenu.hint_others" = "Może wyłączyć dźwięk na innych wyświetlaczach";
 "submenu.speakers_here" = "Użyj tego wyświetlacza do głośników";
+"update.available.body_homebrew" = "Masz wersję %1$@. Aby uaktualnić, uruchom to polecenie w Terminalu. Zainstaluje ono nową wersję i ponownie otworzy %2$@.\n\n%3$@";
+"update.available.body_source" = "Masz wersję %1$@. Aby uaktualnić, pobierz kod źródłowy nowej wersji z informacji o wydaniu i uruchom %3$@ w jego folderze. To także ponownie otworzy %2$@.";
+"update.available.title" = "Dostępna jest nowa wersja: %1$@ %2$@";
+"update.button.copy" = "Kopiuj polecenie";
+"update.button.later" = "Później";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Informacje o wydaniu";
+"update.current.body" = "Wersja %@ jest najnowsza.";
+"update.current.title" = "%@ jest aktualna";
+"update.failed.body" = "Sprawdź połączenie z internetem i spróbuj ponownie później.";
+"update.failed.title" = "Nie można sprawdzić uaktualnień";
 "welcome.body" = "Ikona pokazuje, czy dźwięk na wyświetlaczach działa. Zielona: wszystko działa. Pomarańczowa: wyświetlacz, którego nie używasz do dźwięku, ucichł. Czerwona: głośniki monitora ucichły.\n\nAby naprawić ciche głośniki monitora, aplikacja wyłącza i włącza ich wyświetlacz. Ten ekran zgaśnie na około 3 sekundy, a jego okna mogą się na chwilę przesunąć. Aplikacja nigdy nie robi tego z Twoim jedynym ekranem i czeka, aż skończą się rozmowy i wideo na pełnym ekranie.\n\nAplikacja otwiera się przy logowaniu. Możesz to zmienić w jej menu.";
 "welcome.fix_automatically" = "Naprawiaj automatycznie";
 "welcome.status_only" = "Tylko pokazuj stan";

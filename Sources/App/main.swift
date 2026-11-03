@@ -72,6 +72,18 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     private var lastTopology = ""
     private var glyphs: [Tone: NSImage] = [:]
     private var lastRendered = ""
+    private var updateTimer: Timer?
+    private var checkingForUpdates = false
+    private var updateFailureLogged = false
+    // Ephemeral: no cookies, no cache and no credentials are kept between update checks.
+    private let updateSession: URLSession = {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.httpCookieStorage = nil
+        configuration.urlCache = nil
+        configuration.urlCredentialStorage = nil
+        configuration.timeoutIntervalForResource = 30
+        return URLSession(configuration: configuration)
+    }()
 
     // A healthy probe gets callbacks within milliseconds; a stuck one blocks ~10s regardless.
     private let probeSeconds = 1.0
@@ -81,6 +93,20 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     private var autoFix: Bool {
         get { defaults.bool(forKey: "autoFix") }
         set { defaults.set(newValue, forKey: "autoFix") }
+    }
+
+    private var checkForUpdates: Bool {
+        get { defaults.bool(forKey: "checkForUpdates") }
+        set { defaults.set(newValue, forKey: "checkForUpdates") }
+    }
+
+    // The newest release seen by the last successful check, offered only while it is newer
+    // than this copy, so the menu item disappears by itself after updating.
+    private var availableRelease: AvailableRelease? {
+        guard let version = defaults.string(forKey: "latestVersion").flatMap(ReleaseVersion.init),
+              let page = defaults.string(forKey: "latestReleasePage").flatMap(URL.init(string:)),
+              isProjectReleasePage(page) else { return nil }
+        return newerRelease(AvailableRelease(version: version, pageURL: page), than: toolVersion)
     }
 
     private var interval: Int {
@@ -100,13 +126,60 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     private var watchedUID: String? { pinnedUID ?? soundOutputUID }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        let others = NSRunningApplication.runningApplications(withBundleIdentifier: bundleID)
-            .filter { $0.processIdentifier != ProcessInfo.processInfo.processIdentifier }
-        if !others.isEmpty || runningAsRoot {
+        if runningAsRoot {
             NSApp.terminate(nil)
             return
         }
-        defaults.register(defaults: ["autoFix": true, "interval": 60])
+        takeOverFromStaleCopies(since: Date())
+    }
+
+    private func otherCopies() -> [NSRunningApplication] {
+        NSRunningApplication.runningApplications(withBundleIdentifier: bundleID)
+            .filter { $0.processIdentifier != ProcessInfo.processInfo.processIdentifier && !$0.isTerminated }
+    }
+
+    // Only one copy runs. A newly opened copy asks stale copies (an older version still running
+    // after an update) to quit and starts once they have gone; their quit waits for a fix in
+    // progress. Once it has asked, it waits for as long as that takes, since giving up could
+    // leave no copy running at all. If another current copy started first, the newcomer quits.
+    private func takeOverFromStaleCopies(since: Date, asked: Date? = nil, loggedWait: Bool = false) {
+        let me = NSRunningApplication.current
+        let myStart = processStartTime(me.processIdentifier)
+        let others = otherCopies()
+        let stale = others.filter { other in
+            let executable = other.executableURL?.resolvingSymlinksInPath()
+            let modified = executable.flatMap { (try? FileManager.default.attributesOfItem(atPath: $0.path))?[.modificationDate] as? Date }
+            let diskVersion = other.bundleURL.flatMap { Bundle(url: $0) }?.infoDictionary?["CFBundleShortVersionString"] as? String
+            return isStaleCopy(executableModified: modified, launched: processStartTime(other.processIdentifier),
+                               diskVersion: diskVersion, ownVersion: toolVersion)
+        }
+        let current = others.filter { other in !stale.contains { $0.processIdentifier == other.processIdentifier } }
+        if current.contains(where: { startedFirst((processStartTime($0.processIdentifier), $0.processIdentifier), before: (myStart, me.processIdentifier)) }) {
+            NSApp.terminate(nil)
+            return
+        }
+        guard !stale.isEmpty else {
+            start()
+            return
+        }
+        // The request is repeated every 5 s in case one is lost; a copy finishing a fix just
+        // keeps waiting for it.
+        var lastAsked = asked
+        if asked == nil || Date().timeIntervalSince(asked!) >= 5 {
+            if asked == nil { say("Asking the running \(appName) to quit so this version (\(toolVersion)) can take over.", echo: false) }
+            stale.forEach { $0.terminate() }
+            lastAsked = Date()
+        }
+        var logged = loggedWait
+        if !logged, Date().timeIntervalSince(since) > 30 {
+            say("Still waiting for the older \(appName) to quit.", echo: false)
+            logged = true
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { self.takeOverFromStaleCopies(since: since, asked: lastAsked, loggedWait: logged) }
+    }
+
+    private func start() {
+        defaults.register(defaults: ["autoFix": true, "checkForUpdates": true, "interval": 60])
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         menu.delegate = self
         menu.autoenablesItems = false
@@ -123,6 +196,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         observeEvents()
         lastTopology = topology()
         rescheduleTimer()
+        startUpdateChecks()
         say("\(appName) \(toolVersion) started (auto-fix \(autoFix ? "on" : "off"), every \(interval)s).", echo: false)
         recoverStranded()
         // Fill the menu with every display straight away, then check them all at once. Automatic
@@ -253,6 +327,9 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         if look.tone == .red, let watchedUID { menu.addItem(info(L("headline.speakers_on", label(for: watchedUID)))) }
         if let note { menu.addItem(info(note)) }
         if let summary = fixSummary() { menu.addItem(info(summary)) }
+        if let release = availableRelease {
+            menu.addItem(item(L("menu.update_available", appName, release.version.description), #selector(showAvailableUpdate), enabled: true))
+        }
         menu.addItem(.separator())
 
         for panel in panels {
@@ -315,8 +392,12 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         let login = item(L("menu.open_at_login"), #selector(toggleLaunchAtLogin), enabled: true)
         login.state = FileManager.default.fileExists(atPath: launchAgentURL.path) ? .on : .off
         menu.addItem(login)
+        let updates = item(L("menu.check_updates_automatically"), #selector(toggleUpdateChecks), enabled: true)
+        updates.state = checkForUpdates ? .on : .off
+        menu.addItem(updates)
         menu.addItem(.separator())
         if let lastCheck { menu.addItem(info(L("menu.last_checked", relativeTime(lastCheck)))) }
+        menu.addItem(item(L("menu.check_updates"), #selector(checkForUpdatesNow), enabled: !checkingForUpdates))
         menu.addItem(item(L("menu.show_log"), #selector(openLog), key: "l", enabled: true))
         menu.addItem(item(fixingUID == nil ? L("menu.quit", appName) : L("menu.quit_after_fix"), #selector(quit), key: "q", enabled: true))
     }
@@ -458,6 +539,125 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     @objc private func openLog() { NSWorkspace.shared.activateFileViewerSelecting([logURL]) }
 
     @objc private func quit() { NSApp.terminate(nil) }
+
+    // MARK: Updates
+
+    // The first check waits a minute or so after launch, so a login does not start with network
+    // traffic; after that an hourly tick asks the schedule whether a day has passed.
+    private func startUpdateChecks() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 45 + Double.random(in: 0...45)) { [weak self] in self?.checkForUpdatesIfDue() }
+        let next = Timer(timeInterval: 3600, repeats: true) { [weak self] _ in self?.checkForUpdatesIfDue() }
+        next.tolerance = 600
+        RunLoop.main.add(next, forMode: .common)
+        updateTimer = next
+    }
+
+    private func checkForUpdatesIfDue() {
+        guard checkForUpdates, sessionActive,
+              UpdateSchedule().isDue(lastChecked: defaults.object(forKey: "lastUpdateCheck") as? Date, now: Date()) else { return }
+        fetchLatestRelease(manual: false)
+    }
+
+    @objc private func checkForUpdatesNow() {
+        fetchLatestRelease(manual: true)
+    }
+
+    @objc private func toggleUpdateChecks() {
+        checkForUpdates.toggle()
+        say("Automatic update checks turned \(checkForUpdates ? "on" : "off").", echo: false)
+        if checkForUpdates { checkForUpdatesIfDue() }
+    }
+
+    // One unauthenticated GET of the public "latest release" endpoint. GitHub sees the IP
+    // address, the app's version and standard headers; the language is fixed to English.
+    private func fetchLatestRelease(manual: Bool) {
+        guard !checkingForUpdates else { return }
+        checkingForUpdates = true
+        var request = URLRequest(url: latestReleaseURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 20)
+        request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+        request.setValue("\(appName)/\(toolVersion)", forHTTPHeaderField: "User-Agent")
+        // Fixed, so the user's language list is not sent along with the request.
+        request.setValue("en", forHTTPHeaderField: "Accept-Language")
+        request.httpShouldHandleCookies = false
+        updateSession.dataTask(with: request) { data, response, error in
+            let status = (response as? HTTPURLResponse)?.statusCode
+            // 404 means the project has no published release yet, which is not a failure.
+            let answered = status == 200 || status == 404
+            let release = status == 200 ? data.flatMap(parseLatestRelease) : nil
+            let problem: String?
+            if let error {
+                problem = error.localizedDescription
+            } else if !answered {
+                problem = "HTTP \(status ?? 0)"
+            } else if status == 200 && release == nil {
+                problem = "the latest release could not be read"
+            } else {
+                problem = nil
+            }
+            DispatchQueue.main.async { self.finishUpdateCheck(release: release, problem: problem, manual: manual) }
+        }.resume()
+    }
+
+    private func finishUpdateCheck(release: AvailableRelease?, problem: String?, manual: Bool) {
+        checkingForUpdates = false
+        if let problem {
+            // Offline Macs retry hourly; the failure is logged once until a check succeeds.
+            if manual || !updateFailureLogged { say("Update check failed: \(problem).", echo: false) }
+            updateFailureLogged = true
+            if manual { showUpdateAlert(title: L("update.failed.title"), body: L("update.failed.body")) }
+            return
+        }
+        updateFailureLogged = false
+        defaults.set(Date(), forKey: "lastUpdateCheck")
+        let newer = newerRelease(release, than: toolVersion)
+        if let newer {
+            if defaults.string(forKey: "latestVersion") != newer.version.description {
+                say("Update available: \(appName) \(newer.version).", echo: false)
+            }
+            defaults.set(newer.version.description, forKey: "latestVersion")
+            defaults.set(newer.pageURL.absoluteString, forKey: "latestReleasePage")
+        } else {
+            defaults.removeObject(forKey: "latestVersion")
+            defaults.removeObject(forKey: "latestReleasePage")
+        }
+        guard manual else { return }
+        if newer != nil {
+            showAvailableUpdate()
+        } else {
+            showUpdateAlert(title: L("update.current.title", appName), body: L("update.current.body", toolVersion))
+        }
+    }
+
+    private func showUpdateAlert(title: String, body: String) {
+        NSApp.activate(ignoringOtherApps: true)
+        let alert = NSAlert()
+        alert.messageText = title
+        alert.informativeText = body
+        alert.addButton(withTitle: L("update.button.ok"))
+        alert.runModal()
+    }
+
+    // Says how to update this copy: Homebrew's command, or `make install` for a source build.
+    // Nothing is downloaded or run by the app itself.
+    @objc private func showAvailableUpdate() {
+        guard let release = availableRelease else { return }
+        let homebrew = isHomebrewInstall(bundlePath: Bundle.main.bundlePath)
+        let command = homebrew ? homebrewUpgradeCommand : sourceUpgradeCommand
+        NSApp.activate(ignoringOtherApps: true)
+        let alert = NSAlert()
+        alert.messageText = L("update.available.title", appName, release.version.description)
+        alert.informativeText = L(homebrew ? "update.available.body_homebrew" : "update.available.body_source", toolVersion, appName, command)
+        if homebrew { alert.addButton(withTitle: L("update.button.copy")) }
+        alert.addButton(withTitle: L("update.button.release_notes"))
+        alert.addButton(withTitle: L("update.button.later"))
+        let answer = alert.runModal()
+        if homebrew && answer == .alertFirstButtonReturn {
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(command, forType: .string)
+        } else if answer == (homebrew ? .alertSecondButtonReturn : .alertFirstButtonReturn) {
+            NSWorkspace.shared.open(release.pageURL)
+        }
+    }
 
     // MARK: Login item
 

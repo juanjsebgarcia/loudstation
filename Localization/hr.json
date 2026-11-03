@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Nepoznata opcija „%@”.",
     "cli.error.unknown_command": "Nepoznata naredba „%@”.",
     "cli.error.no_output": "Nema audioizlaza s ID-om %1$@. Pogledajte `%2$@ list`.",
-    "cli.error.not_display": "%@ nije audioizlaz zaslona."
+    "cli.error.not_display": "%@ nije audioizlaz zaslona.",
+    "menu.check_updates": "Provjeri ima li ažuriranja…",
+    "menu.check_updates_automatically": "Automatski provjeravaj ima li ažuriranja",
+    "menu.update_available": "Dostupno ažuriranje: %1$@ %2$@…",
+    "update.available.body_homebrew": "Imate verziju %1$@. Za ažuriranje pokrenite ovu naredbu u Terminalu. Ona instalira novu verziju i ponovno otvara aplikaciju %2$@.\n\n%3$@",
+    "update.available.body_source": "Imate verziju %1$@. Za ažuriranje preuzmite izvorni kod nove verzije iz njezinih bilješki o izdanju i pokrenite %3$@ u mapi izvornog koda. Time se ponovno otvara i aplikacija %2$@.",
+    "update.available.title": "Dostupna je aplikacija %1$@ %2$@",
+    "update.button.copy": "Kopiraj naredbu",
+    "update.button.later": "Kasnije",
+    "update.button.ok": "U redu",
+    "update.button.release_notes": "Bilješke o izdanju",
+    "update.current.body": "Verzija %@ je najnovija.",
+    "update.current.title": "Aplikacija %@ je ažurna",
+    "update.failed.body": "Provjerite internetsku vezu i pokušajte ponovno kasnije.",
+    "update.failed.title": "Provjera ažuriranja nije uspjela"
   },
   "plurals": {
     "headline.others_silent": {

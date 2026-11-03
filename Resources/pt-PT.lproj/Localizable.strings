@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "As suas colunas do monitor estão sem som";
 "menu.check_every" = "Verificar a cada";
 "menu.check_now" = "Verificar agora";
+"menu.check_updates" = "Procurar atualizações…";
+"menu.check_updates_automatically" = "Procurar atualizações automaticamente";
 "menu.fix_automatically" = "Corrigir colunas do monitor automaticamente";
 "menu.follow_sound_output" = "Colunas do monitor seguem a saída de som";
 "menu.interval.events_only" = "Só quando os ecrãs mudam ou o Mac sai do repouso";
@@ -55,6 +57,7 @@
 "menu.quit" = "Sair de %@";
 "menu.quit_after_fix" = "Sair quando a correção terminar";
 "menu.show_log" = "Mostrar registo";
+"menu.update_available" = "Atualização disponível: %1$@ %2$@…";
 "note.busy" = "Ainda a verificar. Tente «Corrigir agora» de novo dentro de alguns segundos.";
 "note.cant_autofix" = "Este ecrã não pode ser corrigido automaticamente aqui. Volte a ligar o cabo para o corrigir.";
 "note.collateral" = "Corrigir %1$@ cortou o som em %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "O ecrã fica preto durante cerca de 3 segundos";
 "submenu.hint_others" = "Pode cortar o som noutros ecrãs";
 "submenu.speakers_here" = "Usar este ecrã para as colunas";
+"update.available.body_homebrew" = "Tem a versão %1$@. Para atualizar, execute este comando no Terminal. Instala a nova versão e volta a abrir %2$@.\n\n%3$@";
+"update.available.body_source" = "Tem a versão %1$@. Para atualizar, descarregue o código-fonte da nova versão a partir das notas de lançamento e execute %3$@ na respetiva pasta. Isso também volta a abrir %2$@.";
+"update.available.title" = "%1$@ %2$@ está disponível";
+"update.button.copy" = "Copiar comando";
+"update.button.later" = "Mais tarde";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Notas de lançamento";
+"update.current.body" = "A versão %@ é a mais recente.";
+"update.current.title" = "%@ está atualizado";
+"update.failed.body" = "Verifique a ligação à internet e tente novamente mais tarde.";
+"update.failed.title" = "Não foi possível procurar atualizações";
 "welcome.body" = "O ícone mostra se o som dos seus ecrãs está a funcionar. Verde: está tudo a funcionar. Laranja: um ecrã que não usa para o som ficou sem som. Vermelho: as suas colunas do monitor ficaram sem som.\n\nPara corrigir as suas colunas do monitor, a app desliga e volta a ligar o respetivo ecrã. Esse ecrã fica preto durante cerca de 3 segundos e as janelas podem mudar de sítio por um momento. Nunca o faz no seu único ecrã e aguarda que terminem as chamadas e os vídeos em ecrã completo.\n\nAbre ao iniciar sessão. Pode alterar isso no respetivo menu.";
 "welcome.fix_automatically" = "Corrigir automaticamente";
 "welcome.status_only" = "Só mostrar o estado";

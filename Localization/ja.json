@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "「%@」は不明なオプションです。",
     "cli.error.unknown_command": "「%@」は不明なコマンドです。",
     "cli.error.no_output": "ID %1$@のオーディオ出力はありません。`%2$@ list`を参照してください。",
-    "cli.error.not_display": "%@はディスプレイのオーディオ出力ではありません。"
+    "cli.error.not_display": "%@はディスプレイのオーディオ出力ではありません。",
+    "menu.check_updates": "アップデートを確認…",
+    "menu.check_updates_automatically": "アップデートを自動的に確認",
+    "menu.update_available": "アップデートが利用可能：%1$@ %2$@…",
+    "update.available.body_homebrew": "現在のバージョンは%1$@です。アップデートするには、“ターミナル”でこのコマンドを実行してください。新しいバージョンがインストールされ、%2$@がもう一度開きます。\n\n%3$@",
+    "update.available.body_source": "現在のバージョンは%1$@です。アップデートするには、リリースノートから新しいバージョンのソースをダウンロードし、そのフォルダで%3$@を実行してください。%2$@ももう一度開きます。",
+    "update.available.title": "%1$@ %2$@を利用できます",
+    "update.button.copy": "コマンドをコピー",
+    "update.button.later": "あとで",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "リリースノート",
+    "update.current.body": "バージョン%@が最新です。",
+    "update.current.title": "%@は最新の状態です",
+    "update.failed.body": "インターネット接続を確認して、しばらくしてからもう一度お試しください。",
+    "update.failed.title": "アップデートを確認できませんでした"
   },
   "plurals": {
     "headline.others_silent": {

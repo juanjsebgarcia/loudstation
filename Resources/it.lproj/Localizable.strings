@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Nessun audio dagli altoparlanti del monitor";
 "menu.check_every" = "Intervallo di controllo";
 "menu.check_now" = "Controlla ora";
+"menu.check_updates" = "Controlla aggiornamenti…";
+"menu.check_updates_automatically" = "Controlla aggiornamenti automaticamente";
 "menu.fix_automatically" = "Ripara automaticamente gli altoparlanti";
 "menu.follow_sound_output" = "Altoparlanti del monitor seguono l’uscita audio";
 "menu.interval.events_only" = "Solo al cambio di monitor o al risveglio";
@@ -55,6 +57,7 @@
 "menu.quit" = "Esci da %@";
 "menu.quit_after_fix" = "Esci al termine della riparazione";
 "menu.show_log" = "Mostra registro";
+"menu.update_available" = "Aggiornamento disponibile: %1$@ %2$@…";
 "note.busy" = "Controllo ancora in corso. Riprova «Ripara ora» tra qualche secondo.";
 "note.cant_autofix" = "Questo monitor non può essere riparato automaticamente qui. Ricollega il cavo per ripararlo.";
 "note.collateral" = "La riparazione di %1$@ ha interrotto l’audio di %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Lo schermo diventa nero per circa 3 secondi";
 "submenu.hint_others" = "Può interrompere l’audio degli altri monitor";
 "submenu.speakers_here" = "Usa questo monitor per gli altoparlanti";
+"update.available.body_homebrew" = "Hai la versione %1$@. Per aggiornare, esegui questo comando in Terminale. Installa la nuova versione e riapre %2$@.\n\n%3$@";
+"update.available.body_source" = "Hai la versione %1$@. Per aggiornare, scarica il codice sorgente della nuova versione dalle sue note di rilascio ed esegui %3$@ nella sua cartella. In questo modo si riapre anche %2$@.";
+"update.available.title" = "%1$@ %2$@ è disponibile";
+"update.button.copy" = "Copia comando";
+"update.button.later" = "Più tardi";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Note di rilascio";
+"update.current.body" = "La versione %@ è la più recente.";
+"update.current.title" = "%@ è aggiornato";
+"update.failed.body" = "Controlla la connessione a Internet e riprova più tardi.";
+"update.failed.title" = "Impossibile controllare gli aggiornamenti";
 "welcome.body" = "L’icona mostra se l’audio dei tuoi monitor funziona. Verde: tutto funziona. Arancione: un monitor che non usi per l’audio è diventato muto. Rosso: gli altoparlanti del monitor sono diventati muti.\n\nPer riparare gli altoparlanti del monitor muti, l’app spegne e riaccende il loro monitor. Quello schermo diventa nero per circa 3 secondi e le sue finestre potrebbero spostarsi per un attimo. Non lo fa mai sul tuo unico schermo e attende la fine di chiamate e video a tutto schermo.\n\nSi apre al login. Puoi cambiare questa impostazione nel suo menu.";
 "welcome.fix_automatically" = "Ripara automaticamente";
 "welcome.status_only" = "Mostra solo lo stato";

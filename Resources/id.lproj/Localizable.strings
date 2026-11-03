@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Tidak ada suara dari speaker monitor Anda";
 "menu.check_every" = "Periksa Setiap";
 "menu.check_now" = "Periksa Sekarang";
+"menu.check_updates" = "Periksa Pembaruan…";
+"menu.check_updates_automatically" = "Periksa Pembaruan Secara Otomatis";
 "menu.fix_automatically" = "Perbaiki Speaker Monitor Secara Otomatis";
 "menu.follow_sound_output" = "Speaker Monitor Mengikuti Output Suara";
 "menu.interval.events_only" = "Hanya Saat Layar Berubah atau Mac Bangun";
@@ -55,6 +57,7 @@
 "menu.quit" = "Keluar dari %@";
 "menu.quit_after_fix" = "Keluar Setelah Perbaikan Selesai";
 "menu.show_log" = "Tampilkan Log";
+"menu.update_available" = "Pembaruan Tersedia: %1$@ %2$@…";
 "note.busy" = "Masih memeriksa. Coba Perbaiki Sekarang lagi dalam beberapa detik.";
 "note.cant_autofix" = "Layar ini tidak bisa diperbaiki secara otomatis di sini. Sambungkan ulang kabelnya untuk memperbaikinya.";
 "note.collateral" = "Memperbaiki %1$@ menghentikan suara di %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Layar menjadi hitam selama sekitar 3 detik";
 "submenu.hint_others" = "Dapat menghentikan suara di layar lain";
 "submenu.speakers_here" = "Gunakan Layar Ini untuk Speaker";
+"update.available.body_homebrew" = "Anda menggunakan versi %1$@. Untuk memperbarui, jalankan perintah ini di Terminal. Perintah ini menginstal versi baru dan membuka kembali %2$@.\n\n%3$@";
+"update.available.body_source" = "Anda menggunakan versi %1$@. Untuk memperbarui, unduh kode sumber versi baru dari catatan rilisnya, lalu jalankan %3$@ di foldernya. Ini juga membuka kembali %2$@.";
+"update.available.title" = "%1$@ %2$@ tersedia";
+"update.button.copy" = "Salin Perintah";
+"update.button.later" = "Nanti";
+"update.button.ok" = "OKE";
+"update.button.release_notes" = "Catatan Rilis";
+"update.current.body" = "Versi %@ adalah versi terbaru.";
+"update.current.title" = "%@ sudah terbaru";
+"update.failed.body" = "Periksa koneksi internet Anda dan coba lagi nanti.";
+"update.failed.title" = "Tidak dapat memeriksa pembaruan";
 "welcome.body" = "Ikon menunjukkan apakah suara layar Anda berfungsi. Hijau: semua berfungsi. Oranye: layar yang tidak Anda gunakan untuk suara menjadi senyap. Merah: speaker monitor Anda menjadi senyap.\n\nUntuk memperbaiki speaker monitor yang senyap, app mematikan dan menyalakan layarnya. Layar tersebut menjadi hitam selama sekitar 3 detik dan jendelanya mungkin berpindah sesaat. App tidak pernah melakukan ini pada satu-satunya layar Anda, dan menunggu hingga panggilan dan video layar penuh selesai.\n\nApp ini terbuka saat login. Anda dapat mengubahnya di menunya.";
 "welcome.fix_automatically" = "Perbaiki Otomatis";
 "welcome.status_only" = "Tampilkan Status Saja";

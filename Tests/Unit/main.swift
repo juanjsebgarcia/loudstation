@@ -250,5 +250,89 @@ if let app = environment["LOUDSTATION_TEST_APP"] {
 }
 expect(!isTrustedAppBundle(URL(fileURLWithPath: stateDirectory)), "a folder that is not LoudStation is not trusted")
 
+// MARK: Update check
+
+section("Release versions")
+expectEqual(ReleaseVersion("v0.3.0")?.description, "0.3.0", "a leading v is accepted")
+expectEqual(ReleaseVersion("1.2"), ReleaseVersion("1.2.0"), "a missing patch number is zero")
+expect(ReleaseVersion("0.10.0")! > ReleaseVersion("0.9.9")!, "numbers compare numerically, not as text")
+expect(ReleaseVersion("1.0.0")! > ReleaseVersion("0.99.99")!, "the major number wins")
+expect(!(ReleaseVersion("0.3.0")! > ReleaseVersion("0.3")!), "equal versions are not newer")
+for bad in ["", "v", "0.3.0-beta", "0.3.0.1", "1..2", "x.y.z", "0.3.0 extra", "٣.٠.٠", "1234567890.0.0", "-1.0.0"] {
+    expect(ReleaseVersion(bad) == nil, "\"\(bad)\" is not a release version")
+}
+expectEqual(ReleaseVersion(toolVersion)?.description, toolVersion, "this build's own version parses")
+
+section("GitHub's latest-release answer")
+func releaseJSON(_ fields: [String: Any]) -> Data {
+    var object: [String: Any] = ["tag_name": "v9.0.0", "html_url": "https://github.com/\(projectRepository)/releases/tag/v9.0.0", "draft": false, "prerelease": false]
+    fields.forEach { object[$0.key] = $0.value }
+    return try! JSONSerialization.data(withJSONObject: object)
+}
+let latest = parseLatestRelease(releaseJSON([:]))
+expectEqual(latest?.version.description, "9.0.0", "the tag becomes the version")
+expectEqual(latest?.pageURL.absoluteString, "https://github.com/\(projectRepository)/releases/tag/v9.0.0", "the release page is kept")
+expect(parseLatestRelease(releaseJSON(["draft": true])) == nil, "a draft is ignored")
+expect(parseLatestRelease(releaseJSON(["prerelease": true])) == nil, "a pre-release is ignored")
+expect(parseLatestRelease(releaseJSON(["tag_name": "nightly"])) == nil, "a tag that is not a version is ignored")
+expect(parseLatestRelease(releaseJSON(["tag_name": 3])) == nil, "a tag of the wrong type is ignored")
+for page in ["http://github.com/\(projectRepository)/releases/tag/v9.0.0", "https://evil.example/\(projectRepository)/releases/tag/v9.0.0",
+             "https://github.com.evil.example/\(projectRepository)/releases/", "https://github.com/someone/else/releases/tag/v9.0.0",
+             "https://user@github.com/\(projectRepository)/releases/tag/v9.0.0", "https://github.com:8443/\(projectRepository)/releases/tag/v9.0.0",
+             "https://github.com/\(projectRepository)/releases/../../../someone/else", "https://github.com/\(projectRepository)/releases/%2e%2e/%2e%2e/x",
+             "javascript:alert(1)"] {
+    expect(parseLatestRelease(releaseJSON(["html_url": page])) == nil, "the page \(page) is refused")
+}
+expect(parseLatestRelease(Data("not json".utf8)) == nil, "a body that is not JSON is ignored")
+expect(parseLatestRelease(Data("[1, 2]".utf8)) == nil, "JSON that is not an object is ignored")
+expect(parseLatestRelease(Data("{\"message\": \"API rate limit exceeded\"}".utf8)) == nil, "an error answer is ignored")
+
+section("Only a newer release is offered")
+expect(newerRelease(latest, than: "0.3.0") != nil, "9.0.0 is offered to 0.3.0")
+expect(newerRelease(latest, than: "9.0.0") == nil, "the same version is not offered")
+expect(newerRelease(latest, than: "10.0.0") == nil, "an older release is not offered")
+expect(newerRelease(nil, than: "0.3.0") == nil, "no release, no offer")
+expect(newerRelease(latest, than: "garbage") == nil, "an unparseable current version offers nothing")
+
+section("Homebrew or source install")
+expect(isHomebrewInstall(bundlePath: "/opt/homebrew/Cellar/loudstation/0.3.0/libexec/LoudStation.app"), "Homebrew's Cellar on Apple Silicon")
+expect(isHomebrewInstall(bundlePath: "/opt/homebrew/opt/loudstation/libexec/LoudStation.app"), "Homebrew's opt link")
+expect(isHomebrewInstall(bundlePath: "/Users/me/homebrew/Cellar/loudstation/0.3.0/libexec/LoudStation.app"), "a Homebrew in the home folder")
+expect(!isHomebrewInstall(bundlePath: "/Users/me/Applications/LoudStation.app"), "make install's ~/Applications copy")
+expect(!isHomebrewInstall(bundlePath: "/opt/homebrew/Cellar/other/1.0/LoudStation.app"), "another formula's Cellar")
+
+section("A newly opened copy takes over only from a stale one")
+let launchedAt = Date(timeIntervalSinceReferenceDate: 800_000_000)
+let builtBefore = launchedAt.addingTimeInterval(-3600)
+let replacedAfter = launchedAt.addingTimeInterval(600)
+expect(isStaleCopy(executableModified: replacedAfter, launched: launchedAt, diskVersion: "0.3.0", ownVersion: "0.3.0"),
+       "Homebrew's opt link now shows the new version, but the running program was replaced after launch")
+expect(isStaleCopy(executableModified: nil, launched: launchedAt, diskVersion: nil, ownVersion: "0.3.0"), "a copy whose program was removed is stale")
+expect(isStaleCopy(executableModified: builtBefore, launched: launchedAt, diskVersion: "0.2.0", ownVersion: "0.3.0"), "an older version elsewhere is stale")
+expect(!isStaleCopy(executableModified: builtBefore, launched: launchedAt, diskVersion: "0.3.0", ownVersion: "0.3.0"), "the same, untouched version is current")
+expect(!isStaleCopy(executableModified: builtBefore, launched: launchedAt, diskVersion: "0.4.0", ownVersion: "0.3.0"), "a newer copy is current")
+expect(!isStaleCopy(executableModified: builtBefore, launched: launchedAt, diskVersion: nil, ownVersion: "0.3.0"), "an unknown version is left alone")
+expect(!isStaleCopy(executableModified: launchedAt.addingTimeInterval(0.5), launched: launchedAt, diskVersion: "0.3.0", ownVersion: "0.3.0"), "rounding of modification times is tolerated")
+expect(isStaleCopy(executableModified: Date(), launched: processStartTime(getpid()).map { $0.addingTimeInterval(-60) }, diskVersion: toolVersion, ownVersion: toolVersion),
+       "a login-item copy (no launch date from AppKit) whose program was replaced after it started is stale, using the kernel's start time")
+if let started = processStartTime(getpid()) {
+    expect(abs(started.timeIntervalSinceNow) < 600, "the kernel's start time of this process is recent")
+} else {
+    expect(false, "the kernel reports this process's start time")
+}
+expect(processStartTime(-1) == nil, "no start time for a process that does not exist")
+expect(startedFirst((launchedAt, 900), before: (replacedAfter, 100)), "the earlier launch stays")
+expect(startedFirst((launchedAt, 100), before: (launchedAt, 900)), "the same launch time falls back to the lower process ID")
+expect(!startedFirst((nil, 900), before: (nil, 100)), "unknown launch times fall back to the process ID")
+
+section("Update check schedule")
+let schedule = UpdateSchedule()
+let checkedAt = Date(timeIntervalSinceReferenceDate: 800_000_000)
+expect(schedule.isDue(lastChecked: nil, now: checkedAt), "never checked is due")
+expect(!schedule.isDue(lastChecked: checkedAt, now: checkedAt.addingTimeInterval(23 * 3600)), "under a day later is not due")
+expect(schedule.isDue(lastChecked: checkedAt, now: checkedAt.addingTimeInterval(24 * 3600)), "a day later is due")
+expect(!schedule.isDue(lastChecked: checkedAt.addingTimeInterval(30 * 60), now: checkedAt), "a small clock difference is not due")
+expect(schedule.isDue(lastChecked: checkedAt.addingTimeInterval(3 * 24 * 3600), now: checkedAt), "a last check in the future (clock set back) is due")
+
 print("\nunit: \(passed) passed, \(failed) failed")
 exit(failed == 0 ? 0 : 1)

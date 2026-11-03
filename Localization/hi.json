@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "अज्ञात विकल्प “%@”।",
     "cli.error.unknown_command": "अज्ञात कमांड “%@”।",
     "cli.error.no_output": "ID %1$@ वाला कोई ऑडियो आउटपुट नहीं है। `%2$@ list` देखें।",
-    "cli.error.not_display": "%@ किसी डिस्प्ले का ऑडियो आउटपुट नहीं है।"
+    "cli.error.not_display": "%@ किसी डिस्प्ले का ऑडियो आउटपुट नहीं है।",
+    "menu.check_updates": "अपडेट के लिए जाँचें…",
+    "menu.check_updates_automatically": "अपडेट के लिए अपने आप जाँचें",
+    "menu.update_available": "अपडेट उपलब्ध: %1$@ %2$@…",
+    "update.available.body_homebrew": "आपके पास संस्करण %1$@ है। अपडेट करने के लिए, टर्मिनल में यह कमांड चलाएँ। यह नया संस्करण इंस्टॉल करता है और %2$@ को फिर से खोलता है।\n\n%3$@",
+    "update.available.body_source": "आपके पास संस्करण %1$@ है। अपडेट करने के लिए, नए संस्करण के रिलीज़ नोट्स से उसका सोर्स डाउनलोड करें और उसके फ़ोल्डर में %3$@ चलाएँ। इससे %2$@ भी फिर से खुल जाता है।",
+    "update.available.title": "%1$@ %2$@ उपलब्ध है",
+    "update.button.copy": "कमांड कॉपी करें",
+    "update.button.later": "बाद में",
+    "update.button.ok": "ठीक है",
+    "update.button.release_notes": "रिलीज़ नोट्स",
+    "update.current.body": "संस्करण %@ सबसे नया संस्करण है।",
+    "update.current.title": "%@ अप टू डेट है",
+    "update.failed.body": "अपना इंटरनेट कनेक्शन जाँचें और बाद में फिर से कोशिश करें।",
+    "update.failed.title": "अपडेट की जाँच नहीं हो सकी"
   },
   "plurals": {
     "headline.others_silent": {

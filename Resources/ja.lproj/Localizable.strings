@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "ディスプレイのスピーカーから音が出ません";
 "menu.check_every" = "確認の間隔";
 "menu.check_now" = "今すぐ確認";
+"menu.check_updates" = "アップデートを確認…";
+"menu.check_updates_automatically" = "アップデートを自動的に確認";
 "menu.fix_automatically" = "ディスプレイのスピーカーを自動で修復";
 "menu.follow_sound_output" = "スピーカーをサウンド出力に合わせる";
 "menu.interval.events_only" = "ディスプレイの変更時とMacのスリープ解除時のみ";
@@ -55,6 +57,7 @@
 "menu.quit" = "%@を終了";
 "menu.quit_after_fix" = "修復の完了後に終了";
 "menu.show_log" = "ログを表示";
+"menu.update_available" = "アップデートが利用可能：%1$@ %2$@…";
 "note.busy" = "まだ確認中です。数秒後にもう一度「今すぐ修復」を選んでください。";
 "note.cant_autofix" = "このディスプレイはここでは自動で修復できません。ケーブルを接続し直してください。";
 "note.collateral" = "%1$@を修復したため、%2$@の音が止まりました。";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "画面が約3秒間暗くなります";
 "submenu.hint_others" = "ほかのディスプレイの音が止まる場合があります";
 "submenu.speakers_here" = "このディスプレイをスピーカー用に設定";
+"update.available.body_homebrew" = "現在のバージョンは%1$@です。アップデートするには、“ターミナル”でこのコマンドを実行してください。新しいバージョンがインストールされ、%2$@がもう一度開きます。\n\n%3$@";
+"update.available.body_source" = "現在のバージョンは%1$@です。アップデートするには、リリースノートから新しいバージョンのソースをダウンロードし、そのフォルダで%3$@を実行してください。%2$@ももう一度開きます。";
+"update.available.title" = "%1$@ %2$@を利用できます";
+"update.button.copy" = "コマンドをコピー";
+"update.button.later" = "あとで";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "リリースノート";
+"update.current.body" = "バージョン%@が最新です。";
+"update.current.title" = "%@は最新の状態です";
+"update.failed.body" = "インターネット接続を確認して、しばらくしてからもう一度お試しください。";
+"update.failed.title" = "アップデートを確認できませんでした";
 "welcome.body" = "アイコンで、ディスプレイの音が出ているかどうかがわかります。緑：すべて正常です。オレンジ：音声に使っていないディスプレイの音が出なくなっています。赤：ディスプレイのスピーカーの音が出なくなっています。\n\n音が出なくなったディスプレイのスピーカーを修復するため、このアプリはそのディスプレイをオフにしてからオンにします。その画面は約3秒間暗くなり、ウインドウが一時的に移動することがあります。画面が1つしかないときは行わず、通話やフルスクリーンのビデオが終わるまで待ちます。\n\nこのアプリはログイン時に開きます。この設定はメニューで変更できます。";
 "welcome.fix_automatically" = "自動で修復";
 "welcome.status_only" = "状態の表示のみ";

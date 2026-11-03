@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Невідомий параметр «%@».",
     "cli.error.unknown_command": "Невідома команда «%@».",
     "cli.error.no_output": "Немає аудіовиходу з ID %1$@. Див. `%2$@ list`.",
-    "cli.error.not_display": "%@ — не аудіовихід монітора."
+    "cli.error.not_display": "%@ — не аудіовихід монітора.",
+    "menu.check_updates": "Перевірити наявність оновлень…",
+    "menu.check_updates_automatically": "Автоматично перевіряти наявність оновлень",
+    "menu.update_available": "Доступне оновлення: %1$@ %2$@…",
+    "update.available.body_homebrew": "У вас версія %1$@. Щоб оновити, виконайте цю команду в Терміналі. Вона встановить нову версію та знову відкриє %2$@.\n\n%3$@",
+    "update.available.body_source": "У вас версія %1$@. Щоб оновити, завантажте вихідний код нової версії з її нотаток до випуску й виконайте %3$@ у її папці. Це також знову відкриє %2$@.",
+    "update.available.title": "Доступна нова версія: %1$@ %2$@",
+    "update.button.copy": "Копіювати команду",
+    "update.button.later": "Пізніше",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Нотатки до випуску",
+    "update.current.body": "Версія %@ є найновішою.",
+    "update.current.title": "Програма %@ не потребує оновлення",
+    "update.failed.body": "Перевірте з’єднання з інтернетом і спробуйте пізніше.",
+    "update.failed.title": "Не вдалося перевірити наявність оновлень"
   },
   "plurals": {
     "headline.others_silent": {

@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Ingen lyd fra dine skærmhøjttalere";
 "menu.check_every" = "Tjekinterval";
 "menu.check_now" = "Tjek nu";
+"menu.check_updates" = "Søg efter opdateringer…";
+"menu.check_updates_automatically" = "Søg automatisk efter opdateringer";
 "menu.fix_automatically" = "Ordn skærmhøjttalerne automatisk";
 "menu.follow_sound_output" = "Skærmhøjttalerne følger lydudgangen";
 "menu.interval.events_only" = "Kun når skærme ændres, eller computeren vågner";
@@ -55,6 +57,7 @@
 "menu.quit" = "Afslut %@";
 "menu.quit_after_fix" = "Afslut, når det er ordnet";
 "menu.show_log" = "Vis log";
+"menu.update_available" = "Opdatering tilgængelig: %1$@ %2$@…";
 "note.busy" = "Tjekker stadig. Prøv Ordn nu igen om et par sekunder.";
 "note.cant_autofix" = "Denne skærm kan ikke ordnes automatisk her. Tilslut dens kabel igen for at ordne den.";
 "note.collateral" = "Da %1$@ blev ordnet, stoppede lyden på %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "Skærmen bliver sort i ca. 3 sekunder";
 "submenu.hint_others" = "Kan stoppe lyden på andre skærme";
 "submenu.speakers_here" = "Brug denne skærm til højttalerne";
+"update.available.body_homebrew" = "Du har version %1$@. Kør denne kommando i Terminal for at opdatere. Den installerer den nye version og åbner %2$@ igen.\n\n%3$@";
+"update.available.body_source" = "Du har version %1$@. Hent kildekoden til den nye version fra dens udgivelsesnoter, og kør %3$@ i dens mappe for at opdatere. Det åbner også %2$@ igen.";
+"update.available.title" = "%1$@ %2$@ er tilgængelig";
+"update.button.copy" = "Kopiér kommando";
+"update.button.later" = "Senere";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Udgivelsesnoter";
+"update.current.body" = "Version %@ er den nyeste version.";
+"update.current.title" = "%@ er opdateret";
+"update.failed.body" = "Tjek din internetforbindelse, og prøv igen senere.";
+"update.failed.title" = "Kunne ikke søge efter opdateringer";
 "welcome.body" = "Symbolet viser, om lyden virker på dine skærme. Grøn: alt virker. Orange: en skærm, du ikke bruger til lyd, er blevet tavs. Rød: dine skærmhøjttalere er blevet tavse.\n\nFor at ordne tavse skærmhøjttalere slukker og tænder appen deres skærm. Skærmen bliver sort i ca. 3 sekunder, og dens vinduer kan flytte sig et øjeblik. Det sker aldrig med din eneste skærm, og appen venter, til opkald og video i fuld skærm er slut.\n\nAppen åbner ved login. Det kan du ændre i dens menu.";
 "welcome.fix_automatically" = "Ordn automatisk";
 "welcome.status_only" = "Vis kun status";

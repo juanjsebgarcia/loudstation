@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Ukjent valg «%@».",
     "cli.error.unknown_command": "Ukjent kommando «%@».",
     "cli.error.no_output": "Ingen lydutgang med ID %1$@. Se `%2$@ list`.",
-    "cli.error.not_display": "%@ er ikke en skjerms lydutgang."
+    "cli.error.not_display": "%@ er ikke en skjerms lydutgang.",
+    "menu.check_updates": "Se etter oppdateringer…",
+    "menu.check_updates_automatically": "Se etter oppdateringer automatisk",
+    "menu.update_available": "Oppdatering tilgjengelig: %1$@ %2$@…",
+    "update.available.title": "%1$@ %2$@ er tilgjengelig",
+    "update.available.body_homebrew": "Du har versjon %1$@. For å oppdatere kjører du denne kommandoen i Terminal. Den installerer den nye versjonen og åpner %2$@ på nytt.\n\n%3$@",
+    "update.available.body_source": "Du har versjon %1$@. For å oppdatere laster du ned kildekoden til den nye versjonen fra utgivelsesnotatene og kjører %3$@ i mappen. Det åpner også %2$@ på nytt.",
+    "update.button.copy": "Kopier kommando",
+    "update.button.release_notes": "Utgivelsesnotater",
+    "update.button.later": "Senere",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ er oppdatert",
+    "update.current.body": "Versjon %@ er den nyeste versjonen.",
+    "update.failed.title": "Kunne ikke se etter oppdateringer",
+    "update.failed.body": "Sjekk internettilkoblingen og prøv igjen senere."
   },
   "plurals": {
     "headline.others_silent": {

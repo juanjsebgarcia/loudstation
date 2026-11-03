@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Option inconnue « %@ ».",
     "cli.error.unknown_command": "Commande inconnue « %@ ».",
     "cli.error.no_output": "Aucune sortie audio avec l’ID %1$@. Consultez `%2$@ list`.",
-    "cli.error.not_display": "%@ n’est pas la sortie audio d’un moniteur."
+    "cli.error.not_display": "%@ n’est pas la sortie audio d’un moniteur.",
+    "menu.check_updates": "Rechercher des mises à jour…",
+    "menu.check_updates_automatically": "Rechercher automatiquement les mises à jour",
+    "menu.update_available": "Mise à jour disponible : %1$@ %2$@…",
+    "update.available.body_homebrew": "Vous utilisez la version %1$@. Pour effectuer la mise à jour, exécutez cette commande dans Terminal. Elle installe la nouvelle version et rouvre %2$@.\n\n%3$@",
+    "update.available.body_source": "Vous utilisez la version %1$@. Pour effectuer la mise à jour, téléchargez le code source de la nouvelle version depuis ses notes de version, puis exécutez %3$@ dans son dossier. Cela rouvre aussi %2$@.",
+    "update.available.title": "%1$@ %2$@ est disponible",
+    "update.button.copy": "Copier la commande",
+    "update.button.later": "Plus tard",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Notes de version",
+    "update.current.body": "La version %@ est la plus récente.",
+    "update.current.title": "%@ est à jour",
+    "update.failed.body": "Vérifiez votre connexion à Internet, puis réessayez plus tard.",
+    "update.failed.title": "Impossible de rechercher des mises à jour"
   },
   "plurals": {
     "headline.others_silent": {

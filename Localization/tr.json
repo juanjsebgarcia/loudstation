@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Bilinmeyen seçenek: “%@”.",
     "cli.error.unknown_command": "Bilinmeyen komut: “%@”.",
     "cli.error.no_output": "Kimliği %1$@ olan ses çıkışı yok. Bkz. `%2$@ list`.",
-    "cli.error.not_display": "%@ bir ekranın ses çıkışı değil."
+    "cli.error.not_display": "%@ bir ekranın ses çıkışı değil.",
+    "menu.check_updates": "Güncellemeleri denetle…",
+    "menu.check_updates_automatically": "Güncellemeleri otomatik denetle",
+    "menu.update_available": "Güncelleme mevcut: %1$@ %2$@…",
+    "update.available.body_homebrew": "%1$@ sürümünü kullanıyorsunuz. Güncellemek için bu komutu Terminal’de çalıştırın. Komut yeni sürümü yükler ve %2$@ uygulamasını yeniden açar.\n\n%3$@",
+    "update.available.body_source": "%1$@ sürümünü kullanıyorsunuz. Güncellemek için yeni sürümün kaynak kodunu sürüm notlarından indirin ve klasöründe %3$@ komutunu çalıştırın. Bu, %2$@ uygulamasını da yeniden açar.",
+    "update.available.title": "%1$@ %2$@ kullanılabilir",
+    "update.button.copy": "Komutu kopyala",
+    "update.button.later": "Sonra",
+    "update.button.ok": "Tamam",
+    "update.button.release_notes": "Sürüm notları",
+    "update.current.body": "%@ sürümü en son sürüm.",
+    "update.current.title": "%@ güncel",
+    "update.failed.body": "İnternet bağlantınızı denetleyin ve daha sonra yeniden deneyin.",
+    "update.failed.title": "Güncellemeler denetlenemedi"
   },
   "plurals": {
     "headline.others_silent": {

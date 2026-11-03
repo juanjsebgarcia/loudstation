@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Seus alto-falantes do monitor estão sem som";
 "menu.check_every" = "Verificar a cada";
 "menu.check_now" = "Verificar agora";
+"menu.check_updates" = "Verificar atualizações…";
+"menu.check_updates_automatically" = "Verificar atualizações automaticamente";
 "menu.fix_automatically" = "Correção automática dos alto-falantes do monitor";
 "menu.follow_sound_output" = "Alto-falantes do monitor seguem a saída de som";
 "menu.interval.events_only" = "Só se os monitores mudarem ou o Mac despertar";
@@ -55,6 +57,7 @@
 "menu.quit" = "Encerrar %@";
 "menu.quit_after_fix" = "Encerrar quando a correção terminar";
 "menu.show_log" = "Mostrar registro";
+"menu.update_available" = "Atualização disponível: %1$@ %2$@…";
 "note.busy" = "Ainda verificando. Tente “Corrigir agora” de novo em alguns segundos.";
 "note.cant_autofix" = "Este monitor não pode ser corrigido automaticamente aqui. Reconecte o cabo dele para corrigir.";
 "note.collateral" = "Corrigir %1$@ cortou o som de %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "A tela fica preta por cerca de 3 segundos";
 "submenu.hint_others" = "Pode cortar o som de outros monitores";
 "submenu.speakers_here" = "Usar este monitor para os alto-falantes";
+"update.available.body_homebrew" = "Você tem a versão %1$@. Para atualizar, execute este comando no Terminal. Ele instala a nova versão e reabre %2$@.\n\n%3$@";
+"update.available.body_source" = "Você tem a versão %1$@. Para atualizar, baixe o código-fonte da nova versão nas notas da versão e execute %3$@ na pasta dele. Isso também reabre %2$@.";
+"update.available.title" = "%1$@ %2$@ está disponível";
+"update.button.copy" = "Copiar comando";
+"update.button.later" = "Mais tarde";
+"update.button.ok" = "OK";
+"update.button.release_notes" = "Notas da versão";
+"update.current.body" = "A versão %@ é a mais recente.";
+"update.current.title" = "%@ está atualizado";
+"update.failed.body" = "Verifique sua conexão com a internet e tente novamente mais tarde.";
+"update.failed.title" = "Não foi possível verificar atualizações";
 "welcome.body" = "O ícone mostra se o som dos seus monitores está funcionando. Verde: tudo funciona. Laranja: um monitor que você não usa para o som ficou sem som. Vermelho: seus alto-falantes do monitor ficaram sem som.\n\nPara corrigir seus alto-falantes do monitor, o app desliga e religa o monitor deles. Essa tela fica preta por cerca de 3 segundos e as janelas dela podem se mover por um instante. Isso nunca é feito na sua única tela, e o app espera o fim de chamadas e vídeos em tela cheia.\n\nEle abre ao iniciar sessão. Você pode mudar isso no menu dele.";
 "welcome.fix_automatically" = "Corrigir automaticamente";
 "welcome.status_only" = "Só mostrar o estado";

@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Neznámá volba „%@“.",
     "cli.error.unknown_command": "Neznámý příkaz „%@“.",
     "cli.error.no_output": "Žádný zvukový výstup s ID %1$@. Viz `%2$@ list`.",
-    "cli.error.not_display": "%@ není zvukový výstup monitoru."
+    "cli.error.not_display": "%@ není zvukový výstup monitoru.",
+    "menu.check_updates": "Vyhledat aktualizace…",
+    "menu.check_updates_automatically": "Automaticky vyhledávat aktualizace",
+    "menu.update_available": "Je k dispozici aktualizace: %1$@ %2$@…",
+    "update.available.body_homebrew": "Máte verzi %1$@. Chcete-li aktualizovat, spusťte v Terminálu tento příkaz. Nainstaluje novou verzi a znovu otevře %2$@.\n\n%3$@",
+    "update.available.body_source": "Máte verzi %1$@. Chcete-li aktualizovat, stáhněte zdrojový kód nové verze z poznámek k vydání a v jeho složce spusťte %3$@. Tím se také znovu otevře %2$@.",
+    "update.available.title": "Je k dispozici %1$@ %2$@",
+    "update.button.copy": "Kopírovat příkaz",
+    "update.button.later": "Později",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Poznámky k vydání",
+    "update.current.body": "Verze %@ je nejnovější.",
+    "update.current.title": "%@ je aktuální",
+    "update.failed.body": "Zkontrolujte připojení k internetu a zkuste to později znovu.",
+    "update.failed.title": "Aktualizace nelze vyhledat"
   },
   "plurals": {
     "headline.others_silent": {

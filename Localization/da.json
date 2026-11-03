@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Ukendt indstilling “%@”.",
     "cli.error.unknown_command": "Ukendt kommando “%@”.",
     "cli.error.no_output": "Ingen lydudgang med ID %1$@. Se `%2$@ list`.",
-    "cli.error.not_display": "%@ er ikke en skærms lydudgang."
+    "cli.error.not_display": "%@ er ikke en skærms lydudgang.",
+    "menu.check_updates": "Søg efter opdateringer…",
+    "menu.check_updates_automatically": "Søg automatisk efter opdateringer",
+    "menu.update_available": "Opdatering tilgængelig: %1$@ %2$@…",
+    "update.available.body_homebrew": "Du har version %1$@. Kør denne kommando i Terminal for at opdatere. Den installerer den nye version og åbner %2$@ igen.\n\n%3$@",
+    "update.available.body_source": "Du har version %1$@. Hent kildekoden til den nye version fra dens udgivelsesnoter, og kør %3$@ i dens mappe for at opdatere. Det åbner også %2$@ igen.",
+    "update.available.title": "%1$@ %2$@ er tilgængelig",
+    "update.button.copy": "Kopiér kommando",
+    "update.button.later": "Senere",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Udgivelsesnoter",
+    "update.current.body": "Version %@ er den nyeste version.",
+    "update.current.title": "%@ er opdateret",
+    "update.failed.body": "Tjek din internetforbindelse, og prøv igen senere.",
+    "update.failed.title": "Kunne ikke søge efter opdateringer"
   },
   "plurals": {
     "headline.others_silent": {

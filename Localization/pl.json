@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Nieznana opcja „%@”.",
     "cli.error.unknown_command": "Nieznane polecenie „%@”.",
     "cli.error.no_output": "Brak wyjścia audio o identyfikatorze %1$@. Zobacz `%2$@ list`.",
-    "cli.error.not_display": "%@ nie jest wyjściem audio wyświetlacza."
+    "cli.error.not_display": "%@ nie jest wyjściem audio wyświetlacza.",
+    "menu.check_updates": "Sprawdź uaktualnienia…",
+    "menu.check_updates_automatically": "Sprawdzaj uaktualnienia automatycznie",
+    "menu.update_available": "Dostępne uaktualnienie: %1$@ %2$@…",
+    "update.available.title": "Dostępna jest nowa wersja: %1$@ %2$@",
+    "update.available.body_homebrew": "Masz wersję %1$@. Aby uaktualnić, uruchom to polecenie w Terminalu. Zainstaluje ono nową wersję i ponownie otworzy %2$@.\n\n%3$@",
+    "update.available.body_source": "Masz wersję %1$@. Aby uaktualnić, pobierz kod źródłowy nowej wersji z informacji o wydaniu i uruchom %3$@ w jego folderze. To także ponownie otworzy %2$@.",
+    "update.button.copy": "Kopiuj polecenie",
+    "update.button.release_notes": "Informacje o wydaniu",
+    "update.button.later": "Później",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ jest aktualna",
+    "update.current.body": "Wersja %@ jest najnowsza.",
+    "update.failed.title": "Nie można sprawdzić uaktualnień",
+    "update.failed.body": "Sprawdź połączenie z internetem i spróbuj ponownie później."
   },
   "plurals": {
     "headline.others_silent": {

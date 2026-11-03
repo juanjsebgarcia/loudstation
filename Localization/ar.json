@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "خيار غير معروف «%@».",
     "cli.error.unknown_command": "أمر غير معروف «%@».",
     "cli.error.no_output": "لا يوجد مخرج صوت بالمعرّف %1$@. راجع `%2$@ list`.",
-    "cli.error.not_display": "%@ ليس مخرج صوت لشاشة."
+    "cli.error.not_display": "%@ ليس مخرج صوت لشاشة.",
+    "menu.check_updates": "التحقق من وجود تحديثات…",
+    "menu.check_updates_automatically": "التحقق من وجود تحديثات تلقائيًا",
+    "menu.update_available": "يتوفر تحديث: %1$@ %2$@…",
+    "update.available.body_homebrew": "لديك الإصدار %1$@. للتحديث، شغّل هذا الأمر في تطبيق Terminal. سيثبّت الإصدار الجديد ويعيد فتح %2$@.\n\n%3$@",
+    "update.available.body_source": "لديك الإصدار %1$@. للتحديث، نزّل الشيفرة المصدرية للإصدار الجديد من ملاحظات الإصدار وشغّل %3$@ في مجلدها. سيعيد ذلك أيضًا فتح %2$@.",
+    "update.available.title": "يتوفر %1$@ %2$@",
+    "update.button.copy": "نسخ الأمر",
+    "update.button.later": "لاحقًا",
+    "update.button.ok": "حسنًا",
+    "update.button.release_notes": "ملاحظات الإصدار",
+    "update.current.body": "الإصدار %@ هو أحدث إصدار.",
+    "update.current.title": "%@ محدَّث",
+    "update.failed.body": "تحقق من اتصالك بالإنترنت وحاول مرة أخرى لاحقًا.",
+    "update.failed.title": "تعذّر التحقق من وجود تحديثات"
   },
   "plurals": {
     "headline.others_silent": {

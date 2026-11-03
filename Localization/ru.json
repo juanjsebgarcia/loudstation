@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Неизвестный параметр «%@».",
     "cli.error.unknown_command": "Неизвестная команда «%@».",
     "cli.error.no_output": "Нет аудиовыхода с ID %1$@. См. `%2$@ list`.",
-    "cli.error.not_display": "%@ не является аудиовыходом монитора."
+    "cli.error.not_display": "%@ не является аудиовыходом монитора.",
+    "menu.check_updates": "Проверить обновления…",
+    "menu.check_updates_automatically": "Проверять обновления автоматически",
+    "menu.update_available": "Доступно обновление: %1$@ %2$@…",
+    "update.available.title": "Доступна версия %1$@ %2$@",
+    "update.available.body_homebrew": "У вас версия %1$@. Чтобы обновить, выполните эту команду в Терминале. Она установит новую версию и снова откроет %2$@.\n\n%3$@",
+    "update.available.body_source": "У вас версия %1$@. Чтобы обновить, загрузите исходный код новой версии из примечаний к выпуску и выполните %3$@ в его папке. Это также снова откроет %2$@.",
+    "update.button.copy": "Скопировать команду",
+    "update.button.release_notes": "Примечания к выпуску",
+    "update.button.later": "Позже",
+    "update.button.ok": "ОК",
+    "update.current.title": "У вас последняя версия %@",
+    "update.current.body": "Версия %@ — последняя.",
+    "update.failed.title": "Не удалось проверить обновления",
+    "update.failed.body": "Проверьте подключение к интернету и повторите попытку позже."
   },
   "plurals": {
     "headline.others_silent": {

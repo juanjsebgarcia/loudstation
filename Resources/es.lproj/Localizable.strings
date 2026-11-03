@@ -46,6 +46,8 @@
 "headline.speakers_silent" = "Tus altavoces del monitor no tienen sonido";
 "menu.check_every" = "Comprobar cada";
 "menu.check_now" = "Comprobar ahora";
+"menu.check_updates" = "Buscar actualizaciones…";
+"menu.check_updates_automatically" = "Buscar actualizaciones automáticamente";
 "menu.fix_automatically" = "Arreglar altavoces del monitor automáticamente";
 "menu.follow_sound_output" = "Altavoces del monitor según la salida de sonido";
 "menu.interval.events_only" = "Solo si cambian las pantallas o se activa el Mac";
@@ -55,6 +57,7 @@
 "menu.quit" = "Salir de %@";
 "menu.quit_after_fix" = "Salir al terminar el arreglo";
 "menu.show_log" = "Mostrar registro";
+"menu.update_available" = "Actualización disponible: %1$@ %2$@…";
 "note.busy" = "Todavía se está comprobando. Vuelve a probar «Arreglar ahora» en unos segundos.";
 "note.cant_autofix" = "Esta pantalla no se puede arreglar automáticamente aquí. Vuelve a conectar su cable para arreglarla.";
 "note.collateral" = "Al arreglar %1$@ se ha cortado el sonido en %2$@.";
@@ -99,6 +102,17 @@
 "submenu.hint_blackout" = "La pantalla se queda en negro unos 3 segundos";
 "submenu.hint_others" = "Puede cortar el sonido en otras pantallas";
 "submenu.speakers_here" = "Usar esta pantalla para los altavoces";
+"update.available.body_homebrew" = "Tienes la versión %1$@. Para actualizar, ejecuta este comando en Terminal. Instala la nueva versión y vuelve a abrir %2$@.\n\n%3$@";
+"update.available.body_source" = "Tienes la versión %1$@. Para actualizar, descarga el código fuente de la nueva versión desde las notas de la versión y ejecuta %3$@ en su carpeta. Eso también vuelve a abrir %2$@.";
+"update.available.title" = "%1$@ %2$@ ya está disponible";
+"update.button.copy" = "Copiar comando";
+"update.button.later" = "Más tarde";
+"update.button.ok" = "Aceptar";
+"update.button.release_notes" = "Notas de la versión";
+"update.current.body" = "La versión %@ es la más reciente.";
+"update.current.title" = "%@ está actualizado";
+"update.failed.body" = "Comprueba tu conexión a internet y vuelve a intentarlo más tarde.";
+"update.failed.title" = "No se han podido buscar actualizaciones";
 "welcome.body" = "El icono muestra si funciona el sonido de tus pantallas. Verde: todo funciona. Naranja: se ha quedado sin sonido una pantalla que no usas para el sonido. Rojo: tus altavoces del monitor se han quedado sin sonido.\n\nPara arreglar tus altavoces del monitor, la app apaga y enciende su pantalla. Esa pantalla se queda en negro unos 3 segundos y sus ventanas pueden moverse un momento. Nunca lo hace con tu única pantalla, y espera a que terminen las llamadas y los vídeos a pantalla completa.\n\nSe abre al iniciar sesión. Puedes cambiarlo en su menú.";
 "welcome.fix_automatically" = "Arreglar automáticamente";
 "welcome.status_only" = "Solo mostrar el estado";

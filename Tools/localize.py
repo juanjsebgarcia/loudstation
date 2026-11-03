@@ -48,7 +48,7 @@ LIMITS = [
     (re.compile(r"^row\.tag\."), 22),
     (re.compile(r"^(menu\.|submenu\.)"), 48),
     (re.compile(r"^headline\."), 52),
-    (re.compile(r"^(welcome\.fix_automatically|welcome\.status_only|confirm\.fix|confirm\.cancel)$"), 24),
+    (re.compile(r"^(welcome\.fix_automatically|welcome\.status_only|confirm\.fix|confirm\.cancel|update\.button\.[a-z_]+)$"), 24),
     (re.compile(r"^notify\..*\.title$"), 48),
     (re.compile(r"^note\."), 110),
     (re.compile(r"^notify\..*body"), 170),

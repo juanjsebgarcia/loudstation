@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "ไม่รู้จักตัวเลือก “%@”",
     "cli.error.unknown_command": "ไม่รู้จักคำสั่ง “%@”",
     "cli.error.no_output": "ไม่มีเอาต์พุตเสียงที่มี ID %1$@ ดู `%2$@ list`",
-    "cli.error.not_display": "%@ ไม่ใช่เอาต์พุตเสียงของจอภาพ"
+    "cli.error.not_display": "%@ ไม่ใช่เอาต์พุตเสียงของจอภาพ",
+    "menu.check_updates": "ตรวจหาการอัปเดต…",
+    "menu.check_updates_automatically": "ตรวจหาการอัปเดตโดยอัตโนมัติ",
+    "menu.update_available": "มีอัปเดต: %1$@ %2$@…",
+    "update.available.body_homebrew": "คุณใช้เวอร์ชัน %1$@ อยู่ หากต้องการอัปเดต ให้เรียกใช้คำสั่งนี้ในเทอร์มินัล คำสั่งนี้จะติดตั้งเวอร์ชันใหม่และเปิด %2$@ อีกครั้ง\n\n%3$@",
+    "update.available.body_source": "คุณใช้เวอร์ชัน %1$@ อยู่ หากต้องการอัปเดต ให้ดาวน์โหลดซอร์สโค้ดของเวอร์ชันใหม่จากบันทึกประจำรุ่น แล้วเรียกใช้ %3$@ ในโฟลเดอร์นั้น ซึ่งจะเปิด %2$@ อีกครั้งด้วย",
+    "update.available.title": "%1$@ %2$@ พร้อมให้ใช้งานแล้ว",
+    "update.button.copy": "คัดลอกคำสั่ง",
+    "update.button.later": "ภายหลัง",
+    "update.button.ok": "ตกลง",
+    "update.button.release_notes": "บันทึกประจำรุ่น",
+    "update.current.body": "เวอร์ชัน %@ เป็นเวอร์ชันล่าสุด",
+    "update.current.title": "%@ เป็นเวอร์ชันล่าสุดแล้ว",
+    "update.failed.body": "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ แล้วลองอีกครั้งในภายหลัง",
+    "update.failed.title": "ไม่สามารถตรวจหาการอัปเดตได้"
   },
   "plurals": {
     "headline.others_silent": {

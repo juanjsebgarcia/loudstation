@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "未知选项“%@”。",
     "cli.error.unknown_command": "未知命令“%@”。",
     "cli.error.no_output": "没有 ID 为 %1$@ 的音频输出。请参阅 `%2$@ list`。",
-    "cli.error.not_display": "%@ 不是显示器的音频输出。"
+    "cli.error.not_display": "%@ 不是显示器的音频输出。",
+    "menu.check_updates": "检查更新…",
+    "menu.check_updates_automatically": "自动检查更新",
+    "menu.update_available": "有可用更新：%1$@ %2$@…",
+    "update.available.body_homebrew": "你正在使用版本 %1$@。要更新，请在“终端”中运行此命令。它会安装新版本并重新打开 %2$@。\n\n%3$@",
+    "update.available.body_source": "你正在使用版本 %1$@。要更新，请从新版本的发行说明中下载其源代码，然后在其文件夹中运行 %3$@。这也会重新打开 %2$@。",
+    "update.available.title": "%1$@ %2$@ 现已推出",
+    "update.button.copy": "拷贝命令",
+    "update.button.later": "以后",
+    "update.button.ok": "好",
+    "update.button.release_notes": "发行说明",
+    "update.current.body": "版本 %@ 是最新版本。",
+    "update.current.title": "%@ 已是最新版本",
+    "update.failed.body": "请检查你的互联网连接，稍后再试。",
+    "update.failed.title": "无法检查更新"
   },
   "plurals": {
     "headline.others_silent": {

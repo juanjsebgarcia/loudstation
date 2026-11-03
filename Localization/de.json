@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Unbekannte Option „%@“.",
     "cli.error.unknown_command": "Unbekannter Befehl „%@“.",
     "cli.error.no_output": "Kein Audioausgang mit der ID %1$@. Siehe `%2$@ list`.",
-    "cli.error.not_display": "%@ ist kein Audioausgang eines Displays."
+    "cli.error.not_display": "%@ ist kein Audioausgang eines Displays.",
+    "menu.check_updates": "Nach Updates suchen …",
+    "menu.check_updates_automatically": "Automatisch nach Updates suchen",
+    "menu.update_available": "Update verfügbar: %1$@ %2$@ …",
+    "update.available.body_homebrew": "Du hast Version %1$@. Führe zum Aktualisieren diesen Befehl im Terminal aus. Er installiert die neue Version und öffnet %2$@ erneut.\n\n%3$@",
+    "update.available.body_source": "Du hast Version %1$@. Lade zum Aktualisieren den Quellcode der neuen Version über die Versionshinweise herunter und führe %3$@ in seinem Ordner aus. Dadurch wird auch %2$@ erneut geöffnet.",
+    "update.available.title": "%1$@ %2$@ ist verfügbar",
+    "update.button.copy": "Befehl kopieren",
+    "update.button.later": "Später",
+    "update.button.ok": "OK",
+    "update.button.release_notes": "Versionshinweise",
+    "update.current.body": "Version %@ ist die neueste Version.",
+    "update.current.title": "%@ ist auf dem neuesten Stand",
+    "update.failed.body": "Prüfe deine Internetverbindung und versuche es später erneut.",
+    "update.failed.title": "Suche nach Updates fehlgeschlagen"
   },
   "plurals": {
     "headline.others_silent": {

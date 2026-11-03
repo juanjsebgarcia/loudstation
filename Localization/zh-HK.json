@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "未知的選項「%@」。",
     "cli.error.unknown_command": "未知的指令「%@」。",
     "cli.error.no_output": "沒有 ID 為 %1$@ 的音訊輸出。請參閱 `%2$@ list`。",
-    "cli.error.not_display": "%@ 不是顯示器的音訊輸出。"
+    "cli.error.not_display": "%@ 不是顯示器的音訊輸出。",
+    "menu.check_updates": "檢查更新項目⋯",
+    "menu.check_updates_automatically": "自動檢查更新項目",
+    "menu.update_available": "有可用的更新項目：%1$@ %2$@⋯",
+    "update.available.body_homebrew": "你正在使用版本 %1$@。如要更新，請在「終端機」中執行此指令。它會安裝新版本並重新開啟 %2$@。\n\n%3$@",
+    "update.available.body_source": "你正在使用版本 %1$@。如要更新，請從新版本的版本附註下載其原始碼，並在其檔案夾中執行 %3$@。這也會重新開啟 %2$@。",
+    "update.available.title": "%1$@ %2$@ 現已推出",
+    "update.button.copy": "拷貝指令",
+    "update.button.later": "稍後",
+    "update.button.ok": "好",
+    "update.button.release_notes": "版本附註",
+    "update.current.body": "版本 %@ 是最新版本。",
+    "update.current.title": "%@ 已是最新版本",
+    "update.failed.body": "請檢查你的互聯網連線，稍後再試一次。",
+    "update.failed.title": "無法檢查更新項目"
   },
   "plurals": {
     "headline.others_silent": {

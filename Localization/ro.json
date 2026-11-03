@@ -115,7 +115,21 @@
     "cli.error.unknown_option": "Opțiune necunoscută: „%@”.",
     "cli.error.unknown_command": "Comandă necunoscută: „%@”.",
     "cli.error.no_output": "Nu există nicio ieșire audio cu ID-ul %1$@. Consultați `%2$@ list`.",
-    "cli.error.not_display": "%@ nu este ieșirea audio a unui monitor."
+    "cli.error.not_display": "%@ nu este ieșirea audio a unui monitor.",
+    "menu.check_updates": "Căutați actualizări…",
+    "menu.check_updates_automatically": "Căutați automat actualizări",
+    "menu.update_available": "Actualizare disponibilă: %1$@ %2$@…",
+    "update.available.title": "%1$@ %2$@ este disponibil",
+    "update.available.body_homebrew": "Aveți versiunea %1$@. Pentru actualizare, rulați această comandă în Terminal. Comanda instalează noua versiune și redeschide %2$@.\n\n%3$@",
+    "update.available.body_source": "Aveți versiunea %1$@. Pentru actualizare, descărcați codul sursă al noii versiuni din notele de lansare și rulați %3$@ în dosarul acestuia. Astfel se redeschide și %2$@.",
+    "update.button.copy": "Copiați comanda",
+    "update.button.release_notes": "Note de lansare",
+    "update.button.later": "Mai târziu",
+    "update.button.ok": "OK",
+    "update.current.title": "%@ este actualizat",
+    "update.current.body": "Versiunea %@ este cea mai recentă.",
+    "update.failed.title": "Nu s-au putut căuta actualizări",
+    "update.failed.body": "Verificați conexiunea la internet și încercați din nou mai târziu."
   },
   "plurals": {
     "headline.others_silent": {
