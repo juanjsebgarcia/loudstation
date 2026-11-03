@@ -22,6 +22,53 @@ It happens most with several displays connected at once, for example a lid-close
 
 To check whether this is your problem, run `loudstation`. "No Sound" next to a display means its audio is stuck.
 
+### How people describe it
+
+The same fault turns up in forum threads from Monterey to macOS 27 (Golden Gate), on MacBook Air, MacBook Pro, Mac mini and Mac Studio, from M1 to M4 Max. If you searched for something like one of these, you are probably in the right place:
+
+- "No sound from monitor speakers" or "HDMI audio not working on my Mac"
+- "DisplayPort or USB-C monitor audio stopped working all of a sudden"
+- "No sound after waking from sleep" with an external display
+- "Clamshell mode, no audio through the monitor"
+- "No sound through the dock" (Dell WD19TB, CalDigit TS3 Plus, Belkin and other Thunderbolt docks)
+- "No audio from the monitor's 3.5 mm headphone jack after upgrading macOS"
+- "Dell monitor, no sound with MacBook Pro M1" (U2518D, U2520D, U4025QW, S2725QC and others)
+- "YouTube or Netflix freezes when an external monitor is connected"
+- "Only one of my monitors plays sound," or "audio moves to whichever display connected last"
+
+### What it looks like in the logs
+
+These are the messages people paste into bug reports. Search your own log with `/usr/bin/log show --last 10m --predicate 'process == "coreaudiod" OR process == "kernel"'`:
+
+- `could not establish a timeline after waiting 10000000 microseconds`
+- `IO Stopped Context ... after 0 frames`
+- `the IO thread failed to start, Error: 1937010544 ('stop')`
+- `Device <uid> is not running`
+- `DCPAVAudioDriver` with `_hostTime=0`
+- `AppleDCPDPTXAudioLinkDelegate::handleStartLink Failed to get workloop`
+- `HDCP Startup Failed`
+
+### Workarounds you may have tried
+
+These help some of the time, or not at all, because none of them rebuilds the display's audio link:
+
+| Workaround | Why it falls short |
+|---|---|
+| Restarting the Mac | Works until the next plug-in or wake |
+| Replugging the cable or power-cycling the monitor | Works, but by hand, every time |
+| `sudo killall coreaudiod` | Restarts the audio daemon, not the display link |
+| Switching the sound output away and back | The display's clock is still stopped |
+| Changing the sample rate in Audio MIDI Setup, or the refresh rate (120, 60, then 120 Hz) | Sometimes renegotiates the link; often not |
+| Audio routing apps, or `SwitchAudioSource` on wake | They choose an output but cannot restart a dead one |
+
+LoudStation does the replug for you, in software, only when the audio is actually stuck.
+
+### Probably not this bug
+
+- Apple Studio Display speakers: their audio goes over USB, not the display link.
+- Video that plays too fast or at the wrong pitch: that is a wrong clock rate, not a stopped clock.
+- Bluetooth speakers or headphones, the Mac's own headphone jack, and Intel Macs.
+
 ## What is actually wrong
 
 On Apple Silicon each external display is driven by a DCP (display coprocessor), which also carries that display's audio. The logs suggest that when several displays come up at the same moment, their audio link setup, which is tied to HDCP negotiation, collides. The kernel logs `AppleDCPDPTXAudioLinkDelegate::handleStartLink Failed to get workloop` or `HDCP Startup Failed`, yet the link is reported as started. The audio engine's clock then never runs. `coreaudiod` waits 10 seconds for it and gives up "after 0 frames", and every app playing to that output stalls. Video players wait on the audio clock, so video stalls too.
