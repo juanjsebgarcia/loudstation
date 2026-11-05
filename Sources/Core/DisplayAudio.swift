@@ -10,7 +10,7 @@ import os
 // behind every choice made here. Log lines (say) stay in English; anything shown to the
 // user goes through L() in Localization.swift.
 
-let toolVersion = "0.3.0"
+let toolVersion = "0.4.0"
 
 // Homebrew runs code from a versioned Cellar path that disappears on upgrade; its stable
 // equivalent is the opt symlink. Anything persisted (the login item) must use the latter.
@@ -175,7 +175,7 @@ func microphoneInUse() -> Bool {
 }
 
 // The UIDs of the kernel's display-audio engines (DCPAVAudioDriver). Their "is running"
-// flag reads true while a client is merely trying, so it is never used as a health signal.
+// flag reads true while a client is merely trying, so it is never used alone as a health signal.
 func displayAudioEngineUIDs() -> Set<String> {
     var result = Set<String>()
     var iterator: io_iterator_t = 0
@@ -193,6 +193,63 @@ func displayAudioEngineUIDs() -> Set<String> {
         }
     }
     return result
+}
+
+// What the kernel's display-audio engine reports, whatever an app holding the device open sees.
+// TransferCount rises once per pass through the engine's ring buffer, so it moves only while
+// the hardware really plays. An app keeping a dead device open (Spotify, on 2026-11-05) gets an
+// estimated clock from Core Audio, and so would a probe joining it; this cannot be fooled.
+struct EngineSample: Equatable {
+    let entryID: UInt64
+    let running: Bool
+    let transfers: Int
+    // How long one pass through the ring buffer takes.
+    let bufferSeconds: Double
+}
+
+// The engine with this UID, or nil when there is none, it lacks the counters, or two engines
+// share the UID (identical monitors), since a sample of the wrong one must never decide anything.
+func engineSample(uid wanted: String) -> EngineSample? {
+    var iterator: io_iterator_t = 0
+    guard IOServiceGetMatchingServices(kIOMainPortDefault, IOServiceMatching("DCPAVAudioDriver"), &iterator) == KERN_SUCCESS else {
+        return nil
+    }
+    defer { IOObjectRelease(iterator) }
+    var found: [EngineSample?] = []
+    while true {
+        let service = IOIteratorNext(iterator)
+        if service == 0 { break }
+        defer { IOObjectRelease(service) }
+        let property = { (key: String) in
+            IORegistryEntryCreateCFProperty(service, key as CFString, kCFAllocatorDefault, 0)?.takeRetainedValue()
+        }
+        guard property("device UID") as? String == wanted else { continue }
+        var entryID: UInt64 = 0
+        guard IORegistryEntryGetRegistryEntryID(service, &entryID) == KERN_SUCCESS,
+              let running = property("is running") as? Bool,
+              let transfers = (property("TransferCount") as? NSNumber)?.intValue,
+              let frames = (property("io buffer frame size") as? NSNumber)?.doubleValue,
+              let fixedRate = (property("sample rate") as? NSNumber)?.doubleValue else {
+            found.append(nil)
+            continue
+        }
+        // The kernel stores the sample rate as 32.32 fixed point.
+        let rate = fixedRate / 4_294_967_296
+        let bufferSeconds = frames > 0 && rate > 0 ? frames / rate : 0
+        found.append(EngineSample(entryID: entryID, running: running, transfers: transfers, bufferSeconds: bufferSeconds))
+    }
+    return found.count == 1 ? found[0] : nil
+}
+
+// Whether the engine stalled across a probe window. True only when the same engine was running
+// at both ends and did not finish a single pass through its buffer in at least three passes'
+// time; false when it moved; nil when there is no evidence either way (no engine, a restart in
+// between, too short a window), which leaves the verdict to the probe's own callbacks.
+func engineStalled(before: EngineSample?, after: EngineSample?, elapsed: Double) -> Bool? {
+    guard let before, let after, before.entryID == after.entryID, before.running, after.running,
+          before.bufferSeconds > 0, after.transfers >= before.transfers else { return nil }
+    if after.transfers > before.transfers { return false }
+    return elapsed >= 3 * before.bufferSeconds ? true : nil
 }
 
 // MARK: Probing
@@ -249,6 +306,21 @@ final class StartHandoff: @unchecked Sendable {
             return $0.status
         }
     }
+}
+
+// A one-shot signal that stays raised: once fired, every wait returns at once. A semaphore is
+// used up by the first wait, which made every probe of a working display sit out a second,
+// 15 s wait for a signal that had already come (2026-11-05).
+final class OneShotSignal: @unchecked Sendable {
+    private let group = DispatchGroup()
+
+    init() { group.enter() }
+
+    // Call exactly once.
+    func fire() { group.leave() }
+
+    @discardableResult
+    func wait(seconds: Double) -> Bool { group.wait(timeout: .now() + seconds) == .success }
 }
 
 // Devices with a start still blocked. Probing one again would only pile up threads, so it is
@@ -310,7 +382,7 @@ func probe(_ dev: AudioObjectID, seconds requested: Double, log: Bool = true) ->
     }
 
     let handoff = StartHandoff()
-    let returned = DispatchSemaphore(value: 0)
+    let returned = OneShotSignal()
     // A dedicated thread rather than the shared pool: a start that never returns must not starve GCD.
     let starter = Thread {
         let status = AudioDeviceStart(dev, procID)
@@ -320,18 +392,23 @@ func probe(_ dev: AudioObjectID, seconds requested: Double, log: Bool = true) ->
             release()
             say("A late start on '\(devName)' returned; its IOProc is cleaned up.", echo: false)
         }
-        returned.signal()
+        returned.fire()
     }
     starter.name = "LoudStation probe"
     starter.start()
 
     // The window starts once AudioDeviceStart returns (a slow TV or receiver needs a moment), but
     // no later than 2 s in, since a stuck device's start blocks for about 10 s.
-    _ = returned.wait(timeout: .now() + 2)
+    returned.wait(seconds: 2)
+    let engineUID = uid(of: dev)
+    let engineBefore = engineUID.flatMap { engineSample(uid: $0) }
+    let windowStart = Date()
     Thread.sleep(forTimeInterval: seconds)
     let result = tally.snapshot()
+    let stalled = engineStalled(before: engineBefore, after: engineUID.flatMap { engineSample(uid: $0) },
+                                elapsed: Date().timeIntervalSince(windowStart))
     // A stuck device's start returns 'stop' after about 10 s; wait for it before tearing down.
-    _ = returned.wait(timeout: .now() + 15)
+    returned.wait(seconds: 15)
     guard let startStatus = handoff.abandonUnlessFinished() else {
         say("AudioDeviceStart on '\(devName)' has not returned after 15s; it will be cleaned up when it does.", echo: log)
         return false
@@ -345,7 +422,12 @@ func probe(_ dev: AudioObjectID, seconds requested: Double, log: Bool = true) ->
         return nil
     }
     let expected = nominalSampleRate(dev) * seconds
-    let healthy = isHealthy(callbacks: result.count, advancedFrames: result.advanced, sampleRate: nominalSampleRate(dev), seconds: seconds)
+    let clockMoved = isHealthy(callbacks: result.count, advancedFrames: result.advanced, sampleRate: nominalSampleRate(dev), seconds: seconds)
+    // Core Audio's clock can be an estimate; the kernel engine's own counter has the last word.
+    let healthy = clockMoved && stalled != true
+    if clockMoved && !healthy {
+        say("'\(devName)' looks open and playing, but its audio engine has not moved; another app is probably holding a dead device open.", echo: log)
+    }
     if log { say("\(healthy ? "HEALTHY" : "STUCK"): \(result.count) IO callbacks, clock advanced \(Int(result.advanced)) of about \(Int(expected)) frames.") }
     return healthy
 }
@@ -809,7 +891,10 @@ struct RepairOutcome {
 
 // Cycles the display behind `dev`, re-probes it, then probes every other display-audio
 // output and reports, without touching, any that the cycle knocked out.
-func repair(_ dev: AudioObjectID, probeSeconds: Double, hold: Double, settle requested: Double) -> RepairOutcome {
+// `othersToCheck` limits the check for collateral damage to these displays (those working
+// before the fix, since a silent one cannot be knocked out); nil checks every other display.
+func repair(_ dev: AudioObjectID, probeSeconds: Double, hold: Double, settle requested: Double,
+            othersToCheck: Set<String>? = nil) -> RepairOutcome {
     let settle = min(max(requested, settleRange.lowerBound), settleRange.upperBound)
     let devName = name(of: dev)
     guard let devUID = uid(of: dev), let display = display(forAudioUID: devUID) else {
@@ -837,18 +922,20 @@ func repair(_ dev: AudioObjectID, probeSeconds: Double, hold: Double, settle req
     if let systemBefore, systemSoundsOutputDevice().flatMap(uid(of:)) != systemBefore, let dev = device(withUID: systemBefore) {
         setSystemSoundsOutputDevice(dev)
     }
-    // The cycle may renumber audio devices, so look this one up afresh.
-    let after = device(withUID: devUID).flatMap { probe($0, seconds: probeSeconds) }
-    // The other displays are checked at once, since each silent one blocks for about 10 seconds.
-    let others = displayAudioOutputs().filter { $0.uid != devUID }
-    var silent = [Bool](repeating: false, count: others.count)
+    // The cycle may renumber audio devices, so this one is looked up afresh. It and the other
+    // displays are checked at once, since each silent one blocks for about 10 seconds.
+    let others = displayAudioOutputs().filter { $0.uid != devUID && othersToCheck?.contains($0.uid) != false }
+    let targets = [device(withUID: devUID)] + others.map { Optional($0.device) }
+    var results = [Bool?](repeating: nil, count: targets.count)
     let lock = NSLock()
-    DispatchQueue.concurrentPerform(iterations: others.count) { index in
-        let isSilent = probe(others[index].device, seconds: probeSeconds) == false
+    DispatchQueue.concurrentPerform(iterations: targets.count) { index in
+        let result = targets[index].flatMap { probe($0, seconds: probeSeconds) }
         lock.lock()
-        silent[index] = isSilent
+        results[index] = result
         lock.unlock()
     }
+    let after = results[0]
+    let silent = results.dropFirst().map { $0 == false }
     var collateral: [String] = []
     for (index, other) in others.enumerated() where silent[index] {
         collateral.append(other.name)
