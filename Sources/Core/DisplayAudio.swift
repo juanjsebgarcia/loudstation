@@ -10,7 +10,7 @@ import os
 // behind every choice made here. Log lines (say) stay in English; anything shown to the
 // user goes through L() in Localization.swift.
 
-let toolVersion = "0.3.0"
+let toolVersion = "0.4.0"
 
 // Homebrew runs code from a versioned Cellar path that disappears on upgrade; its stable
 // equivalent is the opt symlink. Anything persisted (the login item) must use the latter.
