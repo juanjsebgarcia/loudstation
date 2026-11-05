@@ -6,6 +6,7 @@ import Foundation
 
 let projectRepository = "juanjsebgarcia/loudstation"
 let latestReleaseURL = URL(string: "https://api.github.com/repos/\(projectRepository)/releases/latest")!
+let projectPageURL = URL(string: "https://github.com/\(projectRepository)")!
 let homebrewUpgradeCommand = "brew update && brew upgrade \(commandName) && \(commandName) app"
 let sourceUpgradeCommand = "make install"
 

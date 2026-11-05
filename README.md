@@ -4,7 +4,7 @@
 
 **No sound from your monitor speakers on an Apple Silicon Mac?** If speakers or headphones plugged into an external display (USB-C, DisplayPort, HDMI or a dock) go silent after you plug in or wake the Mac, and Spotify, YouTube or Netflix freeze or won't play, LoudStation spots it from the menu bar and fixes it without you unplugging anything.
 
-<p align="center"><img src="docs/screenshot.png" width="516" alt="The LoudStation menu: one display working with the monitor speakers, two other displays with no sound, and the Check Now, Fix Automatically and Check Every options"></p>
+<p align="center"><img src="docs/screenshot.png" width="401" alt="The LoudStation menu: the monitor speakers' display working under Monitor Speakers, two other displays with no sound under Other Displays, then the options, Help and About"></p>
 
 > Apple Silicon only (M1, M2, M3, M4 and later); runs on macOS 13 and later, in 37 languages. Tested so far only on macOS 27 (Golden Gate) on an M1 Max with three Dell displays. Reports from other setups are very welcome.
 
@@ -83,9 +83,9 @@ It checks whether a display's audio clock is ticking by playing a moment of sile
 
 Safeguards:
 
-- **It never acts on a glitch.** It waits for displays to settle after login, wake or docking, needs your monitor speakers' display to be silent twice, at least 10 seconds apart, and checks once more just before fixing.
+- **It never acts on a glitch.** It waits for displays to settle after login, wake or docking, needs your monitor speakers' display to be silent twice, at least 10 seconds apart, and fixes only straight after the second check (it checks again if it had to wait). Each check reads the display's own audio hardware, so an app holding the speakers open, such as a music player, cannot make a silent display look like it works.
 - **Only your monitor speakers' display is fixed automatically,** by default the display your sound plays through. Rebuilding one display's link has been seen to break another display's working audio, so it never flickers a screen you do not use for sound.
-- **It waits during calls and full-screen use.** While a microphone is in use, or something is full screen on that display, it tells you instead and offers Fix Now.
+- **It waits during full-screen use.** While something is full screen on that display, it tells you instead and offers Fix Now. It can also wait while any app uses a microphone, which usually means a call: turn on **Pause Fixing While Microphone Is Active** (off by default, since silent monitor speakers already spoil a call through them, and dictation counts as microphone use).
 - **It backs off:** at most one fix a minute, and after three in ten minutes automatic fixing pauses until you reconnect a display or act yourself. A display that is still silent after two fixes is left to you.
 - **It never switches off your only screen.** Sidecar, AirPlay, virtual and DisplayLink screens do not count as a second screen, and mirrored displays are left alone. Checks pause while the displays sleep and while another user's session is in front.
 - **It switches a display back on even after a crash:** it records a display before switching it off, and the next launch switches it back on. Quitting during a fix waits for the fix to finish.
@@ -132,16 +132,16 @@ The menu bar icon is LoudStation's own mark, a display with a sound wave on it, 
 | Colour | Meaning |
 |---|---|
 | Green | Sound is working on every display |
-| Orange | A display you don't use for sound has no sound |
+| Orange | A display you don't use for sound has no sound (unless **Warn About Other Displays** is off) |
 | Red | Your monitor speakers have no sound |
 | Blue | Fixing |
 | Grey | Checking, couldn't check, or no display can play sound |
 
-The menu lists each display with its status (Working, No Sound, Checking…, Couldn't Check) and how often it has been fixed. Each display has a submenu with **Set This Display as Speaker Output**, to say which display your speakers are plugged into; it also makes that display your Mac's sound output (choose it again to go back to following the sound output), and **Fix Now**, which asks first for a display without your monitor speakers.
+The menu lists your monitor speakers' display first, under **Monitor Speakers**, then any others under **Other Displays**, in a fixed order. Each display shows its status (Working, No Sound, Checking…, Couldn't Check) and how often it has been fixed. Each display has a submenu with **Set This Display as Speaker Output**, to say which display your speakers are plugged into; it also makes that display your Mac's sound output (choose it again to go back to following the sound output), and **Fix Now**, which asks first for a display without your monitor speakers.
 
-Below the list are **Check Now** (⌘R), **Monitor Speakers Follow Sound Output**, **Fix Monitor Speakers Automatically**, **Check Every** (10, 20 or 60 (default) seconds, or only when displays change or the Mac wakes), **Open at Login**, **Check for Updates Automatically**, **Check for Updates…**, **Show Log** (⌘L) and **Quit LoudStation** (⌘Q).
+Below the list are **Check Now** (⌘R), **Monitor Speakers Follow Sound Output**, **Fix Monitor Speakers Automatically**, **Pause Fixing While Microphone Is Active** (off by default), **Warn About Other Displays** (on by default; turn it off for an icon that is only green or red, following your monitor speakers), **Check Every** (10, 20 or 60 (default) seconds, or only when displays change or the Mac wakes), **Open at Login**, **Check for Updates…**, **Check for Updates Automatically**, **Show Log** (⌘L), **LoudStation Help** (⌘?), **About LoudStation** and **Quit LoudStation** (⌘Q).
 
-It sends a notification when it restores sound, when your monitor speakers are still silent after a fix, when it pauses automatic fixing, and when it is waiting for a call or full-screen use to end.
+It sends a notification when it restores sound, when your monitor speakers are still silent after a fix, when it pauses automatic fixing, and when it is waiting for full-screen use (or, if you turned that on, a call) to end.
 
 If you cannot see the icon, it may be hidden behind the notch or by a menu bar manager.
 

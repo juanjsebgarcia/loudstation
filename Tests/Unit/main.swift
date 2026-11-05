@@ -158,14 +158,54 @@ expectEqual(silent(&policy, 1), .wait(.confirming, seconds: 11), "settling after
 expectEqual(policy.decide("A", now: at(12.5), blocker: nil), .wait(.confirming, seconds: 0.5), "no fix without a second probe, even once settled")
 expectEqual(silent(&policy, 12.5), .fix, "a second silent probe 11.5 s later allows a fix")
 policy = settled()
-expectEqual(silent(&policy, 0), .wait(.confirming, seconds: 10), "a first silent probe waits for a second")
-expectEqual(silent(&policy, 4), .wait(.confirming, seconds: 6), "a second probe too soon still waits")
+expectEqual(silent(&policy, 0), .wait(.confirming, seconds: 0.5), "a first silent probe asks for a second at once")
+expectEqual(silent(&policy, 4), .wait(.confirming, seconds: 6), "a second verdict too soon still waits out the gap")
+expectEqual(silent(&policy, 10), .fix, "verdicts 10 s apart allow a fix")
+policy = settled()
+_ = silent(&policy, 0)
 policy.observedWorking("A", isWatched: true)
-expectEqual(silent(&policy, 11), .wait(.confirming, seconds: 10), "a working probe in between restarts confirmation")
+expectEqual(silent(&policy, 11), .wait(.confirming, seconds: 0.5), "a working probe in between restarts confirmation")
+expectEqual(silent(&policy, 12), .wait(.confirming, seconds: 9), "and the gap counts from the restart")
+
+section("Two quick silent verdicts never shortcut the gap")
+policy = settled()
+var now = 0.0
+var decision = silent(&policy, now)
+while case .wait(.confirming, let seconds) = decision {
+    now += seconds + 1
+    decision = silent(&policy, now)
+}
+expectEqual(decision, .fix, "fixes in the end")
+expect(now >= 10, "but only once the verdicts span the gap (\(now) s)")
+
+section("A fresh silent verdict skips the final probe before a fix")
+policy = settled()
+expect(policy.needsFinalProbe("A", now: at(0)), "no verdict at all needs one")
+_ = silent(&policy, 0)
+_ = silent(&policy, 10)
+expect(!policy.needsFinalProbe("A", now: at(11)), "a verdict a second old does not")
+expect(policy.needsFinalProbe("A", now: at(40)), "a verdict from half a minute ago does")
+policy.observedWorking("A", isWatched: true)
+expect(policy.needsFinalProbe("A", now: at(11)), "a display last seen working needs one")
 policy = settled()
 _ = silent(&policy, 0)
 policy.displaysMaySettle(now: at(5))
 expectEqual(silent(&policy, 10), .wait(.confirming, seconds: 7), "a wake mid-confirmation waits for settling")
+
+section("A burst of display events delays the first check by at most ten seconds")
+expectEqual(eventCheckDelay(now: at(0), burstStarted: at(0), delay: 5, longest: 10), 5, "a lone event waits the short delay")
+expectEqual(eventCheckDelay(now: at(3), burstStarted: at(0), delay: 5, longest: 10), 5, "an early follow-up restarts it")
+expectEqual(eventCheckDelay(now: at(8), burstStarted: at(0), delay: 5, longest: 10), 2, "but not past the deadline")
+expectEqual(eventCheckDelay(now: at(30), burstStarted: at(0), delay: 5, longest: 10), 0.5, "a burst that runs on checks almost at once")
+
+section("Only a screen arriving or leaving starts a check")
+expect(isArrivalOrDeparture([.addFlag]), "an added display")
+expect(isArrivalOrDeparture([.removeFlag]), "a removed display")
+expect(isArrivalOrDeparture([.enabledFlag, .setModeFlag]), "an enabled display, whatever else changed")
+expect(!isArrivalOrDeparture([.setModeFlag]), "not a mode change")
+expect(!isArrivalOrDeparture([.movedFlag, .desktopShapeChangedFlag]), "not a rearrangement")
+expect(!isArrivalOrDeparture([.setMainFlag]), "not a new main display")
+expectEqual(describeDisplayEvent([.addFlag, .setModeFlag]), "added, mode", "events are logged in words")
 
 section("Auto-fix rate limits")
 policy = settled()
@@ -238,11 +278,35 @@ expect(announcements <= Int(7200 / 600) + 1, "the pause is announced at most onc
 
 // MARK: Health and trust
 
+section("A probe's start signal can be waited on more than once")
+let startSignal = OneShotSignal()
+expect(!startSignal.wait(seconds: 0.05), "an unfired signal times out")
+startSignal.fire()
+let waitStarted = Date()
+expect(startSignal.wait(seconds: 5) && startSignal.wait(seconds: 5), "a fired signal satisfies every wait")
+expect(Date().timeIntervalSince(waitStarted) < 1, "at once, not after the timeout")
+
 section("Health threshold")
 expect(isHealthy(callbacks: 90, advancedFrames: 47_000, sampleRate: 48_000, seconds: 1), "a full second of frames is healthy")
 expect(isHealthy(callbacks: 4, advancedFrames: 15_000, sampleRate: 48_000, seconds: 1), "large buffers with few callbacks are healthy")
 expect(!isHealthy(callbacks: 0, advancedFrames: 0, sampleRate: 48_000, seconds: 1), "no callbacks is stuck")
 expect(!isHealthy(callbacks: 90, advancedFrames: 1_000, sampleRate: 48_000, seconds: 1), "callbacks without clock movement is stuck")
+
+section("The kernel engine's counter overrules an estimated clock")
+// The values seen on 2026-11-05: 12288-frame buffers at 48 kHz, so one pass every 0.256 s.
+func engine(_ transfers: Int, running: Bool = true, entry: UInt64 = 7) -> EngineSample {
+    EngineSample(entryID: entry, running: running, transfers: transfers, bufferSeconds: 0.256)
+}
+expectEqual(engineStalled(before: engine(1422), after: engine(1422), elapsed: 1), true, "running with no pass in a second is stalled")
+expectEqual(engineStalled(before: engine(5591), after: engine(5595), elapsed: 1), false, "a counter that moves is not stalled")
+expectEqual(engineStalled(before: engine(1422), after: engine(1422), elapsed: 0.7), nil, "under three passes' time proves nothing")
+expectEqual(engineStalled(before: engine(3, running: false), after: engine(3, running: false), elapsed: 1), nil, "an idle engine proves nothing")
+expectEqual(engineStalled(before: engine(3, running: false), after: engine(3), elapsed: 1), nil, "an engine that only just started proves nothing")
+expectEqual(engineStalled(before: engine(1422), after: engine(1422, entry: 8), elapsed: 1), nil, "a different engine (a relink) proves nothing")
+expectEqual(engineStalled(before: engine(1422), after: engine(2), elapsed: 1), nil, "a counter that went back proves nothing")
+expectEqual(engineStalled(before: nil, after: engine(1422), elapsed: 1), nil, "no sample proves nothing")
+expectEqual(engineStalled(before: EngineSample(entryID: 7, running: true, transfers: 1, bufferSeconds: 0), after: engine(1), elapsed: 5),
+            nil, "an unknown buffer length proves nothing")
 
 section("The built app is a trusted bundle for this version")
 if let app = environment["LOUDSTATION_TEST_APP"] {

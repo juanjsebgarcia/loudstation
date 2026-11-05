@@ -11,6 +11,7 @@ Read these before changing the code. Record new findings in `discoveries/` and n
 - [decisions/0005-hardening-for-other-macs.md](decisions/0005-hardening-for-other-macs.md) - safeguards for other setups, probe robustness, cycle locking, resource use and security
 - [decisions/0006-test-suite.md](decisions/0006-test-suite.md) - the testable auto-fix policy, the four test layers, isolation from real installations and CI
 - [decisions/0007-update-check.md](decisions/0007-update-check.md) - the daily update check: what it sends, why it never self-updates, and how a new copy takes over from an old one
+- [decisions/0008-faster-and-truer-detection.md](decisions/0008-faster-and-truer-detection.md) - the kernel engine's counter overrules an estimated clock, and a shorter path from replug to fix
 - [apple-feedback-report.md](apple-feedback-report.md) - a ready-made Feedback Assistant report for Apple
 - [releasing.md](releasing.md) - tagging a release and updating the Homebrew formula
 

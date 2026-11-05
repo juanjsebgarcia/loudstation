@@ -57,6 +57,8 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     private var lastCheck: Date?
     private var timer: Timer?
     private var pending: DispatchWorkItem?
+    // When the current burst of display events began; cleared when a check starts.
+    private var burstStarted: Date?
     private var recheck: DispatchWorkItem?
     // When automatic fixing may act: settling, confirmation, rate limits and give-ups (Core).
     private var policy = AutoFixPolicy(now: Date())
@@ -73,6 +75,8 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     private var glyphs: [Tone: NSImage] = [:]
     private var lastRendered = ""
     private var updateTimer: Timer?
+    private var aboutWindow: NSWindow?
+    private var helpWindow: NSWindow?
     private var checkingForUpdates = false
     private var updateFailureLogged = false
     // Ephemeral: no cookies, no cache and no credentials are kept between update checks.
@@ -87,12 +91,28 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
 
     // A healthy probe gets callbacks within milliseconds; a stuck one blocks ~10s regardless.
     private let probeSeconds = 1.0
-    private let settleAfterEvent = 12.0
+    // How soon after a display event to check. Checking early is harmless: fixing still waits
+    // for the policy's settle time and for two silent verdicts.
+    private let probeAfterEvent = 5.0
+    private let longestEventDelay = 10.0
     private let deferralRecheck = 30.0
 
     private var autoFix: Bool {
         get { defaults.bool(forKey: "autoFix") }
         set { defaults.set(newValue, forKey: "autoFix") }
+    }
+
+    // On: automatic fixing waits while any app uses a microphone. Off by default, since silent
+    // monitor speakers already spoil a call through them, and dictation counts as microphone use.
+    private var pauseForMicrophone: Bool {
+        get { defaults.bool(forKey: "pauseForMicrophone") }
+        set { defaults.set(newValue, forKey: "pauseForMicrophone") }
+    }
+
+    // Off: the icon follows only the monitor speakers (green or red), never orange for the others.
+    private var warnAboutOtherDisplays: Bool {
+        get { defaults.bool(forKey: "warnAboutOtherDisplays") }
+        set { defaults.set(newValue, forKey: "warnAboutOtherDisplays") }
     }
 
     private var checkForUpdates: Bool {
@@ -179,7 +199,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     }
 
     private func start() {
-        defaults.register(defaults: ["autoFix": true, "checkForUpdates": true, "interval": 60])
+        defaults.register(defaults: ["autoFix": true, "checkForUpdates": true, "interval": 60, "pauseForMicrophone": false, "warnAboutOtherDisplays": true])
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         menu.delegate = self
         menu.autoenablesItems = false
@@ -241,6 +261,18 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         let silent = panels.filter { $0.health == .noSound }
         if let watchedUID, silent.contains(where: { $0.output.uid == watchedUID }) {
             return (.red, L("headline.speakers_silent"))
+        }
+        // Other displays left out of the icon: only the monitor speakers' own state counts.
+        if !warnAboutOtherDisplays {
+            guard let speakers = panels.first(where: { $0.output.uid == watchedUID }) else {
+                return (.green, L("headline.sound_not_on_display"))
+            }
+            switch speakers.health {
+            case .working: return (.green, L("headline.speakers_working"))
+            case .checking: return (.grey, L("headline.checking"))
+            case .unknown: return (.grey, L("headline.speakers_couldnt_check"))
+            case .noSound: return (.red, L("headline.speakers_silent"))
+            }
         }
         if !silent.isEmpty {
             return (.orange, L("headline.others_silent", silent.count))
@@ -332,41 +364,51 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         }
         menu.addItem(.separator())
 
-        for panel in panels {
-            let panelUID = panel.output.uid
-            let isWatched = panelUID == watchedUID
-            var tags: [String] = []
-            if isWatched { tags.append(L("row.tag.speakers")) }
-            if panelUID == soundOutputUID && pinnedUID != nil { tags.append(L("row.tag.sound_output")) }
-            let look: (word: String, symbol: String, color: NSColor) = {
-                if fixingUID == panelUID { return (L("status.fixing"), "arrow.triangle.2.circlepath", .systemBlue) }
-                switch panel.health {
-                case .working: return (L("status.working"), "checkmark.circle.fill", .systemGreen)
-                case .noSound: return (L("status.no_sound"), isWatched ? "xmark.circle.fill" : "exclamationmark.circle.fill", isWatched ? .systemRed : .systemOrange)
-                case .checking: return (L("status.checking"), "circle.dotted", .secondaryLabelColor)
-                case .unknown: return (L("status.couldnt_check"), "questionmark.circle.fill", .secondaryLabelColor)
-                }
-            }()
-            let title = tags.isEmpty
-                ? L("row.plain", label(for: panelUID), look.word)
-                : L("row.with_tags", label(for: panelUID), localizedList(tags), look.word)
-            let row = NSMenuItem(title: title, action: nil, keyEquivalent: "")
-            row.image = symbol(look.symbol, look.color, size: 12)
-            let sub = NSMenu()
-            sub.autoenablesItems = false
-            let here = item(L("submenu.speakers_here"), #selector(watchDisplay(_:)), enabled: true)
-            here.representedObject = panelUID
-            here.state = pinnedUID == panelUID ? .on : .off
-            sub.addItem(here)
-            let fix = item(isWatched ? L("submenu.fix_now") : L("submenu.fix_now_confirm"), #selector(fixDisplay(_:)), enabled: !busy)
-            fix.representedObject = panelUID
-            sub.addItem(fix)
-            sub.addItem(info(L("submenu.hint_blackout")))
-            if !isWatched { sub.addItem(info(L("submenu.hint_others"))) }
-            if let counts = stats(for: panelUID) { sub.addItem(info(counts)) }
-            if let lastProbe = panel.lastProbe { sub.addItem(info(L("submenu.checked", relativeTime(lastProbe)))) }
-            row.submenu = sub
-            menu.addItem(row)
+        // The monitor speakers' display comes first under its own heading, so it is easy to find;
+        // the others keep their order below it, so identical monitors never swap places.
+        let speakerPanels = panels.filter { $0.output.uid == watchedUID }
+        let otherPanels = panels.filter { $0.output.uid != watchedUID }
+        let sections: [(heading: String?, panels: [PanelState])] = speakerPanels.isEmpty
+            ? [(nil, panels)]
+            : [(L("menu.section.speakers"), speakerPanels), (L("menu.section.other_displays"), otherPanels)]
+        for section in sections where !section.panels.isEmpty {
+            if let heading = section.heading { menu.addItem(sectionHeading(heading)) }
+            for panel in section.panels {
+                let panelUID = panel.output.uid
+                let isWatched = panelUID == watchedUID
+                var tags: [String] = []
+                if isWatched { tags.append(L("row.tag.speakers")) }
+                if panelUID == soundOutputUID && pinnedUID != nil { tags.append(L("row.tag.sound_output")) }
+                let look: (word: String, symbol: String, color: NSColor) = {
+                    if fixingUID == panelUID { return (L("status.fixing"), "arrow.triangle.2.circlepath", .systemBlue) }
+                    switch panel.health {
+                    case .working: return (L("status.working"), "checkmark.circle.fill", .systemGreen)
+                    case .noSound: return (L("status.no_sound"), isWatched ? "xmark.circle.fill" : "exclamationmark.circle.fill", isWatched ? .systemRed : .systemOrange)
+                    case .checking: return (L("status.checking"), "circle.dotted", .secondaryLabelColor)
+                    case .unknown: return (L("status.couldnt_check"), "questionmark.circle.fill", .secondaryLabelColor)
+                    }
+                }()
+                let title = tags.isEmpty
+                    ? L("row.plain", label(for: panelUID), look.word)
+                    : L("row.with_tags", label(for: panelUID), localizedList(tags), look.word)
+                let row = NSMenuItem(title: title, action: nil, keyEquivalent: "")
+                row.image = symbol(look.symbol, look.color, size: 12)
+                let sub = NSMenu()
+                sub.autoenablesItems = false
+                let here = item(L("submenu.speakers_here"), #selector(watchDisplay(_:)), enabled: true)
+                here.representedObject = panelUID
+                here.state = pinnedUID == panelUID ? .on : .off
+                sub.addItem(here)
+                let fix = item(isWatched ? L("submenu.fix_now") : L("submenu.fix_now_confirm"), #selector(fixDisplay(_:)), enabled: !busy)
+                fix.representedObject = panelUID
+                sub.addItem(fix)
+                sub.addItem(info(L("submenu.hint_blackout")))
+                if !isWatched { sub.addItem(info(L("submenu.hint_others"))) }
+                if let counts = stats(for: panelUID) { sub.addItem(info(counts)) }
+                if let lastProbe = panel.lastProbe { sub.addItem(info(L("submenu.checked", relativeTime(lastProbe)))) }
+                row.submenu = sub
+                menu.addItem(row)
+            }
         }
         menu.addItem(.separator())
 
@@ -377,6 +419,12 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         let auto = item(L("menu.fix_automatically"), #selector(toggleAutoFix), enabled: true)
         auto.state = autoFix ? .on : .off
         menu.addItem(auto)
+        let microphone = item(L("menu.pause_for_microphone"), #selector(togglePauseForMicrophone), enabled: true)
+        microphone.state = pauseForMicrophone ? .on : .off
+        menu.addItem(microphone)
+        let warn = item(L("menu.warn_other_displays"), #selector(toggleWarnAboutOtherDisplays), enabled: true)
+        warn.state = warnAboutOtherDisplays ? .on : .off
+        menu.addItem(warn)
         let every = NSMenuItem(title: L("menu.check_every"), action: nil, keyEquivalent: "")
         let choices = NSMenu()
         choices.autoenablesItems = false
@@ -392,14 +440,24 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         let login = item(L("menu.open_at_login"), #selector(toggleLaunchAtLogin), enabled: true)
         login.state = FileManager.default.fileExists(atPath: launchAgentURL.path) ? .on : .off
         menu.addItem(login)
+        menu.addItem(.separator())
+        if let lastCheck { menu.addItem(info(L("menu.last_checked", relativeTime(lastCheck)))) }
+        // The two update items sit together.
+        menu.addItem(item(L("menu.check_updates"), #selector(checkForUpdatesNow), enabled: !checkingForUpdates))
         let updates = item(L("menu.check_updates_automatically"), #selector(toggleUpdateChecks), enabled: true)
         updates.state = checkForUpdates ? .on : .off
         menu.addItem(updates)
-        menu.addItem(.separator())
-        if let lastCheck { menu.addItem(info(L("menu.last_checked", relativeTime(lastCheck)))) }
-        menu.addItem(item(L("menu.check_updates"), #selector(checkForUpdatesNow), enabled: !checkingForUpdates))
         menu.addItem(item(L("menu.show_log"), #selector(openLog), key: "l", enabled: true))
+        menu.addItem(.separator())
+        menu.addItem(item(L("menu.help", appName), #selector(showHelp), key: "?", enabled: true))
+        menu.addItem(item(L("menu.about", appName), #selector(showAbout), enabled: true))
         menu.addItem(item(fixingUID == nil ? L("menu.quit", appName) : L("menu.quit_after_fix"), #selector(quit), key: "q", enabled: true))
+    }
+
+    // macOS 14's section header, or a plain disabled line before it.
+    private func sectionHeading(_ title: String) -> NSMenuItem {
+        if #available(macOS 14, *) { return NSMenuItem.sectionHeader(title: title) }
+        return info(title)
     }
 
     private func info(_ title: String) -> NSMenuItem {
@@ -540,6 +598,188 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
 
     @objc private func quit() { NSApp.terminate(nil) }
 
+    // MARK: About and help
+
+    // A small About window: the icon, name and version, a line on what the app does, a link to
+    // the project, and the copyright from Info.plist, which names the author. Built by hand
+    // because the standard panel is cramped and its credits text is tiny.
+    @objc private func showAbout() {
+        NSApp.activate(ignoringOtherApps: true)
+        if let aboutWindow {
+            aboutWindow.makeKeyAndOrderFront(nil)
+            return
+        }
+        let icon = NSImageView(image: NSApp.applicationIconImage)
+        icon.imageScaling = .scaleProportionallyUpOrDown
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([icon.widthAnchor.constraint(equalToConstant: 128), icon.heightAnchor.constraint(equalToConstant: 128)])
+        let name = aboutLine(appName, font: .systemFont(ofSize: 22, weight: .semibold))
+        let version = aboutLine(L("about.version", toolVersion), font: .systemFont(ofSize: 13), color: .secondaryLabelColor)
+        let tagline = aboutLine(L("about.tagline"), font: .systemFont(ofSize: 13))
+        let link = NSButton(title: "", target: self, action: #selector(openProjectPage))
+        link.isBordered = false
+        link.attributedTitle = NSAttributedString(string: projectPageURL.host! + projectPageURL.path, attributes: [
+            .font: NSFont.systemFont(ofSize: 13),
+            .foregroundColor: NSColor.linkColor,
+        ])
+        let copyright = Bundle.main.object(forInfoDictionaryKey: "NSHumanReadableCopyright") as? String ?? ""
+        let notice = aboutLine(copyright, font: .systemFont(ofSize: 11), color: .secondaryLabelColor)
+        let stack = NSStackView(views: [icon, name, version, tagline, link, notice])
+        stack.orientation = .vertical
+        stack.alignment = .centerX
+        stack.spacing = 6
+        stack.setCustomSpacing(14, after: icon)
+        stack.setCustomSpacing(16, after: version)
+        stack.setCustomSpacing(12, after: tagline)
+        stack.setCustomSpacing(16, after: link)
+        stack.edgeInsets = NSEdgeInsets(top: 28, left: 44, bottom: 24, right: 44)
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 360, height: 400),
+            styleMask: [.titled, .closable, .fullSizeContentView],
+            backing: .buffered,
+            defer: false
+        )
+        window.titlebarAppearsTransparent = true
+        window.titleVisibility = .hidden
+        window.isReleasedWhenClosed = false
+        window.contentView = stack
+        window.setContentSize(stack.fittingSize)
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        aboutWindow = window
+    }
+
+    // Text in the About window wraps well inside its edges.
+    private let aboutTextWidth: CGFloat = 272
+
+    private func aboutLine(_ text: String, font: NSFont, color: NSColor = .labelColor) -> NSTextField {
+        let field = NSTextField(wrappingLabelWithString: text)
+        field.font = font
+        field.textColor = color
+        field.alignment = .center
+        field.isSelectable = false
+        field.preferredMaxLayoutWidth = aboutTextWidth
+        field.widthAnchor.constraint(lessThanOrEqualToConstant: aboutTextWidth).isActive = true
+        return field
+    }
+
+    // A small window explaining what the app does, the icon's colours and each menu item. The
+    // item names come from the menu's own strings, so the two can never disagree.
+    @objc private func showHelp() {
+        NSApp.activate(ignoringOtherApps: true)
+        if let helpWindow {
+            helpWindow.makeKeyAndOrderFront(nil)
+            return
+        }
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 500, height: 600),
+            styleMask: [.titled, .closable, .resizable],
+            backing: .buffered,
+            defer: false
+        )
+        window.title = L("help.title", appName)
+        window.isReleasedWhenClosed = false
+        window.minSize = NSSize(width: 380, height: 300)
+        let scroll = NSTextView.scrollableTextView()
+        scroll.drawsBackground = false
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        if let text = scroll.documentView as? NSTextView {
+            text.isEditable = false
+            text.drawsBackground = false
+            text.textContainerInset = NSSize(width: 18, height: 16)
+            text.textStorage?.setAttributedString(helpText())
+        }
+        let button = NSButton(title: L("help.button.project"), target: self, action: #selector(openProjectPage))
+        button.bezelStyle = .rounded
+        button.keyEquivalent = "\r"
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let content = NSView()
+        content.addSubview(scroll)
+        content.addSubview(button)
+        NSLayoutConstraint.activate([
+            scroll.topAnchor.constraint(equalTo: content.topAnchor),
+            scroll.leadingAnchor.constraint(equalTo: content.leadingAnchor),
+            scroll.trailingAnchor.constraint(equalTo: content.trailingAnchor),
+            button.topAnchor.constraint(equalTo: scroll.bottomAnchor, constant: 12),
+            button.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -20),
+            button.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -16),
+        ])
+        window.contentView = content
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        helpWindow = window
+    }
+
+    private func helpText() -> NSAttributedString {
+        let spaced = NSMutableParagraphStyle()
+        spaced.paragraphSpacing = 8
+        spaced.lineSpacing = 2
+        let headed = NSMutableParagraphStyle()
+        headed.paragraphSpacingBefore = 10
+        headed.paragraphSpacing = 6
+        let body: [NSAttributedString.Key: Any] = [.font: NSFont.systemFont(ofSize: 13), .foregroundColor: NSColor.labelColor, .paragraphStyle: spaced]
+        let tight = NSMutableParagraphStyle()
+        tight.paragraphSpacing = 1
+        var name = body
+        name[.font] = NSFont.boldSystemFont(ofSize: 13)
+        name[.paragraphStyle] = tight
+        var code = body
+        code[.font] = NSFont.monospacedSystemFont(ofSize: 12, weight: .regular)
+        let heading: [NSAttributedString.Key: Any] = [.font: NSFont.boldSystemFont(ofSize: 15), .foregroundColor: NSColor.labelColor, .paragraphStyle: headed]
+        let result = NSMutableAttributedString()
+        let add = { (text: String, attributes: [NSAttributedString.Key: Any]) in
+            result.append(NSAttributedString(string: text, attributes: attributes))
+        }
+
+        add(L("help.what.heading") + "\n", heading)
+        add(L("help.what.body", appName) + "\n", body)
+
+        add(L("help.how.heading") + "\n", heading)
+        add(L("help.how.body") + "\n", body)
+
+        add(L("help.icon.heading") + "\n", heading)
+        let colours: [(Tone, String)] = [
+            (.green, L("help.icon.green")), (.orange, L("help.icon.orange", L("menu.warn_other_displays"))),
+            (.red, L("help.icon.red")), (.blue, L("help.icon.blue")), (.grey, L("help.icon.grey")),
+        ]
+        for (tone, text) in colours {
+            var dot = body
+            dot[.foregroundColor] = tone.color
+            add("●  ", dot)
+            add(text + "\n", body)
+        }
+
+        add(L("help.menu.heading") + "\n", heading)
+        let items: [(String, String)] = [
+            (L("menu.section.speakers"), L("help.item.speakers")),
+            (L("menu.section.other_displays"), L("help.item.others", L("submenu.speakers_here"))),
+            (L("menu.check_now"), L("help.item.check_now")),
+            (L("menu.follow_sound_output"), L("help.item.follow")),
+            (L("menu.fix_automatically"), L("help.item.fix_automatically")),
+            (L("menu.pause_for_microphone"), L("help.item.pause_for_microphone")),
+            (L("menu.warn_other_displays"), L("help.item.warn_other_displays")),
+            (L("menu.check_every"), L("help.item.check_every")),
+            (L("menu.open_at_login"), L("help.item.open_at_login", appName)),
+            (L("menu.check_updates"), L("help.item.check_updates")),
+            (L("menu.check_updates_automatically"), L("help.item.check_updates_automatically")),
+            (L("menu.show_log"), L("help.item.show_log")),
+        ]
+        for (title, explanation) in items {
+            add(title + "\n", name)
+            add(explanation + "\n", body)
+        }
+
+        add(L("help.terminal.heading") + "\n", heading)
+        // Backticked commands are shown in a monospaced font, without the backticks.
+        for (index, part) in (L("help.terminal.body", commandName, "\(commandName) fix", "\(commandName) --help") + "\n").components(separatedBy: "`").enumerated() {
+            add(part, index.isMultiple(of: 2) ? body : code)
+        }
+        add(L("help.more"), body)
+        return result
+    }
+
+    @objc private func openProjectPage() { NSWorkspace.shared.open(projectPageURL) }
+
     // MARK: Updates
 
     // The first check waits a minute or so after launch, so a login does not start with network
@@ -560,6 +800,20 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
 
     @objc private func checkForUpdatesNow() {
         fetchLatestRelease(manual: true)
+    }
+
+    @objc private func togglePauseForMicrophone() {
+        pauseForMicrophone.toggle()
+        say("Pausing fixes while a microphone is in use turned \(pauseForMicrophone ? "on" : "off").", echo: false)
+        // A fix held for the microphone goes ahead at the next confirming check.
+        if !pauseForMicrophone, deferredUID != nil { scheduleRecheck(after: 0.5) }
+        render()
+    }
+
+    @objc private func toggleWarnAboutOtherDisplays() {
+        warnAboutOtherDisplays.toggle()
+        say("Warnings about other displays turned \(warnAboutOtherDisplays ? "on" : "off").", echo: false)
+        render()
     }
 
     @objc private func toggleUpdateChecks() {
@@ -758,7 +1012,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
                 self.displaysAsleep = false
                 self.policy.displaysMaySettle(now: Date())
                 self.rescheduleTimer()
-                self.schedule(after: self.settleAfterEvent, reason: "wake")
+                self.schedule(after: self.probeAfterEvent, reason: "wake")
             }
         }
         // Fast user switching: a session in the background must not probe or touch displays.
@@ -769,13 +1023,18 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
             guard let self else { return }
             self.sessionActive = true
             self.policy.displaysMaySettle(now: Date())
-            self.schedule(after: self.settleAfterEvent, reason: "session active")
+            self.schedule(after: self.probeAfterEvent, reason: "session active")
         }
-        CGDisplayRegisterReconfigurationCallback({ _, flags, context in
+        CGDisplayRegisterReconfigurationCallback({ display, flags, context in
             guard !flags.contains(.beginConfigurationFlag), let context else { return }
             let controller = Unmanaged<AppController>.fromOpaque(context).takeUnretainedValue()
-            DispatchQueue.main.async { controller.displaysChanged() }
+            DispatchQueue.main.async { controller.displaysChanged(display: display, flags: flags) }
         }, Unmanaged.passUnretained(self).toOpaque())
+        // A display's sound device appearing or going is the event that matters most here.
+        var devices = address(kAudioHardwarePropertyDevices)
+        AudioObjectAddPropertyListenerBlock(AudioObjectID(kAudioObjectSystemObject), &devices, DispatchQueue.main) { [weak self] _, _ in
+            self?.audioDevicesChanged()
+        }
         var addr = address(kAudioHardwarePropertyDefaultOutputDevice)
         AudioObjectAddPropertyListenerBlock(AudioObjectID(kAudioObjectSystemObject), &addr, DispatchQueue.main) { [weak self] _, _ in
             guard let self, self.fixingUID == nil, Date() >= self.ignoreEventsUntil else { return }
@@ -791,25 +1050,50 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     // Our own fixes reconfigure displays too; those are ignored. Only a real topology change
     // (a replug, a new monitor) lifts a latched pause and the per-display give-up; mode,
     // arrangement and wake events do not. A change during a check is remembered, not lost.
-    private func displaysChanged() {
+    private func displaysChanged(display: CGDirectDisplayID, flags: CGDisplayChangeSummaryFlags) {
         guard Date() >= ignoreEventsUntil else { return }
         // During our own fix the reconfiguration is ours; a re-check after it covers a real replug too.
         if fixingUID != nil {
             recheckWhenDone = true
             return
         }
-        let now = topology()
-        if now != lastTopology {
-            lastTopology = now
-            policy.topologyChanged(now: Date())
-            say("Display topology changed.", echo: false)
-        }
+        say("Display \(display) event: \(describeDisplayEvent(flags)).", echo: false)
+        // Any display event, not only a replug, means macOS is still arranging screens, so no
+        // fix may start until it has been quiet for the settle time.
+        policy.displaysMaySettle(now: Date())
         recoverStranded()
+        // Mode, position and main-screen changes do not start (or put off) a check; a screen or
+        // a display sound device arriving or leaving does.
+        let changed = topologyChanged()
+        guard changed || isArrivalOrDeparture(flags) else { return }
+        scheduleEventCheck()
+    }
+
+    private func audioDevicesChanged() {
+        guard Date() >= ignoreEventsUntil, fixingUID == nil, topologyChanged() else { return }
+        scheduleEventCheck()
+    }
+
+    // Notes a real replug or new monitor, which lifts a latched pause and the per-display give-up.
+    private func topologyChanged() -> Bool {
+        let now = topology()
+        guard now != lastTopology else { return false }
+        lastTopology = now
+        policy.topologyChanged(now: Date())
+        say("Display topology changed.", echo: false)
+        return true
+    }
+
+    // One check per burst of events: each event restarts a short wait, up to a deadline.
+    private func scheduleEventCheck() {
         if busy {
             recheckWhenDone = true
             return
         }
-        schedule(after: settleAfterEvent, reason: "displays changed")
+        let started = burstStarted ?? Date()
+        burstStarted = started
+        schedule(after: eventCheckDelay(now: Date(), burstStarted: started, delay: probeAfterEvent, longest: longestEventDelay),
+                 reason: "displays changed")
     }
 
     // Timer ticks re-check only the display with the monitor speakers: the fault starts at link
@@ -853,6 +1137,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
             return
         }
         if (displaysAsleep || !sessionActive) && !manual { return }
+        burstStarted = nil
         busy = true
         // On timer ticks only the watched display is probed, and not while it is known silent: a
         // silent display only recovers when its link is rebuilt, which raises an event and a full
@@ -935,7 +1220,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         }
         if recheckWhenDone {
             recheckWhenDone = false
-            schedule(after: settleAfterEvent, reason: "recheck")
+            schedule(after: probeAfterEvent, reason: "recheck")
         }
         considerAutoFix(reason: reason)
         render()
@@ -983,7 +1268,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
                 return
             }
             deferredUID = nil
-            fix(watchedUID, reason: "auto, \(reason)", automatic: true, confirmFirst: true)
+            fix(watchedUID, reason: "auto, \(reason)", automatic: true, confirmFirst: policy.needsFinalProbe(watchedUID, now: Date()))
         }
     }
 
@@ -997,7 +1282,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
     // drag in progress.
     private func deferralReason(for display: CGDirectDisplayID) -> Deferral? {
         if NSEvent.pressedMouseButtons != 0 { return .pointer }
-        if microphoneInUse() { return .call }
+        if pauseForMicrophone && microphoneInUse() { return .call }
         if fullScreenWindowCovers(display) { return .fullScreen }
         return nil
     }
@@ -1021,13 +1306,15 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         policy.fixStarted(now: Date(), automatic: automatic)
         fixIsAutomatic = automatic
         say("Fix of \(label(for: panelUID)) started (\(reason)).", echo: false)
+        let workingOthers = Set(panels.filter { $0.output.uid != panelUID && $0.health == .working }.map { $0.output.uid })
         work.async {
-            // An automatic fix probes once more first, so a display that recovered meanwhile is left alone.
+            // An automatic fix whose silent verdict is not fresh probes once more first, so a
+            // display that recovered meanwhile is left alone.
             if confirmFirst, probe(dev, seconds: self.probeSeconds, log: false) != false {
                 DispatchQueue.main.async { self.cancelFix(panelUID) }
                 return
             }
-            let outcome = repair(dev, probeSeconds: 2, hold: 3, settle: 4)
+            let outcome = repair(dev, probeSeconds: 2, hold: 3, settle: 4, othersToCheck: workingOthers)
             DispatchQueue.main.async { self.finishFix(panelUID, outcome) }
         }
     }

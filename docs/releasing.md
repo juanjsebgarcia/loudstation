@@ -6,10 +6,11 @@ The Homebrew formula lives in [juanjsebgarcia/homebrew-tap](https://github.com/j
    Run `make test`; CI runs the same on every push.
 
    Then the hardware checklist, on a Mac with at least two external displays. None of this can be automated:
-   - Connect the displays together, so at least one comes up with no sound, and confirm the menu shows it as No Sound within about 10 s.
+   - Connect the displays together, so at least one comes up with no sound, and confirm the menu shows it as No Sound within about 15 s of plugging in.
+   - With an app such as Spotify playing to the speakers' display, replug it until it comes up with no sound: it must still show No Sound, not Working.
    - Fix Now on that display: it goes black for about 3 s and comes back with sound; other displays are reported if they lose sound.
    - With Fix Monitor Speakers Automatically on, replug the speakers' display: a fix happens only after the settle and confirmation wait, and at most once.
-   - Start a call (any app using the microphone) with the speakers' display silent: the fix waits and says so.
+   - Turn on Pause Fixing While Microphone Is Active and start a call (any app using the microphone) with the speakers' display silent: the fix waits and says so. With it off (the default), the fix goes ahead.
    - Quit during a fix: the app quits only after the display is back on.
    - `loudstation status` and `loudstation fix` behave the same as the menu.
    - Open the menu in two other languages (`open -a LoudStation --args -AppleLanguages '(de)'`): nothing clipped or overlapping.

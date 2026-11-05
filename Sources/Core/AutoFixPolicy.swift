@@ -1,3 +1,4 @@
+import CoreGraphics
 import Foundation
 
 // When LoudStation may fix the monitor speakers' display automatically. Pure logic with an
@@ -5,6 +6,32 @@ import Foundation
 // itself, a wake during a fix, a single glitch) without hardware or real time. The app owns one
 // instance and feeds it events; deferral for calls and full screen stays in the app, because it
 // needs live system state.
+// How long to wait before checking after a display event. Each event restarts a short wait, so a
+// burst of events leads to one check, but never later than `longest` after the burst's first
+// event: macOS can keep announcing changes for a minute after a replug (2026-11-05).
+func eventCheckDelay(now: Date, burstStarted: Date, delay: Double, longest: Double) -> Double {
+    let untilDeadline = burstStarted.addingTimeInterval(longest).timeIntervalSince(now)
+    return max(0.5, min(delay, untilDeadline))
+}
+
+// Whether a display event means a screen arrived or left, as opposed to a mode, position or
+// main-screen change of one already there. Only arrivals and departures start a check; the rest
+// only hold off fixing while macOS rearranges.
+func isArrivalOrDeparture(_ flags: CGDisplayChangeSummaryFlags) -> Bool {
+    !flags.isDisjoint(with: [.addFlag, .removeFlag, .enabledFlag, .disabledFlag, .mirrorFlag, .unMirrorFlag])
+}
+
+// The flags of a display event in words, for the log.
+func describeDisplayEvent(_ flags: CGDisplayChangeSummaryFlags) -> String {
+    let names: [(CGDisplayChangeSummaryFlags, String)] = [
+        (.addFlag, "added"), (.removeFlag, "removed"), (.enabledFlag, "enabled"), (.disabledFlag, "disabled"),
+        (.mirrorFlag, "mirrored"), (.unMirrorFlag, "unmirrored"), (.setModeFlag, "mode"), (.movedFlag, "moved"),
+        (.setMainFlag, "main"), (.desktopShapeChangedFlag, "desktop shape"),
+    ]
+    let present = names.filter { flags.contains($0.0) }.map { $0.1 }
+    return present.isEmpty ? "flags \(flags.rawValue)" : present.joined(separator: ", ")
+}
+
 struct AutoFixPolicy {
     struct Timing {
         var settleAfterEvent = 12.0
@@ -13,6 +40,8 @@ struct AutoFixPolicy {
         var maximumFixesPerWindow = 3
         var window = 600.0
         var maximumFailedFixes = 2
+        // A silent verdict this recent needs no further probe right before the fix.
+        var freshVerdict = 3.0
     }
 
     enum Block: Equatable {
@@ -125,10 +154,19 @@ struct AutoFixPolicy {
         let settling = quietUntil.timeIntervalSince(now)
         let confirmed = latest.timeIntervalSince(first) >= timing.confirmationGap
         if settling > 0 || !confirmed {
-            let untilSecondProbe = confirmed ? 0 : max(0, first.addingTimeInterval(timing.confirmationGap).timeIntervalSince(now))
+            // After a single verdict the second probe may start at once: a stuck probe blocks for
+            // about 10 s by itself, and the gap between the two verdicts is still required.
+            let untilSecondProbe = confirmed || latest == first ? 0 : max(0, first.addingTimeInterval(timing.confirmationGap).timeIntervalSince(now))
             return .wait(.confirming, seconds: max(settling, untilSecondProbe, 0.5))
         }
         return .fix
+    }
+
+    // Whether a fix should probe once more before switching the display off: only when the
+    // display's latest silent verdict is not fresh, since a dead link does not recover by itself.
+    func needsFinalProbe(_ uid: String, now: Date) -> Bool {
+        guard let latest = lastSilent[uid] else { return true }
+        return now.timeIntervalSince(latest) > timing.freshVerdict
     }
 
     mutating func fixStarted(now: Date, automatic: Bool) {
