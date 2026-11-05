@@ -11,7 +11,9 @@ import Foundation
 // event: macOS can keep announcing changes for a minute after a replug (2026-11-05).
 func eventCheckDelay(now: Date, burstStarted: Date, delay: Double, longest: Double) -> Double {
     let untilDeadline = burstStarted.addingTimeInterval(longest).timeIntervalSince(now)
-    return max(0.5, min(delay, untilDeadline))
+    // Past the deadline the check is due at once: any floor here would let events arriving
+    // faster than it put the check off for as long as they kept coming.
+    return max(0, min(delay, untilDeadline))
 }
 
 // Whether a display event means a screen arrived or left, as opposed to a mode, position or

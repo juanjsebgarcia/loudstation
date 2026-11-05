@@ -185,6 +185,7 @@ _ = silent(&policy, 0)
 _ = silent(&policy, 10)
 expect(!policy.needsFinalProbe("A", now: at(11)), "a verdict a second old does not")
 expect(policy.needsFinalProbe("A", now: at(40)), "a verdict from half a minute ago does")
+expect(policy.needsFinalProbe("A", now: at(19)), "a verdict nine seconds old does: the app times it from its own probe, not the check's slowest")
 policy.observedWorking("A", isWatched: true)
 expect(policy.needsFinalProbe("A", now: at(11)), "a display last seen working needs one")
 policy = settled()
@@ -196,7 +197,18 @@ section("A burst of display events delays the first check by at most ten seconds
 expectEqual(eventCheckDelay(now: at(0), burstStarted: at(0), delay: 5, longest: 10), 5, "a lone event waits the short delay")
 expectEqual(eventCheckDelay(now: at(3), burstStarted: at(0), delay: 5, longest: 10), 5, "an early follow-up restarts it")
 expectEqual(eventCheckDelay(now: at(8), burstStarted: at(0), delay: 5, longest: 10), 2, "but not past the deadline")
-expectEqual(eventCheckDelay(now: at(30), burstStarted: at(0), delay: 5, longest: 10), 0.5, "a burst that runs on checks almost at once")
+expectEqual(eventCheckDelay(now: at(30), burstStarted: at(0), delay: 5, longest: 10), 0, "a burst that runs on checks at once")
+// Events every 250 ms for 30 s, each replacing the pending check, as the app does.
+var pendingCheck: Double? = nil
+var firstCheck: Double? = nil
+for event in stride(from: 0.0, to: 30, by: 0.25) {
+    if let due = pendingCheck, due <= event {
+        firstCheck = due
+        break
+    }
+    pendingCheck = event + eventCheckDelay(now: at(event), burstStarted: at(0), delay: 5, longest: 10)
+}
+expect((firstCheck ?? pendingCheck ?? 99) <= 10.25, "a long burst of rapid events is checked by about 10 s (\(firstCheck ?? pendingCheck ?? 99) s)")
 
 section("Only a screen arriving or leaving starts a check")
 expect(isArrivalOrDeparture([.addFlag]), "an added display")

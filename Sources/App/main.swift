@@ -1160,16 +1160,20 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
             // display answers in about a second, while a silent one blocks for about 10.
             let lock = NSLock()
             var results: [String: Bool?] = [:]
+            // When each probe finished: a silent verdict counts from then, not from when the
+            // slowest probe of the check finished, so it never looks fresher than it is.
+            var finishedAt: [String: Date] = [:]
             let probed = outputs.filter { !skip.contains($0.uid) }
             DispatchQueue.concurrentPerform(iterations: probed.count) { index in
                 let output = probed[index]
                 let result = probe(output.device, seconds: seconds, log: manual)
                 lock.lock()
                 results[output.uid] = result
+                finishedAt[output.uid] = Date()
                 lock.unlock()
                 DispatchQueue.main.async { self.showResult(output.uid, result) }
             }
-            DispatchQueue.main.async { self.finishCheck(outputs, sound: sound, results: results, before: before, reason: reason) }
+            DispatchQueue.main.async { self.finishCheck(outputs, sound: sound, results: results, finishedAt: finishedAt, before: before, reason: reason) }
         }
     }
 
@@ -1189,7 +1193,8 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
         render()
     }
 
-    private func finishCheck(_ outputs: [DisplayAudioOutput], sound: String?, results: [String: Bool?], before: [String: PanelHealth], reason: String) {
+    private func finishCheck(_ outputs: [DisplayAudioOutput], sound: String?, results: [String: Bool?], finishedAt: [String: Date],
+                             before: [String: PanelHealth], reason: String) {
         busy = false
         lastCheck = Date()
         soundOutputUID = sound
@@ -1204,7 +1209,7 @@ final class AppController: NSObject, NSApplicationDelegate, NSMenuDelegate, UNUs
             let panelUID = panel.output.uid
             if let result = results[panelUID] {
                 if result == true { policy.observedWorking(panelUID, isWatched: panelUID == watchedUID) }
-                if result == false { policy.observedSilent(panelUID, now: Date()) }
+                if result == false { policy.observedSilent(panelUID, now: finishedAt[panelUID] ?? Date()) }
             }
             guard before[panelUID] != panel.health, panel.health != .checking else { continue }
             let word = panel.health == .working ? "working" : (panel.health == .noSound ? "has no sound" : "could not be checked")
